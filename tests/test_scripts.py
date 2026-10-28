@@ -12,7 +12,7 @@ import fetch_all_time  # noqa: E402
 import fetch_images  # noqa: E402
 import fetch_current  # noqa: E402
 import render  # noqa: E402
-from common import CATEGORIES, fingerprint  # noqa: E402
+from common import TYPE_TO_GROUP, fingerprint, product_type  # noqa: E402
 
 STRIP_HTML = """
 <nav class="chapternav"><ul class="chapternav-items">
@@ -46,7 +46,7 @@ def test_dataset_is_valid():
     names = [p["name"] for p in doc["products"]]
     assert len(names) == len(set(names)), "duplicate product names"
     for p in doc["products"]:
-        assert p["category"] in CATEGORIES, p
+        assert product_type(p) in TYPE_TO_GROUP, p
         assert len(p["date"]) == 7 and p["date"][4] == "-", p
 
 
@@ -61,7 +61,7 @@ def test_current_sync_marks_missing_and_adds_new():
     changes = fetch_current.apply(doc, found)
     current = {p["name"] for p in doc["products"] if p["current"]}
     assert "iPhone Duo" in current
-    assert "MacBook Air (M5)" in current
+    assert "MacBook Air (13-inch, M5)" in current and "MacBook Air (15-inch, M5)" in current
     assert "iPhone 17e" not in current
     assert "iPhone 19e" in current
     assert any("New product added: iPhone 19e" in c for c in changes)

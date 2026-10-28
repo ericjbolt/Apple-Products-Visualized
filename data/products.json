@@ -801,7 +801,14 @@
       "current": false
     },
     {
-      "name": "iPhone 6 and iPhone 6 Plus",
+      "name": "iPhone 6",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2014-09",
+      "current": false
+    },
+    {
+      "name": "iPhone 6 Plus",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2014-09",
@@ -850,7 +857,14 @@
       "current": false
     },
     {
-      "name": "iPhone 6s and iPhone 6s Plus",
+      "name": "iPhone 6s",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2015-09",
+      "current": false
+    },
+    {
+      "name": "iPhone 6s Plus",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2015-09",
@@ -892,21 +906,42 @@
       "current": false
     },
     {
-      "name": "iPhone 7 and iPhone 7 Plus",
+      "name": "iPhone 7",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2016-09",
       "current": false
     },
     {
-      "name": "Apple Watch Series 1 and Series 2",
+      "name": "iPhone 7 Plus",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2016-09",
+      "current": false
+    },
+    {
+      "name": "Apple Watch Series 1",
       "line": "Apple Watch",
       "category": "Apple Watch",
       "date": "2016-09",
       "current": false
     },
     {
-      "name": "MacBook Pro (Touch Bar)",
+      "name": "Apple Watch Series 2",
+      "line": "Apple Watch",
+      "category": "Apple Watch",
+      "date": "2016-09",
+      "current": false
+    },
+    {
+      "name": "MacBook Pro (13-inch, 2016)",
+      "line": "MacBook Pro",
+      "category": "Mac",
+      "date": "2016-10",
+      "current": false
+    },
+    {
+      "name": "MacBook Pro (15-inch, 2016)",
       "line": "MacBook Pro",
       "category": "Mac",
       "date": "2016-10",
@@ -934,7 +969,14 @@
       "current": false
     },
     {
-      "name": "iPhone 8 and iPhone 8 Plus",
+      "name": "iPhone 8",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2017-09",
+      "current": false
+    },
+    {
+      "name": "iPhone 8 Plus",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2017-09",
@@ -983,7 +1025,14 @@
       "current": false
     },
     {
-      "name": "iPhone XS and iPhone XS Max",
+      "name": "iPhone XS",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2018-09",
+      "current": false
+    },
+    {
+      "name": "iPhone XS Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2018-09",
@@ -1004,7 +1053,14 @@
       "current": false
     },
     {
-      "name": "iPad Pro (3rd generation)",
+      "name": "iPad Pro 11-inch (1st generation)",
+      "line": "iPad Pro",
+      "category": "iPad",
+      "date": "2018-11",
+      "current": false
+    },
+    {
+      "name": "iPad Pro 12.9-inch (3rd generation)",
       "line": "iPad Pro",
       "category": "iPad",
       "date": "2018-11",
@@ -1046,7 +1102,14 @@
       "current": false
     },
     {
-      "name": "iPhone 11 Pro and iPhone 11 Pro Max",
+      "name": "iPhone 11 Pro",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2019-09",
+      "current": false
+    },
+    {
+      "name": "iPhone 11 Pro Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2019-09",
@@ -1088,7 +1151,14 @@
       "current": false
     },
     {
-      "name": "iPad Pro (4th generation)",
+      "name": "iPad Pro 11-inch (2nd generation)",
+      "line": "iPad Pro",
+      "category": "iPad",
+      "date": "2020-03",
+      "current": false
+    },
+    {
+      "name": "iPad Pro 12.9-inch (4th generation)",
       "line": "iPad Pro",
       "category": "iPad",
       "date": "2020-03",
@@ -1130,14 +1200,28 @@
       "current": false
     },
     {
-      "name": "iPhone 12 and iPhone 12 mini",
+      "name": "iPhone 12",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2020-10",
       "current": false
     },
     {
-      "name": "iPhone 12 Pro and iPhone 12 Pro Max",
+      "name": "iPhone 12 mini",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2020-10",
+      "current": false
+    },
+    {
+      "name": "iPhone 12 Pro",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2020-10",
+      "current": false
+    },
+    {
+      "name": "iPhone 12 Pro Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2020-10",
@@ -1193,7 +1277,14 @@
       "current": false
     },
     {
-      "name": "iPad Pro (M1)",
+      "name": "iPad Pro 11-inch (3rd generation)",
+      "line": "iPad Pro",
+      "category": "iPad",
+      "date": "2021-05",
+      "current": false
+    },
+    {
+      "name": "iPad Pro 12.9-inch (5th generation)",
       "line": "iPad Pro",
       "category": "iPad",
       "date": "2021-05",
@@ -1207,14 +1298,28 @@
       "current": false
     },
     {
-      "name": "iPhone 13 and iPhone 13 mini",
+      "name": "iPhone 13",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2021-09",
       "current": false
     },
     {
-      "name": "iPhone 13 Pro and iPhone 13 Pro Max",
+      "name": "iPhone 13 mini",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2021-09",
+      "current": false
+    },
+    {
+      "name": "iPhone 13 Pro",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2021-09",
+      "current": false
+    },
+    {
+      "name": "iPhone 13 Pro Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2021-09",
@@ -1249,7 +1354,14 @@
       "current": false
     },
     {
-      "name": "MacBook Pro (14-inch and 16-inch, M1 Pro, M1 Max)",
+      "name": "MacBook Pro (14-inch, 2021)",
+      "line": "MacBook Pro",
+      "category": "Mac",
+      "date": "2021-10",
+      "current": false
+    },
+    {
+      "name": "MacBook Pro (16-inch, 2021)",
       "line": "MacBook Pro",
       "category": "Mac",
       "date": "2021-10",
@@ -1284,21 +1396,35 @@
       "current": false
     },
     {
-      "name": "MacBook Air (M2)",
+      "name": "MacBook Air (13-inch, M2)",
       "line": "MacBook Air",
       "category": "Mac",
       "date": "2022-07",
       "current": false
     },
     {
-      "name": "iPhone 14 and iPhone 14 Plus",
+      "name": "iPhone 14",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2022-09",
       "current": false
     },
     {
-      "name": "iPhone 14 Pro and iPhone 14 Pro Max",
+      "name": "iPhone 14 Plus",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2022-09",
+      "current": false
+    },
+    {
+      "name": "iPhone 14 Pro",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2022-09",
+      "current": false
+    },
+    {
+      "name": "iPhone 14 Pro Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2022-09",
@@ -1340,7 +1466,14 @@
       "current": false
     },
     {
-      "name": "iPad Pro (M2)",
+      "name": "iPad Pro 11-inch (4th generation)",
+      "line": "iPad Pro",
+      "category": "iPad",
+      "date": "2022-10",
+      "current": false
+    },
+    {
+      "name": "iPad Pro 12.9-inch (6th generation)",
       "line": "iPad Pro",
       "category": "iPad",
       "date": "2022-10",
@@ -1354,7 +1487,14 @@
       "current": false
     },
     {
-      "name": "MacBook Pro (14-inch and 16-inch, M2 Pro, M2 Max)",
+      "name": "MacBook Pro (14-inch, 2023)",
+      "line": "MacBook Pro",
+      "category": "Mac",
+      "date": "2023-01",
+      "current": false
+    },
+    {
+      "name": "MacBook Pro (16-inch, 2023)",
       "line": "MacBook Pro",
       "category": "Mac",
       "date": "2023-01",
@@ -1398,14 +1538,28 @@
       "apple_name": "Mac Pro"
     },
     {
-      "name": "iPhone 15 and iPhone 15 Plus",
+      "name": "iPhone 15",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2023-09",
       "current": false
     },
     {
-      "name": "iPhone 15 Pro and iPhone 15 Pro Max",
+      "name": "iPhone 15 Plus",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2023-09",
+      "current": false
+    },
+    {
+      "name": "iPhone 15 Pro",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2023-09",
+      "current": false
+    },
+    {
+      "name": "iPhone 15 Pro Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2023-09",
@@ -1426,14 +1580,21 @@
       "current": false
     },
     {
-      "name": "MacBook Pro (M3)",
+      "name": "MacBook Pro (14-inch, M3, Nov 2023)",
       "line": "MacBook Pro",
       "category": "Mac",
       "date": "2023-11",
       "current": false
     },
     {
-      "name": "iMac (M3)",
+      "name": "MacBook Pro (16-inch, Nov 2023)",
+      "line": "MacBook Pro",
+      "category": "Mac",
+      "date": "2023-11",
+      "current": false
+    },
+    {
+      "name": "iMac (24-inch, M3)",
       "line": "iMac",
       "category": "Mac",
       "date": "2023-11",
@@ -1447,28 +1608,49 @@
       "current": false
     },
     {
-      "name": "MacBook Air (M3)",
+      "name": "MacBook Air (13-inch, M3)",
       "line": "MacBook Air",
       "category": "Mac",
       "date": "2024-03",
       "current": false
     },
     {
-      "name": "iPad Air (M2)",
+      "name": "MacBook Air (15-inch, M3)",
+      "line": "MacBook Air",
+      "category": "Mac",
+      "date": "2024-03",
+      "current": false
+    },
+    {
+      "name": "iPad Air 11-inch (M2)",
       "line": "iPad Air",
       "category": "iPad",
       "date": "2024-05",
       "current": false
     },
     {
-      "name": "iPad Pro (M4)",
+      "name": "iPad Air 13-inch (M2)",
+      "line": "iPad Air",
+      "category": "iPad",
+      "date": "2024-05",
+      "current": false
+    },
+    {
+      "name": "iPad Pro 11-inch (M4)",
       "line": "iPad Pro",
       "category": "iPad",
       "date": "2024-05",
       "current": false
     },
     {
-      "name": "iPhone 16 and iPhone 16 Plus",
+      "name": "iPad Pro 13-inch (M4)",
+      "line": "iPad Pro",
+      "category": "iPad",
+      "date": "2024-05",
+      "current": false
+    },
+    {
+      "name": "iPhone 16",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2024-09",
@@ -1476,7 +1658,22 @@
       "apple_name": "iPhone 16"
     },
     {
-      "name": "iPhone 16 Pro and iPhone 16 Pro Max",
+      "name": "iPhone 16 Plus",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2024-09",
+      "current": true,
+      "apple_name": "iPhone 16"
+    },
+    {
+      "name": "iPhone 16 Pro",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2024-09",
+      "current": false
+    },
+    {
+      "name": "iPhone 16 Pro Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2024-09",
@@ -1505,7 +1702,7 @@
       "apple_name": "iPad mini"
     },
     {
-      "name": "iMac (M4)",
+      "name": "iMac (24-inch, M4)",
       "line": "iMac",
       "category": "Mac",
       "date": "2024-11",
@@ -1520,7 +1717,14 @@
       "current": false
     },
     {
-      "name": "MacBook Pro (M4)",
+      "name": "MacBook Pro (14-inch, M4, 2024)",
+      "line": "MacBook Pro",
+      "category": "Mac",
+      "date": "2024-11",
+      "current": false
+    },
+    {
+      "name": "MacBook Pro (16-inch, 2024)",
       "line": "MacBook Pro",
       "category": "Mac",
       "date": "2024-11",
@@ -1534,7 +1738,14 @@
       "current": false
     },
     {
-      "name": "MacBook Air (M4)",
+      "name": "MacBook Air (13-inch, M4)",
+      "line": "MacBook Air",
+      "category": "Mac",
+      "date": "2025-03",
+      "current": false
+    },
+    {
+      "name": "MacBook Air (15-inch, M4)",
       "line": "MacBook Air",
       "category": "Mac",
       "date": "2025-03",
@@ -1548,7 +1759,7 @@
       "current": false
     },
     {
-      "name": "iPad (A16)",
+      "name": "iPad 11-inch (A16)",
       "line": "iPad",
       "category": "iPad",
       "date": "2025-03",
@@ -1556,7 +1767,14 @@
       "apple_name": "iPad"
     },
     {
-      "name": "iPad Air (M3)",
+      "name": "iPad Air 11-inch (M3)",
+      "line": "iPad Air",
+      "category": "iPad",
+      "date": "2025-03",
+      "current": false
+    },
+    {
+      "name": "iPad Air 13-inch (M3)",
       "line": "iPad Air",
       "category": "iPad",
       "date": "2025-03",
@@ -1579,7 +1797,14 @@
       "apple_name": "iPhone Air"
     },
     {
-      "name": "iPhone 17 Pro and iPhone 17 Pro Max",
+      "name": "iPhone 17 Pro",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2025-09",
+      "current": false
+    },
+    {
+      "name": "iPhone 17 Pro Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2025-09",
@@ -1623,7 +1848,15 @@
       "current": true
     },
     {
-      "name": "iPad Pro (M5)",
+      "name": "iPad Pro 11-inch (M5)",
+      "line": "iPad Pro",
+      "category": "iPad",
+      "date": "2025-10",
+      "current": true,
+      "apple_name": "iPad Pro"
+    },
+    {
+      "name": "iPad Pro 13-inch (M5)",
       "line": "iPad Pro",
       "category": "iPad",
       "date": "2025-10",
@@ -1655,7 +1888,7 @@
       "apple_name": "iPhone 17e"
     },
     {
-      "name": "iPad Air (M4)",
+      "name": "iPad Air 11-inch (M4)",
       "line": "iPad Air",
       "category": "iPad",
       "date": "2026-03",
@@ -1663,7 +1896,15 @@
       "apple_name": "iPad Air"
     },
     {
-      "name": "MacBook Air (M5)",
+      "name": "iPad Air 13-inch (M4)",
+      "line": "iPad Air",
+      "category": "iPad",
+      "date": "2026-03",
+      "current": true,
+      "apple_name": "iPad Air"
+    },
+    {
+      "name": "MacBook Air (13-inch, M5)",
       "line": "MacBook Air",
       "category": "Mac",
       "date": "2026-03",
@@ -1671,7 +1912,23 @@
       "apple_name": "MacBook Air"
     },
     {
-      "name": "MacBook Pro (M5 Pro, M5 Max)",
+      "name": "MacBook Air (15-inch, M5)",
+      "line": "MacBook Air",
+      "category": "Mac",
+      "date": "2026-03",
+      "current": true,
+      "apple_name": "MacBook Air"
+    },
+    {
+      "name": "MacBook Pro (14-inch, 2026)",
+      "line": "MacBook Pro",
+      "category": "Mac",
+      "date": "2026-03",
+      "current": true,
+      "apple_name": "MacBook Pro"
+    },
+    {
+      "name": "MacBook Pro (16-inch, 2026)",
       "line": "MacBook Pro",
       "category": "Mac",
       "date": "2026-03",
@@ -1727,7 +1984,15 @@
       "apple_name": "Mac Studio"
     },
     {
-      "name": "iPhone 18 Pro and iPhone 18 Pro Max",
+      "name": "iPhone 18 Pro",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2026-09",
+      "current": true,
+      "apple_name": "iPhone 18 Pro"
+    },
+    {
+      "name": "iPhone 18 Pro Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2026-09",

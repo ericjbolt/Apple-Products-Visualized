@@ -18,7 +18,8 @@ from dataclasses import dataclass
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-from common import CATEGORIES, OUTPUT_DIR, ROOT, load_products, photo_path
+from common import (GROUPS, OUTPUT_DIR, RAINBOW, ROOT, load_products, photo_path,
+                    product_group, product_type, type_color)
 
 Image.MAX_IMAGE_PIXELS = None  # the full-size images are intentionally large
 
@@ -236,7 +237,7 @@ def paste_photo(canvas: Image.Image, photo: Image.Image, card, radius: int) -> N
 def draw_tile(canvas: Image.Image, box, product: dict, radius: int) -> bool:
     """Draw one tile. Returns True when a photo was used."""
     draw = ImageDraw.Draw(canvas)
-    color = hex_rgb(CATEGORIES.get(product["category"], CATEGORIES["Other"]))
+    color = type_color(product_type(product))
     draw.rounded_rectangle(box, radius=radius, fill=color)
     photo = load_photo(product)
     if photo is not None:
@@ -260,16 +261,26 @@ def render_word(word: str, products: list[dict], caption: str, mode: str) -> Ima
     mask = np.array(mask_img)
     tiles = plan_tiles(mask, products, mode)
 
-    categories = [c for c in CATEGORIES if any(p["category"] == c for p in products)]
-    per_row = 6
-    legend_rows = math.ceil(len(categories) / per_row)
+    # Legend: one column per color family, in rainbow order, listing each product type.
+    counts: dict[str, int] = {}
+    for p in products:
+        counts[product_type(p)] = counts.get(product_type(p), 0) + 1
+    columns = []
+    for group, (color_name, types) in GROUPS.items():
+        present = [t for t in types if t in counts]
+        extra = sorted(t for t in counts if product_group({"name": t, "line": t}) == group
+                       and t not in types)
+        if present or extra:
+            columns.append((group, color_name, present + extra))
     width = mask_img.width + 2 * MARGIN
     k = width / 6000  # scale text with the image so the preview stays readable
     word_top = MARGIN
     caption_y = word_top + mask_img.height + int(200 * k)
     legend_top = caption_y + int(190 * k)
-    row_h = int(120 * k)
-    height = legend_top + legend_rows * row_h + int(300 * k)
+    row_h = int(84 * k)
+    header_h = int(150 * k)
+    longest = max((len(types) for _, _, types in columns), default=0)
+    height = legend_top + header_h + longest * row_h + int(320 * k)
 
     canvas = Image.new("RGB", (width, height), BACKGROUND)
     size = tiles[0][0].size if tiles else 0
@@ -284,18 +295,21 @@ def render_word(word: str, products: list[dict], caption: str, mode: str) -> Ima
     draw = ImageDraw.Draw(canvas)
     draw.text((width / 2, caption_y), caption, font=font(int(110 * k), "Medium"), fill=TEXT, anchor="mm")
 
-    legend_font = font(int(64 * k))
-    swatch = int(66 * k)
-    col_w = (width - 2 * MARGIN) / per_row
-    for i, cat in enumerate(categories):
-        row, col = divmod(i, per_row)
-        in_row = min(per_row, len(categories) - row * per_row)
-        x = (width - in_row * col_w) / 2 + col * col_w
-        y = legend_top + row * row_h
-        draw.rounded_rectangle((x, y, x + swatch, y + swatch), radius=int(14 * k), fill=hex_rgb(CATEGORIES[cat]))
-        count = sum(1 for p in products if p["category"] == cat)
-        draw.text((x + swatch + int(26 * k), y + swatch / 2), f"{cat}  {count}", font=legend_font,
-                  fill=TEXT, anchor="lm")
+    legend_font = font(int(50 * k))
+    header_font = font(int(50 * k), "Bold")
+    swatch = int(52 * k)
+    col_w = (width - 2 * MARGIN) / max(1, len(columns))
+    for c, (group, color_name, types) in enumerate(columns):
+        x = MARGIN + c * col_w + int(20 * k)
+        header_lines = wrap(group, header_font, col_w - int(60 * k))[:2]
+        for i, line in enumerate(header_lines):
+            draw.text((x, legend_top + i * int(60 * k)), line, font=header_font,
+                      fill=hex_rgb(RAINBOW[color_name]), anchor="la")
+        for r, t in enumerate(types):
+            y = legend_top + header_h + r * row_h
+            draw.rounded_rectangle((x, y, x + swatch, y + swatch), radius=int(12 * k), fill=type_color(t))
+            draw.text((x + swatch + int(22 * k), y + swatch / 2), f"{t}  {counts[t]}", font=legend_font,
+                      fill=TEXT, anchor="lm")
 
     footer = "Unofficial fan project, not affiliated with Apple Inc.  ·  Script font: Pacifico (SIL Open Font License)"
     if photos:

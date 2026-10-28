@@ -17,14 +17,29 @@ Full-size images: [hello.jpg](output/hello.jpg) and [thank_you.jpg](output/thank
 1. **The data** lives in [`data/products.json`](data/products.json). Each product has a name, a category, a release month, and a `current` flag that says whether apple.com still sells it new.
 2. **The words** are set in [Pacifico](https://fonts.google.com/specimen/Pacifico), an open-source script font included in `assets/fonts`.
 3. **The tiles** fill each word completely. The script picks a tile size small enough for the letters to stay readable, then fits exactly that many square tiles inside the word with no empty slots.
-4. **The order** follows the word from left to right. In **thank you**, each past product gets a short run of neighboring tiles, oldest first, so the word reads as a timeline. **hello** has fewer products than tiles, so the lineup repeats along the word.
+4. **The order** follows the word from left to right. In **thank you**, each past product gets a short run of neighboring tiles, oldest first, so the word reads as a timeline. **hello** has far fewer products than the roughly 1,900 tiles needed for readable letters, so the lineup repeats along the word.
 5. **The photos** come from Wikimedia Commons, the free media library behind Wikipedia. Each tile shows its product's photo in a frame of its category color. Products without a freely licensed photo show their name on a colored tile instead. Every photo is credited in [CREDITS.md](CREDITS.md).
 6. **The weekly update** runs on GitHub Actions every Tuesday at 3:00 p.m. Pacific time. It checks Wikipedia for new releases, checks apple.com for the current lineup, downloads any missing photos, redraws the images, and opens a pull request for review. When Apple retires a product, it moves from **hello** to **thank you** automatically.
+
+### Colors and legend
+
+Tiles use the six colors of Apple's 1977 rainbow logo, in stripe order: green, yellow, orange, red, purple, and blue. Each color covers one product family, and each product type within that family gets its own shade, from darker to lighter.
+
+| Color | Family | Product types |
+| --- | --- | --- |
+| Green `#61BB46` | iPhone | iPhone, iPhone Pro, iPhone SE and e models, iPhone Air, iPhone Duo |
+| Yellow `#FDB827` | Early Computers and Specialty Products | Apple I, Apple II, Apple III, Lisa, LaserWriter, Newton, QuickTake, Pippin, eMate, iSight |
+| Orange `#F5821F` | TV and Home | Apple TV, HomePod, HomePod mini, HomeView, AirPort |
+| Red `#E03A3E` | Apple Watch, iPod, AirPods, and AirTag | Apple Watch, Apple Watch SE, Apple Watch Ultra, iPod, iPod mini, iPod nano, iPod shuffle, iPod touch, iPod Hi-Fi, AirPods, AirPods Pro, AirPods Max, AirTag |
+| Purple `#963D97` | iPad and Apple Vision Pro | iPad, iPad mini, iPad Air, iPad Pro, Apple Vision Pro |
+| Blue `#009DDC` | Mac and Displays | Macintosh, PowerBook, iBook, MacBook, MacBook Air, MacBook Pro, MacBook Neo, iMac, iMac Pro, eMac, Mac mini, Mac Studio, Power Mac, Mac Pro, Xserve, Displays |
+
+The hex values are the widely published equivalents of the rainbow logo colors. Apple has never released official Pantone numbers for the logo.
 
 ### What counts as a product
 
 - Apple-branded hardware: computers, phones, tablets, watches, audio, home devices, displays, and a few historical oddities such as the Newton and QuickTake.
-- Variants released together share one entry (for example, "iPhone 17 Pro / Pro Max").
+- Each model and size is its own entry. For example, "iPhone 18 Pro" and "iPhone 18 Pro Max" are separate, as are "MacBook Air (13-inch, M5)" and "MacBook Air (15-inch, M5)".
 - Accessories (keyboards, mice, pencils, cases, bands, cables) and third-party products are excluded. Beats products are excluded as well.
 
 ## Run it on your Mac
@@ -51,7 +66,7 @@ Open `data/products.json` and add, remove, or correct a product. Then run `pytho
 | --- | --- |
 | `name` | Name shown on the tile when there is no photo |
 | `line` | Product family, such as "MacBook Air", used to match apple.com |
-| `category` | One of the legend categories, which sets the tile color |
+| `category` | Broad product category, kept for reference. The legend type and color come from `line` |
 | `date` | Announcement or release month, as `YYYY-MM` |
 | `current` | `true` places the product in **hello**, `false` in **thank you** |
 | `apple_name` | Optional. The exact name apple.com uses, such as "iPhone 17e" |
