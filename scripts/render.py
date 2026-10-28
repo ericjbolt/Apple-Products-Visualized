@@ -16,7 +16,7 @@ import math
 from dataclasses import dataclass
 
 import numpy as np
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from common import (GROUPS, OUTPUT_DIR, RAINBOW, ROOT, load_products, photo_path,
                     product_group, product_type, type_color)
@@ -254,6 +254,65 @@ def draw_tile(canvas: Image.Image, box, product: dict, radius: int) -> bool:
     return False
 
 
+def product_runs(tiles: list[tuple[Cell, dict]]) -> list[tuple[dict, list[Cell]]]:
+    """Group neighboring tiles that show the same product into one run."""
+    runs: list[tuple[dict, list[Cell]]] = []
+    for cell, product in tiles:
+        if runs and runs[-1][0] is product:
+            runs[-1][1].append(cell)
+        else:
+            runs.append((product, [cell]))
+    return runs
+
+
+def largest_square(cells: list[Cell]) -> tuple[float, float, int]:
+    """Top-left corner and side (in tiles) of the biggest square block inside a run."""
+    size = cells[0].size
+    x0, y0 = min(c.x for c in cells), min(c.y for c in cells)
+    occupied = {(round((c.x - x0) / size), round((c.y - y0) / size)) for c in cells}
+    cols = max(c for c, _ in occupied) + 1
+    rows = max(r for _, r in occupied) + 1
+    best = (0, 0, 1)
+    side = [[0] * (cols + 1) for _ in range(rows + 1)]
+    for r in range(rows):
+        for c in range(cols):
+            if (c, r) in occupied:
+                side[r + 1][c + 1] = 1 + min(side[r][c], side[r][c + 1], side[r + 1][c])
+                if side[r + 1][c + 1] > best[2]:
+                    k = side[r + 1][c + 1]
+                    best = (c - k + 1, r - k + 1, k)
+    c, r, k = best
+    return x0 + c * size, y0 + r * size, k
+
+
+def draw_region(canvas: Image.Image, cells: list[Cell], product: dict, origin, gap: float,
+                radius: int) -> bool:
+    """Draw one product as a single colored shape, with its photo or name shown once.
+
+    The run's tiles merge into one region, so a product that needs many tiles to keep the
+    letters readable still appears only once. Returns True when a photo was used.
+    """
+    size = cells[0].size
+    ox, oy = origin
+    left = int(ox + min(c.x for c in cells))
+    top = int(oy + min(c.y for c in cells))
+    right = int(ox + max(c.x for c in cells) + size) + 1
+    bottom = int(oy + max(c.y for c in cells) + size) + 1
+    mask = Image.new("L", (right - left, bottom - top), 0)
+    md = ImageDraw.Draw(mask)
+    for c in cells:
+        md.rectangle((ox + c.x - left, oy + c.y - top,
+                      ox + c.x + size - left, oy + c.y + size - top), fill=255)
+    shrink = max(3, int(gap) | 1)  # odd filter size: leaves a thin gap between products
+    mask = mask.filter(ImageFilter.MinFilter(shrink)).filter(ImageFilter.GaussianBlur(0.8))
+    color = type_color(product_type(product))
+    canvas.paste(Image.new("RGB", mask.size, color), (left, top), mask)
+
+    sx, sy, k = largest_square(cells)
+    box = (ox + sx + gap / 2, oy + sy + gap / 2, ox + sx + k * size - gap / 2, oy + sy + k * size - gap / 2)
+    return draw_tile(canvas, box, product, radius)
+
+
 # --------------------------------------------------------------------------- composition
 
 def render_word(word: str, products: list[dict], caption: str, mode: str) -> Image.Image:
@@ -287,10 +346,8 @@ def render_word(word: str, products: list[dict], caption: str, mode: str) -> Ima
     gap = max(1.0, size * 0.1)
     radius = max(1, int(size * 0.16))
     photos = 0
-    for cell, product in tiles:
-        box = (MARGIN + cell.x + gap / 2, word_top + cell.y + gap / 2,
-               MARGIN + cell.x + size - gap / 2, word_top + cell.y + size - gap / 2)
-        photos += draw_tile(canvas, box, product, radius)
+    for product, cells in product_runs(tiles):
+        photos += draw_region(canvas, cells, product, (MARGIN, word_top), gap, radius)
 
     draw = ImageDraw.Draw(canvas)
     draw.text((width / 2, caption_y), caption, font=font(int(110 * k), "Medium"), fill=TEXT, anchor="mm")
