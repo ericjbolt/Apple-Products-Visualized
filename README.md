@@ -2,13 +2,13 @@
 
 Two words written in script and filled with Apple products. **current** is filled with everything Apple sells today. **thank you** is filled with every product Apple has retired, from the Apple I in 1976 onward, in release order from left to right.
 
-The full-size images are over 10,000 pixels wide, so you can zoom in and find individual products.
+**[Open the zoomable viewer](https://ericjbolt.github.io/Apple-Products-Visualized/)** to scroll or pinch into either word and find individual products, on a computer or a phone.
 
 ![current](output/current.png)
 
 ![thank you](output/thank_you.png)
 
-Full-size, zoomable versions: [current.jpg](output/current.jpg) and [thank_you.jpg](output/thank_you.jpg).
+Full-size images: [current.jpg](output/current.jpg) and [thank_you.jpg](output/thank_you.jpg).
 
 ## How it works
 
@@ -66,6 +66,7 @@ Apple-Products-Visualized/
 ├── scripts/fetch_current.py    syncs the current lineup with apple.com
 ├── scripts/fetch_all_time.py   adds new releases from Wikipedia
 ├── scripts/fetch_images.py     downloads product photos and writes CREDITS.md
+├── scripts/build_site.py       builds the zoomable viewer website
 ├── scripts/common.py           shared helpers and the color palette
 ├── assets/fonts/               Pacifico script font and its license
 ├── assets/photos/              downloaded product photos
@@ -77,6 +78,7 @@ Apple-Products-Visualized/
 ## Notes
 
 - The weekly job needs permission to open pull requests. In the repository on GitHub, go to **Settings > Actions > General**, choose **Read and write permissions**, and check **Allow GitHub Actions to create and approve pull requests**.
+- The zoomable viewer is published with GitHub Pages. In the repository, go to **Settings > Pages** and set **Source** to **GitHub Actions**. The viewer then rebuilds automatically whenever the images change.
 - To run the update immediately, open the **Actions** tab, choose **Weekly product update**, and click **Run workflow**.
 - The apple.com and Wikipedia readers depend on how those pages are built. If either page changes, the script stops without writing anything, and the weekly pull request simply will not appear. The images stay correct either way.
 - The photo script uses the lead photo from each product's Wikipedia article. When an article covers several models, the photo may show a sibling model. To choose a specific photo, add an `image_file` field to that product, delete its file from `assets/photos`, and rerun `python scripts/fetch_images.py`.
