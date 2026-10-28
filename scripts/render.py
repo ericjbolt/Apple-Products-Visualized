@@ -2,7 +2,7 @@
 
 Two images are produced, each as a large zoomable JPEG and a smaller PNG preview:
 
-    output/current.jpg / current.png      "current", filled with today's lineup
+    output/hello.jpg / hello.png          "hello", filled with today's lineup
     output/thank_you.jpg / thank_you.png  "thank you", filled with every past product
 
 Usage:
@@ -322,8 +322,8 @@ def main() -> None:
     past = [p for p in products if not p.get("current")]
     OUTPUT_DIR.mkdir(exist_ok=True)
 
-    save(render_word("current", current,
-                     f"{len(current)} products on apple.com today", mode="cycle"), "current")
+    save(render_word("hello", current,
+                     f"{len(current)} products on apple.com today", mode="cycle"), "hello")
     save(render_word("thank you", past,
                      f"{len(past)} past products, {year_span(past)}, oldest first", mode="timeline"),
          "thank_you")

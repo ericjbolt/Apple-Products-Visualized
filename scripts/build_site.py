@@ -28,7 +28,7 @@ Image.MAX_IMAGE_PIXELS = None
 SITE_DIR = ROOT / "site"
 TILE = 254
 OVERLAP = 1
-WORDS = [("current", "current"), ("thank_you", "thank you")]
+WORDS = [("hello", "hello"), ("thank_you", "thank you")]
 
 
 def write_dzi(source: Path, dest: Path, name: str) -> tuple[int, int]:

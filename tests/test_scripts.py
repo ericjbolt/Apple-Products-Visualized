@@ -104,7 +104,7 @@ def test_timeline_shows_every_product_in_order(monkeypatch):
 def test_cycle_repeats_the_lineup(monkeypatch):
     small_words(monkeypatch)
     current = [p for p in load()["products"] if p["current"]]
-    tiles = render.plan_tiles(render.np.array(render.word_mask("current")), current, "cycle")
+    tiles = render.plan_tiles(render.np.array(render.word_mask("hello")), current, "cycle")
     assert len(tiles) >= len(current)
     assert {id(p) for _, p in tiles} == {id(p) for p in current}
 
@@ -134,6 +134,6 @@ def test_photo_tiles_render(tmp_path, monkeypatch):
     monkeypatch.setattr(render, "photo_path", lambda product: photo)
     render._photo_cache.clear()
     current = [p for p in load()["products"] if p["current"]]
-    image = render.render_word("current", current, "test", mode="cycle")
+    image = render.render_word("hello", current, "test", mode="cycle")
     assert image.width > 0
     render._photo_cache.clear()

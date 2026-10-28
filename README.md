@@ -1,23 +1,23 @@
 # Apple Products Visualized
 
-Two words written in script and filled with Apple products. **current** is filled with everything Apple sells today. **thank you** is filled with every product Apple has retired, from the Apple I in 1976 onward, in release order from left to right.
+Two words written in script and filled with Apple products. **hello** is filled with everything Apple sells today. **thank you** is filled with every product Apple has retired, from the Apple I in 1976 onward, in release order from left to right.
 
 **[Open the zoomable viewer](https://ericjbolt.github.io/Apple-Products-Visualized/)** to scroll or pinch into either word and find individual products, on a computer or a phone.
 
-![current](output/current.png)
+![hello](output/hello.png)
 
 ![thank you](output/thank_you.png)
 
-Full-size images: [current.jpg](output/current.jpg) and [thank_you.jpg](output/thank_you.jpg).
+Full-size images: [hello.jpg](output/hello.jpg) and [thank_you.jpg](output/thank_you.jpg).
 
 ## How it works
 
 1. **The data** lives in [`data/products.json`](data/products.json). Each product has a name, a category, a release month, and a `current` flag that says whether apple.com still sells it new.
 2. **The words** are set in [Pacifico](https://fonts.google.com/specimen/Pacifico), an open-source script font included in `assets/fonts`.
 3. **The tiles** fill each word completely. The script picks a tile size small enough for the letters to stay readable, then fits exactly that many square tiles inside the word with no empty slots.
-4. **The order** follows the word from left to right. In **thank you**, each past product gets a short run of neighboring tiles, oldest first, so the word reads as a timeline. **current** has fewer products than tiles, so the lineup repeats along the word.
+4. **The order** follows the word from left to right. In **thank you**, each past product gets a short run of neighboring tiles, oldest first, so the word reads as a timeline. **hello** has fewer products than tiles, so the lineup repeats along the word.
 5. **The photos** come from Wikimedia Commons, the free media library behind Wikipedia. Each tile shows its product's photo in a frame of its category color. Products without a freely licensed photo show their name on a colored tile instead. Every photo is credited in [CREDITS.md](CREDITS.md).
-6. **The weekly update** runs on GitHub Actions every Tuesday at 3:00 p.m. Pacific time. It checks Wikipedia for new releases, checks apple.com for the current lineup, downloads any missing photos, redraws the images, and opens a pull request for review. When Apple retires a product, it moves from **current** to **thank you** automatically.
+6. **The weekly update** runs on GitHub Actions every Tuesday at 3:00 p.m. Pacific time. It checks Wikipedia for new releases, checks apple.com for the current lineup, downloads any missing photos, redraws the images, and opens a pull request for review. When Apple retires a product, it moves from **hello** to **thank you** automatically.
 
 ### What counts as a product
 
@@ -51,7 +51,7 @@ Open `data/products.json` and add, remove, or correct a product. Then run `pytho
 | `line` | Product family, such as "MacBook Air", used to match apple.com |
 | `category` | One of the legend categories, which sets the tile color |
 | `date` | Announcement or release month, as `YYYY-MM` |
-| `current` | `true` places the product in **current**, `false` in **thank you** |
+| `current` | `true` places the product in **hello**, `false` in **thank you** |
 | `apple_name` | Optional. The exact name apple.com uses, such as "iPhone 17e" |
 | `image_file` | Optional. A specific Wikimedia Commons file to use as the photo, such as "iPhone 4 Black.jpg" |
 | `needs_review` | Added by the update scripts. Check the entry, then delete this field |
