@@ -48,6 +48,8 @@ def test_dataset_is_valid():
     for p in doc["products"]:
         assert product_type(p) in TYPE_TO_GROUP, p
         assert len(p["date"]) == 7 and p["date"][4] == "-", p
+        if not p["current"]:
+            assert p.get("retired", "") >= p["date"], ("past products need a retirement date", p)
 
 
 def test_strip_parser_skips_non_products():
@@ -65,6 +67,8 @@ def test_current_sync_marks_missing_and_adds_new():
     assert "iPhone 17e" not in current
     assert "iPhone 19e" in current
     assert any("New product added: iPhone 19e" in c for c in changes)
+    retired = {p["name"]: p.get("retired") for p in doc["products"]}
+    assert retired["iPhone 17e"] is not None, "a product leaving apple.com gets a retirement date"
 
 
 def test_timeline_parser_adds_only_newer_hardware():
@@ -92,20 +96,23 @@ def test_words_fill_exactly(monkeypatch):
 
 def test_timeline_shows_every_product_in_order(monkeypatch):
     small_words(monkeypatch)
-    past = [p for p in sorted(load()["products"], key=lambda p: p["date"]) if not p["current"]]
+    _, past = render.ordered_products(load()["products"])
     tiles = render.plan_tiles(render.np.array(render.word_mask("thank you")), past, "timeline")
     shown = []
     for _, product in tiles:
         if not shown or shown[-1] is not product:
             shown.append(product)
-    assert shown == past, "each past product appears once, as one run, oldest first"
+    assert shown == past, "each past product appears once, as one run, in retirement order"
+    retired = [p["retired"] for p in shown]
+    assert retired == sorted(retired)
 
 
-def test_cycle_repeats_the_lineup(monkeypatch):
+def test_hello_is_in_introduction_order(monkeypatch):
     small_words(monkeypatch)
-    current = [p for p in load()["products"] if p["current"]]
-    tiles = render.plan_tiles(render.np.array(render.word_mask("hello")), current, "cycle")
-    assert len(tiles) >= len(current)
+    current, _ = render.ordered_products(load()["products"])
+    tiles = render.plan_tiles(render.np.array(render.word_mask("hello")), current, "timeline")
+    dates = [p["date"] for _, p in tiles]
+    assert dates == sorted(dates)
     assert {id(p) for _, p in tiles} == {id(p) for p in current}
 
 

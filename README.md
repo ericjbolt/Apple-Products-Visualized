@@ -2,7 +2,7 @@
 
 [![Support me on Ko-fi](https://img.shields.io/badge/Support%20me%20on-Ko--fi-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/ericbolt)
 
-Two words written in script and filled with Apple products. **hello** is filled with everything Apple sells today. **thank you** is filled with every product Apple has retired, from the Apple I in 1976 onward, in release order from left to right.
+Two words written in script and filled with Apple products. **hello** is filled with everything Apple sells today. **thank you** is filled with every product Apple has retired. Both words read left to right in order: **hello** by introduction date and **thank you** by retirement date.
 
 **[Open the zoomable viewer](https://ericjbolt.github.io/Apple-Products-Visualized/)** to scroll or pinch into either word and find individual products, on a computer or a phone.
 
@@ -17,7 +17,7 @@ Full-size images: [hello.jpg](output/hello.jpg) and [thank_you.jpg](output/thank
 1. **The data** lives in [`data/products.json`](data/products.json). Each product has a name, a category, a release month, and a `current` flag that says whether apple.com still sells it new.
 2. **The words** are set in [Pacifico](https://fonts.google.com/specimen/Pacifico), an open-source script font included in `assets/fonts`.
 3. **The tiles** fill each word completely. The script picks a tile size small enough for the letters to stay readable, then fits exactly that many square tiles inside the word with no empty slots.
-4. **The order** follows the word from left to right. In **thank you**, each past product gets a short run of neighboring tiles, oldest first, so the word reads as a timeline. **hello** has far fewer products than the roughly 1,900 tiles needed for readable letters, so the lineup repeats along the word.
+4. **The order** follows the word from left to right. **hello** lists today's products by introduction date, and **thank you** lists past products by retirement date. Each product gets a short run of neighboring tiles, so the products read in sequence along the word. Retirement dates come from Wikipedia's list of Apple products.
 5. **The photos** come from Wikimedia Commons, the free media library behind Wikipedia. Each tile shows its product's photo in a frame of its category color. Products without a freely licensed photo show their name on a colored tile instead. Every photo is credited in [CREDITS.md](CREDITS.md).
 6. **The weekly update** runs on GitHub Actions every Tuesday at 3:00 p.m. Pacific time. It checks Wikipedia for new releases, checks apple.com for the current lineup, downloads any missing photos, redraws the images, and opens a pull request for review. When Apple retires a product, it moves from **hello** to **thank you** automatically.
 
@@ -69,6 +69,7 @@ Open `data/products.json` and add, remove, or correct a product. Then run `pytho
 | `category` | Broad product category, kept for reference. The legend type and color come from `line` |
 | `date` | Announcement or release month, as `YYYY-MM` |
 | `current` | `true` places the product in **hello**, `false` in **thank you** |
+| `retired` | Month Apple discontinued the product, as `YYYY-MM`. Sets its place in **thank you**. Added automatically when a product leaves apple.com |
 | `apple_name` | Optional. The exact name apple.com uses, such as "iPhone 17e" |
 | `image_file` | Optional. A specific Wikimedia Commons file to use as the photo, such as "iPhone 4 Black.jpg" |
 | `needs_review` | Added by the update scripts. Check the entry, then delete this field |

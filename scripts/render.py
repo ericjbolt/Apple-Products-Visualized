@@ -330,16 +330,29 @@ def year_span(products: list[dict]) -> str:
     return f"{years[0]}–{years[-1]}" if years else ""
 
 
+def ordered_products(products: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Current products by introduction date, past products by retirement date.
+
+    Products from the same month keep the order they have in data/products.json. A past
+    product with no retirement date yet is placed by its introduction date.
+    """
+    current = sorted((p for p in products if p.get("current")), key=lambda p: p["date"])
+    past = sorted((p for p in products if not p.get("current")),
+                  key=lambda p: (p.get("retired", p["date"]), p["date"]))
+    return current, past
+
+
 def main() -> None:
-    products = sorted(load_products()["products"], key=lambda p: p["date"])
-    current = [p for p in products if p.get("current")]
-    past = [p for p in products if not p.get("current")]
+    current, past = ordered_products(load_products()["products"])
     OUTPUT_DIR.mkdir(exist_ok=True)
 
     save(render_word("hello", current,
-                     f"{len(current)} products on apple.com today", mode="cycle"), "hello")
+                     f"{len(current)} products on apple.com today, in order of introduction",
+                     mode="timeline"), "hello")
+    retired_years = sorted(p.get("retired", p["date"])[:4] for p in past)
+    span = f"{retired_years[0]}–{retired_years[-1]}" if retired_years else ""
     save(render_word("thank you", past,
-                     f"{len(past)} past products, {year_span(past)}, oldest first", mode="timeline"),
+                     f"{len(past)} past products, in order of retirement, {span}", mode="timeline"),
          "thank_you")
     print(f"Rendered {len(current)} current and {len(past)} past products.")
 

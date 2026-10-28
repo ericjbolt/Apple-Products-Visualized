@@ -125,6 +125,10 @@ def apply(doc: dict, found: dict[str, str]) -> list[str]:
             after = before and normalize(p["line"]) in line_hits
         if before != after:
             p["current"] = after
+            if after:
+                p.pop("retired", None)
+            else:
+                p["retired"] = date.today().strftime("%Y-%m")  # moves it into "thank you"
             changes.append(("Now current: " if after else "No longer current: ") + p["name"])
 
     # 4. Anything left is either a product another script already added under a
