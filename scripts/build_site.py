@@ -84,6 +84,9 @@ PAGE = """<!doctype html>
   footer { padding: 8px 16px; color: var(--muted); font-size: 12px; border-top: 1px solid #23232d; }
   footer a { color: var(--text); }
   .hint { color: var(--muted); font-size: 13px; }
+  .kofi { color: #fff; background: #ff5e5b; text-decoration: none; font-weight: 600; font-size: 13px;
+    padding: 6px 12px; border-radius: 8px; white-space: nowrap; }
+  .kofi:hover { filter: brightness(1.08); }
 </style>
 </head>
 <body>
@@ -93,12 +96,14 @@ PAGE = """<!doctype html>
     __TABS__
   </div>
   <span class="hint">Scroll or pinch to zoom. Drag to move.</span>
+  <a class="kofi" href="https://ko-fi.com/ericbolt" target="_blank" rel="noopener">Support on Ko-fi</a>
 </header>
 <div id="viewer" role="img" aria-label="Zoomable mosaic of Apple products"></div>
 <footer>
   Unofficial fan project, not affiliated with Apple Inc. Product photos from Wikimedia Commons contributors,
   see <a href="https://github.com/ericjbolt/Apple-Products-Visualized/blob/main/CREDITS.md">credits</a>.
   <a href="https://github.com/ericjbolt/Apple-Products-Visualized">Source on GitHub</a>.
+  <a href="https://ko-fi.com/ericbolt">Support on Ko-fi</a>.
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/openseadragon.min.js"></script>
 <script>

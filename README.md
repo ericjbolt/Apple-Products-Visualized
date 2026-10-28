@@ -1,5 +1,7 @@
 # Apple Products Visualized
 
+[![Support me on Ko-fi](https://img.shields.io/badge/Support%20me%20on-Ko--fi-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/ericbolt)
+
 Two words written in script and filled with Apple products. **hello** is filled with everything Apple sells today. **thank you** is filled with every product Apple has retired, from the Apple I in 1976 onward, in release order from left to right.
 
 **[Open the zoomable viewer](https://ericjbolt.github.io/Apple-Products-Visualized/)** to scroll or pinch into either word and find individual products, on a computer or a phone.
@@ -83,6 +85,10 @@ Apple-Products-Visualized/
 - The apple.com and Wikipedia readers depend on how those pages are built. If either page changes, the script stops without writing anything, and the weekly pull request simply will not appear. The images stay correct either way.
 - The photo script uses the lead photo from each product's Wikipedia article. When an article covers several models, the photo may show a sibling model. To choose a specific photo, add an `image_file` field to that product, delete its file from `assets/photos`, and rerun `python scripts/fetch_images.py`.
 - Only photos licensed CC BY, CC BY-SA, CC0, or public domain are accepted. The script checks each license on Wikimedia Commons before downloading, and it skips logos and screenshots.
+
+## Support this project
+
+If you enjoy this project, you can [buy me a coffee on Ko-fi](https://ko-fi.com/ericbolt). It helps keep the weekly updates running.
 
 ## Disclaimer
 
