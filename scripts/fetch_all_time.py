@@ -25,7 +25,7 @@ from common import fingerprint, load_products, save_products
 
 API = ("https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text"
        "&formatversion=2&page=Timeline_of_Apple_Inc._products")
-HEADERS = {"User-Agent": "apple-fill/1.0 (+https://github.com/ericjbolt/apple-fill)"}
+HEADERS = {"User-Agent": "apple-products-visualized/1.0 (+https://github.com/ericjbolt/Apple-Products-Visualized)"}
 
 ACCESSORIES = re.compile(
     r"keyboard|mouse|trackpad|pencil|cable|adapter|charger|remote|case|cover|band|"

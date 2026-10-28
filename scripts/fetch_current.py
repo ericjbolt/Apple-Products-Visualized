@@ -53,7 +53,7 @@ EXCLUDE = re.compile(
 )
 
 MINIMUM_EXPECTED = 15  # fewer labels than this means the page layout changed
-HEADERS = {"User-Agent": "apple-fill/1.0 (+https://github.com/ericjbolt/apple-fill)"}
+HEADERS = {"User-Agent": "apple-products-visualized/1.0 (+https://github.com/ericjbolt/Apple-Products-Visualized)"}
 
 
 def parse_strip(html: str) -> list[str]:

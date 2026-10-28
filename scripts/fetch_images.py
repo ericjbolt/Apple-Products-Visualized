@@ -37,7 +37,7 @@ WIKI_API = "https://en.wikipedia.org/w/api.php"
 CREDITS_FILE = ROOT / "data" / "photo_credits.json"
 CREDITS_MD = ROOT / "CREDITS.md"
 THUMB_WIDTH = 320
-HEADERS = {"User-Agent": "apple-fill/1.0 (https://github.com/ericjbolt/apple-fill; bolteric@me.com)"}
+HEADERS = {"User-Agent": "apple-products-visualized/1.0 (https://github.com/ericjbolt/Apple-Products-Visualized; bolteric@me.com)"}
 
 FREE_LICENSE = re.compile(r"^(cc[ -]by(-sa)?[ -][\d.]+|cc0|public domain|pd\b)", re.IGNORECASE)
 SKIP_FILE = re.compile(r"logo|icon|wordmark|\.svg$|screenshot|diagram|map\b", re.IGNORECASE)

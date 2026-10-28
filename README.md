@@ -1,4 +1,4 @@
-# Apple Fill
+# Apple Products Visualized
 
 Two words written in script and filled with Apple products. **current** is filled with everything Apple sells today. **thank you** is filled with every product Apple has retired, from the Apple I in 1976 onward, in release order from left to right.
 
@@ -28,8 +28,8 @@ Full-size, zoomable versions: [current.jpg](output/current.jpg) and [thank_you.j
 ## Run it on your Mac
 
 ```bash
-git clone https://github.com/ericjbolt/apple-fill.git
-cd apple-fill
+git clone https://github.com/ericjbolt/Apple-Products-Visualized.git
+cd Apple-Products-Visualized
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
@@ -59,7 +59,7 @@ Open `data/products.json` and add, remove, or correct a product. Then run `pytho
 ## Repository structure
 
 ```
-apple-fill/
+Apple-Products-Visualized/
 ├── data/products.json          the product list
 ├── data/photo_credits.json     author, license, and source for each photo
 ├── scripts/render.py           draws both words
