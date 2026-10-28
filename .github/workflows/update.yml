@@ -41,7 +41,7 @@ jobs:
         run: python scripts/fetch_images.py
 
       - name: Render images
-        run: python scripts/render.py --animate
+        run: python scripts/render.py
 
       - name: Open a pull request with any changes
         uses: peter-evans/create-pull-request@v7

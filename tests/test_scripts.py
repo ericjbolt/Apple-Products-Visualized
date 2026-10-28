@@ -78,17 +78,35 @@ def test_fingerprint_matches_generation_names():
     assert fingerprint("AirPods 5") == fingerprint("AirPods (5th generation)")
 
 
-def test_render_produces_images():
-    products = sorted(load()["products"], key=lambda p: p["date"])
-    image, cells = render.render(products, **render.build_all_time(products))
-    assert len(cells) == len(products), "the apple must be exactly full"
-    assert image.width == render.WIDTH
+def small_words(monkeypatch):
+    """Render at a small size so the tests run quickly."""
+    monkeypatch.setattr(render, "WORD_SIZE", 300)
 
 
-def test_every_count_fills_exactly():
-    mask = render.np.array(render.body_mask(render.SHAPE_SIZE))
-    for count in (1, 7, 32, 100, 251, 400):
-        assert len(render.exact_grid(mask, count)) == count
+def test_words_fill_exactly(monkeypatch):
+    small_words(monkeypatch)
+    mask = render.np.array(render.word_mask("thank you"))
+    for count in (1, 32, 219, 500):
+        assert len(render.exact_grid(mask, count)) == count, "every tile must be inside the word"
+
+
+def test_timeline_shows_every_product_in_order(monkeypatch):
+    small_words(monkeypatch)
+    past = [p for p in sorted(load()["products"], key=lambda p: p["date"]) if not p["current"]]
+    tiles = render.plan_tiles(render.np.array(render.word_mask("thank you")), past, "timeline")
+    shown = []
+    for _, product in tiles:
+        if not shown or shown[-1] is not product:
+            shown.append(product)
+    assert shown == past, "each past product appears once, as one run, oldest first"
+
+
+def test_cycle_repeats_the_lineup(monkeypatch):
+    small_words(monkeypatch)
+    current = [p for p in load()["products"] if p["current"]]
+    tiles = render.plan_tiles(render.np.array(render.word_mask("current")), current, "cycle")
+    assert len(tiles) >= len(current)
+    assert {id(p) for _, p in tiles} == {id(p) for p in current}
 
 
 def test_only_free_licenses_are_accepted():
@@ -110,11 +128,12 @@ def test_title_candidates_drop_alternates_and_details():
 
 def test_photo_tiles_render(tmp_path, monkeypatch):
     from PIL import Image
+    small_words(monkeypatch)
     photo = tmp_path / "photo.jpg"
     Image.new("RGB", (64, 40), (90, 90, 90)).save(photo)
     monkeypatch.setattr(render, "photo_path", lambda product: photo)
     render._photo_cache.clear()
     current = [p for p in load()["products"] if p["current"]]
-    image, cells = render.render(current, **render.build_current(current))
-    assert len(cells) == len(current)
+    image = render.render_word("current", current, "test", mode="cycle")
+    assert image.width > 0
     render._photo_cache.clear()
