@@ -1,0 +1,54 @@
+name: Weekly product update
+
+on:
+  schedule:
+    - cron: "17 14 * * 1"   # Mondays at 14:17 UTC (7:17 a.m. Pacific daylight time)
+  workflow_dispatch:         # adds a "Run workflow" button on the Actions tab
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install fonts and Python packages
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-inter
+          pip install -r requirements.txt pytest
+
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Check Wikipedia for new releases
+        continue-on-error: true
+        run: python scripts/fetch_all_time.py
+
+      - name: Sync the current lineup with apple.com
+        continue-on-error: true
+        run: python scripts/fetch_current.py
+
+      - name: Render images
+        run: python scripts/render.py --animate
+
+      - name: Open a pull request with any changes
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: auto/weekly-update
+          delete-branch: true
+          commit-message: "Weekly product update"
+          title: "Weekly product update"
+          body: |
+            Automated weekly refresh from apple.com and Wikipedia.
+
+            Before merging, open `data/products.json` and check any product marked
+            `"needs_review": true` (name, category, and date). Remove that flag once checked.
+            The job summary on the Actions tab lists every change.

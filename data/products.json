@@ -1,0 +1,1794 @@
+{
+  "updated": "2026-10-27",
+  "note": "Dates are the announcement or release month. 'current' means sold new on apple.com.",
+  "products": [
+    {
+      "name": "Apple I",
+      "line": "Apple I",
+      "category": "Apple I & II",
+      "date": "1976-07",
+      "current": false
+    },
+    {
+      "name": "Apple II",
+      "line": "Apple II",
+      "category": "Apple I & II",
+      "date": "1977-06",
+      "current": false
+    },
+    {
+      "name": "Apple II Plus",
+      "line": "Apple II",
+      "category": "Apple I & II",
+      "date": "1979-06",
+      "current": false
+    },
+    {
+      "name": "Apple III",
+      "line": "Apple III",
+      "category": "Apple I & II",
+      "date": "1980-05",
+      "current": false
+    },
+    {
+      "name": "Apple IIe",
+      "line": "Apple II",
+      "category": "Apple I & II",
+      "date": "1983-01",
+      "current": false
+    },
+    {
+      "name": "Lisa",
+      "line": "Lisa",
+      "category": "Apple I & II",
+      "date": "1983-01",
+      "current": false
+    },
+    {
+      "name": "Macintosh 128K",
+      "line": "Macintosh",
+      "category": "Mac",
+      "date": "1984-01",
+      "current": false
+    },
+    {
+      "name": "Apple IIc",
+      "line": "Apple II",
+      "category": "Apple I & II",
+      "date": "1984-04",
+      "current": false
+    },
+    {
+      "name": "Macintosh 512K",
+      "line": "Macintosh",
+      "category": "Mac",
+      "date": "1984-09",
+      "current": false
+    },
+    {
+      "name": "LaserWriter",
+      "line": "LaserWriter",
+      "category": "Other",
+      "date": "1985-03",
+      "current": false
+    },
+    {
+      "name": "Macintosh Plus",
+      "line": "Macintosh",
+      "category": "Mac",
+      "date": "1986-01",
+      "current": false
+    },
+    {
+      "name": "Apple IIGS",
+      "line": "Apple II",
+      "category": "Apple I & II",
+      "date": "1986-09",
+      "current": false
+    },
+    {
+      "name": "Macintosh SE",
+      "line": "Macintosh",
+      "category": "Mac",
+      "date": "1987-03",
+      "current": false
+    },
+    {
+      "name": "Macintosh II",
+      "line": "Macintosh",
+      "category": "Mac",
+      "date": "1987-03",
+      "current": false
+    },
+    {
+      "name": "Macintosh IIx",
+      "line": "Macintosh",
+      "category": "Mac",
+      "date": "1988-09",
+      "current": false
+    },
+    {
+      "name": "Apple IIc Plus",
+      "line": "Apple II",
+      "category": "Apple I & II",
+      "date": "1988-09",
+      "current": false
+    },
+    {
+      "name": "Macintosh SE/30",
+      "line": "Macintosh",
+      "category": "Mac",
+      "date": "1989-01",
+      "current": false
+    },
+    {
+      "name": "Macintosh Portable",
+      "line": "Macintosh Portable",
+      "category": "Mac",
+      "date": "1989-09",
+      "current": false
+    },
+    {
+      "name": "Macintosh IIci",
+      "line": "Macintosh",
+      "category": "Mac",
+      "date": "1989-09",
+      "current": false
+    },
+    {
+      "name": "Macintosh IIfx",
+      "line": "Macintosh",
+      "category": "Mac",
+      "date": "1990-03",
+      "current": false
+    },
+    {
+      "name": "Macintosh Classic",
+      "line": "Macintosh",
+      "category": "Mac",
+      "date": "1990-10",
+      "current": false
+    },
+    {
+      "name": "Macintosh LC",
+      "line": "Macintosh",
+      "category": "Mac",
+      "date": "1990-10",
+      "current": false
+    },
+    {
+      "name": "Macintosh IIsi",
+      "line": "Macintosh",
+      "category": "Mac",
+      "date": "1990-10",
+      "current": false
+    },
+    {
+      "name": "PowerBook 100",
+      "line": "PowerBook",
+      "category": "Mac",
+      "date": "1991-10",
+      "current": false
+    },
+    {
+      "name": "PowerBook 170",
+      "line": "PowerBook",
+      "category": "Mac",
+      "date": "1991-10",
+      "current": false
+    },
+    {
+      "name": "Macintosh Quadra 700",
+      "line": "Quadra",
+      "category": "Mac",
+      "date": "1991-10",
+      "current": false
+    },
+    {
+      "name": "Macintosh Classic II",
+      "line": "Macintosh",
+      "category": "Mac",
+      "date": "1991-10",
+      "current": false
+    },
+    {
+      "name": "PowerBook Duo 210",
+      "line": "PowerBook",
+      "category": "Mac",
+      "date": "1992-10",
+      "current": false
+    },
+    {
+      "name": "Macintosh Color Classic",
+      "line": "Macintosh",
+      "category": "Mac",
+      "date": "1993-02",
+      "current": false
+    },
+    {
+      "name": "Macintosh LC III",
+      "line": "Macintosh",
+      "category": "Mac",
+      "date": "1993-02",
+      "current": false
+    },
+    {
+      "name": "Macintosh Centris 650",
+      "line": "Centris",
+      "category": "Mac",
+      "date": "1993-02",
+      "current": false
+    },
+    {
+      "name": "Macintosh Quadra 840AV",
+      "line": "Quadra",
+      "category": "Mac",
+      "date": "1993-07",
+      "current": false
+    },
+    {
+      "name": "Newton MessagePad",
+      "line": "Newton",
+      "category": "Other",
+      "date": "1993-08",
+      "current": false
+    },
+    {
+      "name": "QuickTake 100",
+      "line": "QuickTake",
+      "category": "Other",
+      "date": "1994-02",
+      "current": false
+    },
+    {
+      "name": "Power Macintosh 6100",
+      "line": "Power Macintosh",
+      "category": "Mac",
+      "date": "1994-03",
+      "current": false
+    },
+    {
+      "name": "PowerBook 500 series",
+      "line": "PowerBook",
+      "category": "Mac",
+      "date": "1994-05",
+      "current": false
+    },
+    {
+      "name": "Power Macintosh 9500",
+      "line": "Power Macintosh",
+      "category": "Mac",
+      "date": "1995-06",
+      "current": false
+    },
+    {
+      "name": "PowerBook 5300",
+      "line": "PowerBook",
+      "category": "Mac",
+      "date": "1995-08",
+      "current": false
+    },
+    {
+      "name": "Pippin",
+      "line": "Pippin",
+      "category": "Other",
+      "date": "1996-03",
+      "current": false
+    },
+    {
+      "name": "PowerBook 3400",
+      "line": "PowerBook",
+      "category": "Mac",
+      "date": "1997-02",
+      "current": false
+    },
+    {
+      "name": "Twentieth Anniversary Macintosh",
+      "line": "Macintosh",
+      "category": "Mac",
+      "date": "1997-03",
+      "current": false
+    },
+    {
+      "name": "eMate 300",
+      "line": "eMate",
+      "category": "Other",
+      "date": "1997-03",
+      "current": false
+    },
+    {
+      "name": "Power Macintosh G3",
+      "line": "Power Macintosh",
+      "category": "Mac",
+      "date": "1997-11",
+      "current": false
+    },
+    {
+      "name": "PowerBook G3",
+      "line": "PowerBook",
+      "category": "Mac",
+      "date": "1997-11",
+      "current": false
+    },
+    {
+      "name": "iMac G3",
+      "line": "iMac",
+      "category": "Mac",
+      "date": "1998-08",
+      "current": false
+    },
+    {
+      "name": "iBook",
+      "line": "iBook",
+      "category": "Mac",
+      "date": "1999-07",
+      "current": false
+    },
+    {
+      "name": "AirPort Base Station",
+      "line": "AirPort",
+      "category": "Home & TV",
+      "date": "1999-07",
+      "current": false
+    },
+    {
+      "name": "Apple Cinema Display",
+      "line": "Cinema Display",
+      "category": "Display",
+      "date": "1999-07",
+      "current": false
+    },
+    {
+      "name": "Power Mac G4",
+      "line": "Power Mac",
+      "category": "Mac",
+      "date": "1999-08",
+      "current": false
+    },
+    {
+      "name": "iMac DV",
+      "line": "iMac",
+      "category": "Mac",
+      "date": "1999-10",
+      "current": false
+    },
+    {
+      "name": "Power Mac G4 Cube",
+      "line": "Power Mac",
+      "category": "Mac",
+      "date": "2000-07",
+      "current": false
+    },
+    {
+      "name": "PowerBook G4",
+      "line": "PowerBook",
+      "category": "Mac",
+      "date": "2001-01",
+      "current": false
+    },
+    {
+      "name": "iBook (Dual USB)",
+      "line": "iBook",
+      "category": "Mac",
+      "date": "2001-05",
+      "current": false
+    },
+    {
+      "name": "iPod",
+      "line": "iPod",
+      "category": "iPod & Music",
+      "date": "2001-10",
+      "current": false
+    },
+    {
+      "name": "iMac G4",
+      "line": "iMac",
+      "category": "Mac",
+      "date": "2002-01",
+      "current": false
+    },
+    {
+      "name": "eMac",
+      "line": "eMac",
+      "category": "Mac",
+      "date": "2002-04",
+      "current": false
+    },
+    {
+      "name": "Xserve",
+      "line": "Xserve",
+      "category": "Mac",
+      "date": "2002-05",
+      "current": false
+    },
+    {
+      "name": "iPod (2nd generation)",
+      "line": "iPod",
+      "category": "iPod & Music",
+      "date": "2002-07",
+      "current": false
+    },
+    {
+      "name": "AirPort Extreme",
+      "line": "AirPort",
+      "category": "Home & TV",
+      "date": "2003-01",
+      "current": false
+    },
+    {
+      "name": "iPod (3rd generation)",
+      "line": "iPod",
+      "category": "iPod & Music",
+      "date": "2003-04",
+      "current": false
+    },
+    {
+      "name": "Power Mac G5",
+      "line": "Power Mac",
+      "category": "Mac",
+      "date": "2003-06",
+      "current": false
+    },
+    {
+      "name": "iSight",
+      "line": "iSight",
+      "category": "Other",
+      "date": "2003-06",
+      "current": false
+    },
+    {
+      "name": "iBook G4",
+      "line": "iBook",
+      "category": "Mac",
+      "date": "2003-10",
+      "current": false
+    },
+    {
+      "name": "iPod mini",
+      "line": "iPod mini",
+      "category": "iPod & Music",
+      "date": "2004-01",
+      "current": false
+    },
+    {
+      "name": "AirPort Express",
+      "line": "AirPort",
+      "category": "Home & TV",
+      "date": "2004-06",
+      "current": false
+    },
+    {
+      "name": "Apple Cinema HD Display (30-inch)",
+      "line": "Cinema Display",
+      "category": "Display",
+      "date": "2004-06",
+      "current": false
+    },
+    {
+      "name": "iPod (4th generation)",
+      "line": "iPod",
+      "category": "iPod & Music",
+      "date": "2004-07",
+      "current": false
+    },
+    {
+      "name": "iMac G5",
+      "line": "iMac",
+      "category": "Mac",
+      "date": "2004-08",
+      "current": false
+    },
+    {
+      "name": "iPod photo",
+      "line": "iPod",
+      "category": "iPod & Music",
+      "date": "2004-10",
+      "current": false
+    },
+    {
+      "name": "Mac mini",
+      "line": "Mac mini",
+      "category": "Mac",
+      "date": "2005-01",
+      "current": false
+    },
+    {
+      "name": "iPod shuffle",
+      "line": "iPod shuffle",
+      "category": "iPod & Music",
+      "date": "2005-01",
+      "current": false
+    },
+    {
+      "name": "iPod nano",
+      "line": "iPod nano",
+      "category": "iPod & Music",
+      "date": "2005-09",
+      "current": false
+    },
+    {
+      "name": "iPod (5th generation, video)",
+      "line": "iPod",
+      "category": "iPod & Music",
+      "date": "2005-10",
+      "current": false
+    },
+    {
+      "name": "iMac (Intel)",
+      "line": "iMac",
+      "category": "Mac",
+      "date": "2006-01",
+      "current": false
+    },
+    {
+      "name": "MacBook Pro",
+      "line": "MacBook Pro",
+      "category": "Mac",
+      "date": "2006-01",
+      "current": false
+    },
+    {
+      "name": "iPod Hi-Fi",
+      "line": "iPod Hi-Fi",
+      "category": "iPod & Music",
+      "date": "2006-02",
+      "current": false
+    },
+    {
+      "name": "MacBook",
+      "line": "MacBook",
+      "category": "Mac",
+      "date": "2006-05",
+      "current": false
+    },
+    {
+      "name": "Mac Pro",
+      "line": "Mac Pro",
+      "category": "Mac",
+      "date": "2006-08",
+      "current": false
+    },
+    {
+      "name": "iPod shuffle (2nd generation)",
+      "line": "iPod shuffle",
+      "category": "iPod & Music",
+      "date": "2006-09",
+      "current": false
+    },
+    {
+      "name": "Apple TV",
+      "line": "Apple TV",
+      "category": "Home & TV",
+      "date": "2007-03",
+      "current": false
+    },
+    {
+      "name": "iPhone",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2007-06",
+      "current": false
+    },
+    {
+      "name": "iPod classic",
+      "line": "iPod classic",
+      "category": "iPod & Music",
+      "date": "2007-09",
+      "current": false
+    },
+    {
+      "name": "iPod touch",
+      "line": "iPod touch",
+      "category": "iPod & Music",
+      "date": "2007-09",
+      "current": false
+    },
+    {
+      "name": "iPod nano (3rd generation)",
+      "line": "iPod nano",
+      "category": "iPod & Music",
+      "date": "2007-09",
+      "current": false
+    },
+    {
+      "name": "MacBook Air",
+      "line": "MacBook Air",
+      "category": "Mac",
+      "date": "2008-01",
+      "current": false
+    },
+    {
+      "name": "Time Capsule",
+      "line": "AirPort",
+      "category": "Home & TV",
+      "date": "2008-02",
+      "current": false
+    },
+    {
+      "name": "iPhone 3G",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2008-07",
+      "current": false
+    },
+    {
+      "name": "iPod nano (4th generation)",
+      "line": "iPod nano",
+      "category": "iPod & Music",
+      "date": "2008-09",
+      "current": false
+    },
+    {
+      "name": "iPod touch (2nd generation)",
+      "line": "iPod touch",
+      "category": "iPod & Music",
+      "date": "2008-09",
+      "current": false
+    },
+    {
+      "name": "MacBook Pro (Unibody)",
+      "line": "MacBook Pro",
+      "category": "Mac",
+      "date": "2008-10",
+      "current": false
+    },
+    {
+      "name": "LED Cinema Display",
+      "line": "Cinema Display",
+      "category": "Display",
+      "date": "2008-10",
+      "current": false
+    },
+    {
+      "name": "iPod shuffle (3rd generation)",
+      "line": "iPod shuffle",
+      "category": "iPod & Music",
+      "date": "2009-03",
+      "current": false
+    },
+    {
+      "name": "iPhone 3GS",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2009-06",
+      "current": false
+    },
+    {
+      "name": "iPod nano (5th generation)",
+      "line": "iPod nano",
+      "category": "iPod & Music",
+      "date": "2009-09",
+      "current": false
+    },
+    {
+      "name": "iPad",
+      "line": "iPad",
+      "category": "iPad",
+      "date": "2010-04",
+      "current": false
+    },
+    {
+      "name": "iPhone 4",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2010-06",
+      "current": false
+    },
+    {
+      "name": "Apple TV (2nd generation)",
+      "line": "Apple TV",
+      "category": "Home & TV",
+      "date": "2010-09",
+      "current": false
+    },
+    {
+      "name": "iPod nano (6th generation)",
+      "line": "iPod nano",
+      "category": "iPod & Music",
+      "date": "2010-09",
+      "current": false
+    },
+    {
+      "name": "iPod touch (4th generation)",
+      "line": "iPod touch",
+      "category": "iPod & Music",
+      "date": "2010-09",
+      "current": false
+    },
+    {
+      "name": "iPad 2",
+      "line": "iPad",
+      "category": "iPad",
+      "date": "2011-03",
+      "current": false
+    },
+    {
+      "name": "Thunderbolt Display",
+      "line": "Thunderbolt Display",
+      "category": "Display",
+      "date": "2011-07",
+      "current": false
+    },
+    {
+      "name": "iPhone 4s",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2011-10",
+      "current": false
+    },
+    {
+      "name": "iPad (3rd generation)",
+      "line": "iPad",
+      "category": "iPad",
+      "date": "2012-03",
+      "current": false
+    },
+    {
+      "name": "Apple TV (3rd generation)",
+      "line": "Apple TV",
+      "category": "Home & TV",
+      "date": "2012-03",
+      "current": false
+    },
+    {
+      "name": "iPhone 5",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2012-09",
+      "current": false
+    },
+    {
+      "name": "iPod touch (5th generation)",
+      "line": "iPod touch",
+      "category": "iPod & Music",
+      "date": "2012-10",
+      "current": false
+    },
+    {
+      "name": "iPod nano (7th generation)",
+      "line": "iPod nano",
+      "category": "iPod & Music",
+      "date": "2012-10",
+      "current": false
+    },
+    {
+      "name": "iPad (4th generation)",
+      "line": "iPad",
+      "category": "iPad",
+      "date": "2012-11",
+      "current": false
+    },
+    {
+      "name": "iPad mini",
+      "line": "iPad mini",
+      "category": "iPad",
+      "date": "2012-11",
+      "current": false
+    },
+    {
+      "name": "iPhone 5c",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2013-09",
+      "current": false
+    },
+    {
+      "name": "iPhone 5s",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2013-09",
+      "current": false
+    },
+    {
+      "name": "iPad Air",
+      "line": "iPad Air",
+      "category": "iPad",
+      "date": "2013-11",
+      "current": false
+    },
+    {
+      "name": "iPad mini 2",
+      "line": "iPad mini",
+      "category": "iPad",
+      "date": "2013-11",
+      "current": false
+    },
+    {
+      "name": "Mac Pro (2013)",
+      "line": "Mac Pro",
+      "category": "Mac",
+      "date": "2013-12",
+      "current": false
+    },
+    {
+      "name": "iPhone 6 / 6 Plus",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2014-09",
+      "current": false
+    },
+    {
+      "name": "iPad Air 2",
+      "line": "iPad Air",
+      "category": "iPad",
+      "date": "2014-10",
+      "current": false
+    },
+    {
+      "name": "iPad mini 3",
+      "line": "iPad mini",
+      "category": "iPad",
+      "date": "2014-10",
+      "current": false
+    },
+    {
+      "name": "iMac with Retina 5K display",
+      "line": "iMac",
+      "category": "Mac",
+      "date": "2014-10",
+      "current": false
+    },
+    {
+      "name": "Apple Watch",
+      "line": "Apple Watch",
+      "category": "Watch",
+      "date": "2015-04",
+      "current": false
+    },
+    {
+      "name": "MacBook (12-inch)",
+      "line": "MacBook",
+      "category": "Mac",
+      "date": "2015-04",
+      "current": false
+    },
+    {
+      "name": "iPod touch (6th generation)",
+      "line": "iPod touch",
+      "category": "iPod & Music",
+      "date": "2015-07",
+      "current": false
+    },
+    {
+      "name": "iPhone 6s / 6s Plus",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2015-09",
+      "current": false
+    },
+    {
+      "name": "iPad mini 4",
+      "line": "iPad mini",
+      "category": "iPad",
+      "date": "2015-09",
+      "current": false
+    },
+    {
+      "name": "Apple TV HD",
+      "line": "Apple TV",
+      "category": "Home & TV",
+      "date": "2015-10",
+      "current": false
+    },
+    {
+      "name": "iPad Pro (12.9-inch)",
+      "line": "iPad Pro",
+      "category": "iPad",
+      "date": "2015-11",
+      "current": false
+    },
+    {
+      "name": "iPhone SE",
+      "line": "iPhone SE",
+      "category": "iPhone",
+      "date": "2016-03",
+      "current": false
+    },
+    {
+      "name": "iPad Pro (9.7-inch)",
+      "line": "iPad Pro",
+      "category": "iPad",
+      "date": "2016-03",
+      "current": false
+    },
+    {
+      "name": "iPhone 7 / 7 Plus",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2016-09",
+      "current": false
+    },
+    {
+      "name": "Apple Watch Series 1 and Series 2",
+      "line": "Apple Watch",
+      "category": "Watch",
+      "date": "2016-09",
+      "current": false
+    },
+    {
+      "name": "MacBook Pro (Touch Bar)",
+      "line": "MacBook Pro",
+      "category": "Mac",
+      "date": "2016-10",
+      "current": false
+    },
+    {
+      "name": "AirPods",
+      "line": "AirPods",
+      "category": "AirPods",
+      "date": "2016-12",
+      "current": false
+    },
+    {
+      "name": "iPad (5th generation)",
+      "line": "iPad",
+      "category": "iPad",
+      "date": "2017-03",
+      "current": false
+    },
+    {
+      "name": "iPad Pro (10.5-inch)",
+      "line": "iPad Pro",
+      "category": "iPad",
+      "date": "2017-06",
+      "current": false
+    },
+    {
+      "name": "iPhone 8 / 8 Plus",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2017-09",
+      "current": false
+    },
+    {
+      "name": "Apple Watch Series 3",
+      "line": "Apple Watch",
+      "category": "Watch",
+      "date": "2017-09",
+      "current": false
+    },
+    {
+      "name": "Apple TV 4K",
+      "line": "Apple TV",
+      "category": "Home & TV",
+      "date": "2017-09",
+      "current": false
+    },
+    {
+      "name": "iPhone X",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2017-11",
+      "current": false
+    },
+    {
+      "name": "iMac Pro",
+      "line": "iMac Pro",
+      "category": "Mac",
+      "date": "2017-12",
+      "current": false
+    },
+    {
+      "name": "HomePod",
+      "line": "HomePod",
+      "category": "Home & TV",
+      "date": "2018-02",
+      "current": false
+    },
+    {
+      "name": "iPad (6th generation)",
+      "line": "iPad",
+      "category": "iPad",
+      "date": "2018-03",
+      "current": false
+    },
+    {
+      "name": "iPhone XS / XS Max",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2018-09",
+      "current": false
+    },
+    {
+      "name": "Apple Watch Series 4",
+      "line": "Apple Watch",
+      "category": "Watch",
+      "date": "2018-09",
+      "current": false
+    },
+    {
+      "name": "iPhone XR",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2018-10",
+      "current": false
+    },
+    {
+      "name": "iPad Pro (3rd generation)",
+      "line": "iPad Pro",
+      "category": "iPad",
+      "date": "2018-11",
+      "current": false
+    },
+    {
+      "name": "iPad Air (3rd generation)",
+      "line": "iPad Air",
+      "category": "iPad",
+      "date": "2019-03",
+      "current": false
+    },
+    {
+      "name": "iPad mini (5th generation)",
+      "line": "iPad mini",
+      "category": "iPad",
+      "date": "2019-03",
+      "current": false
+    },
+    {
+      "name": "AirPods (2nd generation)",
+      "line": "AirPods",
+      "category": "AirPods",
+      "date": "2019-03",
+      "current": false
+    },
+    {
+      "name": "iPod touch (7th generation)",
+      "line": "iPod touch",
+      "category": "iPod & Music",
+      "date": "2019-05",
+      "current": false
+    },
+    {
+      "name": "iPhone 11",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2019-09",
+      "current": false
+    },
+    {
+      "name": "iPhone 11 Pro / Pro Max",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2019-09",
+      "current": false
+    },
+    {
+      "name": "Apple Watch Series 5",
+      "line": "Apple Watch",
+      "category": "Watch",
+      "date": "2019-09",
+      "current": false
+    },
+    {
+      "name": "iPad (7th generation)",
+      "line": "iPad",
+      "category": "iPad",
+      "date": "2019-09",
+      "current": false
+    },
+    {
+      "name": "AirPods Pro",
+      "line": "AirPods Pro",
+      "category": "AirPods",
+      "date": "2019-10",
+      "current": false
+    },
+    {
+      "name": "Mac Pro (2019)",
+      "line": "Mac Pro",
+      "category": "Mac",
+      "date": "2019-12",
+      "current": false
+    },
+    {
+      "name": "Pro Display XDR",
+      "line": "Pro Display XDR",
+      "category": "Display",
+      "date": "2019-12",
+      "current": false
+    },
+    {
+      "name": "iPad Pro (4th generation)",
+      "line": "iPad Pro",
+      "category": "iPad",
+      "date": "2020-03",
+      "current": false
+    },
+    {
+      "name": "iPhone SE (2nd generation)",
+      "line": "iPhone SE",
+      "category": "iPhone",
+      "date": "2020-04",
+      "current": false
+    },
+    {
+      "name": "Apple Watch Series 6",
+      "line": "Apple Watch",
+      "category": "Watch",
+      "date": "2020-09",
+      "current": false
+    },
+    {
+      "name": "Apple Watch SE",
+      "line": "Apple Watch SE",
+      "category": "Watch",
+      "date": "2020-09",
+      "current": false
+    },
+    {
+      "name": "iPad (8th generation)",
+      "line": "iPad",
+      "category": "iPad",
+      "date": "2020-09",
+      "current": false
+    },
+    {
+      "name": "iPad Air (4th generation)",
+      "line": "iPad Air",
+      "category": "iPad",
+      "date": "2020-10",
+      "current": false
+    },
+    {
+      "name": "iPhone 12 / 12 mini",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2020-10",
+      "current": false
+    },
+    {
+      "name": "iPhone 12 Pro / Pro Max",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2020-10",
+      "current": false
+    },
+    {
+      "name": "HomePod mini",
+      "line": "HomePod mini",
+      "category": "Home & TV",
+      "date": "2020-11",
+      "current": false
+    },
+    {
+      "name": "MacBook Air (M1)",
+      "line": "MacBook Air",
+      "category": "Mac",
+      "date": "2020-11",
+      "current": false
+    },
+    {
+      "name": "MacBook Pro 13-inch (M1)",
+      "line": "MacBook Pro",
+      "category": "Mac",
+      "date": "2020-11",
+      "current": false
+    },
+    {
+      "name": "Mac mini (M1)",
+      "line": "Mac mini",
+      "category": "Mac",
+      "date": "2020-11",
+      "current": false
+    },
+    {
+      "name": "AirPods Max",
+      "line": "AirPods Max",
+      "category": "AirPods",
+      "date": "2020-12",
+      "current": false
+    },
+    {
+      "name": "AirTag",
+      "line": "AirTag",
+      "category": "Other",
+      "date": "2021-04",
+      "current": false
+    },
+    {
+      "name": "iMac 24-inch (M1)",
+      "line": "iMac",
+      "category": "Mac",
+      "date": "2021-05",
+      "current": false
+    },
+    {
+      "name": "iPad Pro (M1)",
+      "line": "iPad Pro",
+      "category": "iPad",
+      "date": "2021-05",
+      "current": false
+    },
+    {
+      "name": "Apple TV 4K (2nd generation)",
+      "line": "Apple TV",
+      "category": "Home & TV",
+      "date": "2021-05",
+      "current": false
+    },
+    {
+      "name": "iPhone 13 / 13 mini",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2021-09",
+      "current": false
+    },
+    {
+      "name": "iPhone 13 Pro / Pro Max",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2021-09",
+      "current": false
+    },
+    {
+      "name": "iPad (9th generation)",
+      "line": "iPad",
+      "category": "iPad",
+      "date": "2021-09",
+      "current": false
+    },
+    {
+      "name": "iPad mini (6th generation)",
+      "line": "iPad mini",
+      "category": "iPad",
+      "date": "2021-09",
+      "current": false
+    },
+    {
+      "name": "Apple Watch Series 7",
+      "line": "Apple Watch",
+      "category": "Watch",
+      "date": "2021-10",
+      "current": false
+    },
+    {
+      "name": "AirPods (3rd generation)",
+      "line": "AirPods",
+      "category": "AirPods",
+      "date": "2021-10",
+      "current": false
+    },
+    {
+      "name": "MacBook Pro 14 / 16-inch (M1 Pro, M1 Max)",
+      "line": "MacBook Pro",
+      "category": "Mac",
+      "date": "2021-10",
+      "current": false
+    },
+    {
+      "name": "Mac Studio",
+      "line": "Mac Studio",
+      "category": "Mac",
+      "date": "2022-03",
+      "current": false
+    },
+    {
+      "name": "Studio Display",
+      "line": "Studio Display",
+      "category": "Display",
+      "date": "2022-03",
+      "current": false
+    },
+    {
+      "name": "iPhone SE (3rd generation)",
+      "line": "iPhone SE",
+      "category": "iPhone",
+      "date": "2022-03",
+      "current": false
+    },
+    {
+      "name": "iPad Air (5th generation)",
+      "line": "iPad Air",
+      "category": "iPad",
+      "date": "2022-03",
+      "current": false
+    },
+    {
+      "name": "MacBook Air (M2)",
+      "line": "MacBook Air",
+      "category": "Mac",
+      "date": "2022-07",
+      "current": false
+    },
+    {
+      "name": "iPhone 14 / 14 Plus",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2022-09",
+      "current": false
+    },
+    {
+      "name": "iPhone 14 Pro / Pro Max",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2022-09",
+      "current": false
+    },
+    {
+      "name": "Apple Watch Series 8",
+      "line": "Apple Watch",
+      "category": "Watch",
+      "date": "2022-09",
+      "current": false
+    },
+    {
+      "name": "Apple Watch Ultra",
+      "line": "Apple Watch Ultra",
+      "category": "Watch",
+      "date": "2022-09",
+      "current": false
+    },
+    {
+      "name": "Apple Watch SE (2nd generation)",
+      "line": "Apple Watch SE",
+      "category": "Watch",
+      "date": "2022-09",
+      "current": false
+    },
+    {
+      "name": "AirPods Pro (2nd generation)",
+      "line": "AirPods Pro",
+      "category": "AirPods",
+      "date": "2022-09",
+      "current": false
+    },
+    {
+      "name": "iPad (10th generation)",
+      "line": "iPad",
+      "category": "iPad",
+      "date": "2022-10",
+      "current": false
+    },
+    {
+      "name": "iPad Pro (M2)",
+      "line": "iPad Pro",
+      "category": "iPad",
+      "date": "2022-10",
+      "current": false
+    },
+    {
+      "name": "Apple TV 4K (3rd generation)",
+      "line": "Apple TV",
+      "category": "Home & TV",
+      "date": "2022-11",
+      "current": false
+    },
+    {
+      "name": "MacBook Pro 14 / 16-inch (M2 Pro, M2 Max)",
+      "line": "MacBook Pro",
+      "category": "Mac",
+      "date": "2023-01",
+      "current": false
+    },
+    {
+      "name": "Mac mini (M2)",
+      "line": "Mac mini",
+      "category": "Mac",
+      "date": "2023-01",
+      "current": false
+    },
+    {
+      "name": "HomePod (2nd generation)",
+      "line": "HomePod",
+      "category": "Home & TV",
+      "date": "2023-02",
+      "current": true,
+      "apple_name": "HomePod"
+    },
+    {
+      "name": "MacBook Air 15-inch (M2)",
+      "line": "MacBook Air",
+      "category": "Mac",
+      "date": "2023-06",
+      "current": false
+    },
+    {
+      "name": "Mac Studio (M2)",
+      "line": "Mac Studio",
+      "category": "Mac",
+      "date": "2023-06",
+      "current": false
+    },
+    {
+      "name": "Mac Pro (M2 Ultra)",
+      "line": "Mac Pro",
+      "category": "Mac",
+      "date": "2023-06",
+      "current": true,
+      "apple_name": "Mac Pro"
+    },
+    {
+      "name": "iPhone 15 / 15 Plus",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2023-09",
+      "current": false
+    },
+    {
+      "name": "iPhone 15 Pro / Pro Max",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2023-09",
+      "current": false
+    },
+    {
+      "name": "Apple Watch Series 9",
+      "line": "Apple Watch",
+      "category": "Watch",
+      "date": "2023-09",
+      "current": false
+    },
+    {
+      "name": "Apple Watch Ultra 2",
+      "line": "Apple Watch Ultra",
+      "category": "Watch",
+      "date": "2023-09",
+      "current": false
+    },
+    {
+      "name": "MacBook Pro (M3)",
+      "line": "MacBook Pro",
+      "category": "Mac",
+      "date": "2023-11",
+      "current": false
+    },
+    {
+      "name": "iMac (M3)",
+      "line": "iMac",
+      "category": "Mac",
+      "date": "2023-11",
+      "current": false
+    },
+    {
+      "name": "Apple Vision Pro",
+      "line": "Apple Vision Pro",
+      "category": "Vision",
+      "date": "2024-02",
+      "current": false
+    },
+    {
+      "name": "MacBook Air (M3)",
+      "line": "MacBook Air",
+      "category": "Mac",
+      "date": "2024-03",
+      "current": false
+    },
+    {
+      "name": "iPad Air (M2)",
+      "line": "iPad Air",
+      "category": "iPad",
+      "date": "2024-05",
+      "current": false
+    },
+    {
+      "name": "iPad Pro (M4)",
+      "line": "iPad Pro",
+      "category": "iPad",
+      "date": "2024-05",
+      "current": false
+    },
+    {
+      "name": "iPhone 16 / 16 Plus",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2024-09",
+      "current": true,
+      "apple_name": "iPhone 16"
+    },
+    {
+      "name": "iPhone 16 Pro / Pro Max",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2024-09",
+      "current": false
+    },
+    {
+      "name": "Apple Watch Series 10",
+      "line": "Apple Watch",
+      "category": "Watch",
+      "date": "2024-09",
+      "current": false
+    },
+    {
+      "name": "AirPods 4",
+      "line": "AirPods",
+      "category": "AirPods",
+      "date": "2024-09",
+      "current": false
+    },
+    {
+      "name": "iPad mini (A17 Pro)",
+      "line": "iPad mini",
+      "category": "iPad",
+      "date": "2024-10",
+      "current": true,
+      "apple_name": "iPad mini"
+    },
+    {
+      "name": "iMac (M4)",
+      "line": "iMac",
+      "category": "Mac",
+      "date": "2024-11",
+      "current": true,
+      "apple_name": "iMac"
+    },
+    {
+      "name": "Mac mini (M4)",
+      "line": "Mac mini",
+      "category": "Mac",
+      "date": "2024-11",
+      "current": false
+    },
+    {
+      "name": "MacBook Pro (M4)",
+      "line": "MacBook Pro",
+      "category": "Mac",
+      "date": "2024-11",
+      "current": false
+    },
+    {
+      "name": "iPhone 16e",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2025-02",
+      "current": false
+    },
+    {
+      "name": "MacBook Air (M4)",
+      "line": "MacBook Air",
+      "category": "Mac",
+      "date": "2025-03",
+      "current": false
+    },
+    {
+      "name": "Mac Studio (M4 Max, M3 Ultra)",
+      "line": "Mac Studio",
+      "category": "Mac",
+      "date": "2025-03",
+      "current": false
+    },
+    {
+      "name": "iPad (A16)",
+      "line": "iPad",
+      "category": "iPad",
+      "date": "2025-03",
+      "current": true,
+      "apple_name": "iPad"
+    },
+    {
+      "name": "iPad Air (M3)",
+      "line": "iPad Air",
+      "category": "iPad",
+      "date": "2025-03",
+      "current": false
+    },
+    {
+      "name": "iPhone 17",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2025-09",
+      "current": true,
+      "apple_name": "iPhone 17"
+    },
+    {
+      "name": "iPhone Air",
+      "line": "iPhone Air",
+      "category": "iPhone",
+      "date": "2025-09",
+      "current": true,
+      "apple_name": "iPhone Air"
+    },
+    {
+      "name": "iPhone 17 Pro / Pro Max",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2025-09",
+      "current": false
+    },
+    {
+      "name": "Apple Watch Series 11",
+      "line": "Apple Watch",
+      "category": "Watch",
+      "date": "2025-09",
+      "current": false
+    },
+    {
+      "name": "Apple Watch Ultra 3",
+      "line": "Apple Watch Ultra",
+      "category": "Watch",
+      "date": "2025-09",
+      "current": false
+    },
+    {
+      "name": "Apple Watch SE 3",
+      "line": "Apple Watch SE",
+      "category": "Watch",
+      "date": "2025-09",
+      "current": true,
+      "apple_name": "Apple Watch SE 3"
+    },
+    {
+      "name": "AirPods Pro 3",
+      "line": "AirPods Pro",
+      "category": "AirPods",
+      "date": "2025-09",
+      "current": true,
+      "apple_name": "AirPods Pro 3"
+    },
+    {
+      "name": "MacBook Pro 14-inch (M5)",
+      "line": "MacBook Pro",
+      "category": "Mac",
+      "date": "2025-10",
+      "current": true
+    },
+    {
+      "name": "iPad Pro (M5)",
+      "line": "iPad Pro",
+      "category": "iPad",
+      "date": "2025-10",
+      "current": true,
+      "apple_name": "iPad Pro"
+    },
+    {
+      "name": "Apple Vision Pro (M5)",
+      "line": "Apple Vision Pro",
+      "category": "Vision",
+      "date": "2025-10",
+      "current": true,
+      "apple_name": "Apple Vision Pro"
+    },
+    {
+      "name": "AirTag (2nd generation)",
+      "line": "AirTag",
+      "category": "Other",
+      "date": "2026-01",
+      "current": true,
+      "apple_name": "AirTag"
+    },
+    {
+      "name": "iPhone 17e",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2026-03",
+      "current": true,
+      "apple_name": "iPhone 17e"
+    },
+    {
+      "name": "iPad Air (M4)",
+      "line": "iPad Air",
+      "category": "iPad",
+      "date": "2026-03",
+      "current": true,
+      "apple_name": "iPad Air"
+    },
+    {
+      "name": "MacBook Air (M5)",
+      "line": "MacBook Air",
+      "category": "Mac",
+      "date": "2026-03",
+      "current": true,
+      "apple_name": "MacBook Air"
+    },
+    {
+      "name": "MacBook Pro (M5 Pro, M5 Max)",
+      "line": "MacBook Pro",
+      "category": "Mac",
+      "date": "2026-03",
+      "current": true,
+      "apple_name": "MacBook Pro"
+    },
+    {
+      "name": "MacBook Neo",
+      "line": "MacBook Neo",
+      "category": "Mac",
+      "date": "2026-03",
+      "current": true,
+      "apple_name": "MacBook Neo"
+    },
+    {
+      "name": "Studio Display (2nd generation)",
+      "line": "Studio Display",
+      "category": "Display",
+      "date": "2026-03",
+      "current": true,
+      "apple_name": "Studio Display"
+    },
+    {
+      "name": "Studio Display XDR",
+      "line": "Studio Display XDR",
+      "category": "Display",
+      "date": "2026-03",
+      "current": true,
+      "apple_name": "Studio Display XDR"
+    },
+    {
+      "name": "AirPods Max 2",
+      "line": "AirPods Max",
+      "category": "AirPods",
+      "date": "2026-03",
+      "current": true,
+      "apple_name": "AirPods Max 2"
+    },
+    {
+      "name": "Mac mini (2026)",
+      "line": "Mac mini",
+      "category": "Mac",
+      "date": "2026-08",
+      "current": true,
+      "apple_name": "Mac mini"
+    },
+    {
+      "name": "Mac Studio (2026)",
+      "line": "Mac Studio",
+      "category": "Mac",
+      "date": "2026-08",
+      "current": true,
+      "apple_name": "Mac Studio"
+    },
+    {
+      "name": "iPhone 18 Pro / Pro Max",
+      "line": "iPhone",
+      "category": "iPhone",
+      "date": "2026-09",
+      "current": true,
+      "apple_name": "iPhone 18 Pro"
+    },
+    {
+      "name": "iPhone Duo",
+      "line": "iPhone Duo",
+      "category": "iPhone",
+      "date": "2026-09",
+      "current": true,
+      "apple_name": "iPhone Duo"
+    },
+    {
+      "name": "Apple Watch Series 12",
+      "line": "Apple Watch",
+      "category": "Watch",
+      "date": "2026-09",
+      "current": true,
+      "apple_name": "Apple Watch Series 12"
+    },
+    {
+      "name": "Apple Watch Ultra 4",
+      "line": "Apple Watch Ultra",
+      "category": "Watch",
+      "date": "2026-09",
+      "current": true,
+      "apple_name": "Apple Watch Ultra 4"
+    },
+    {
+      "name": "AirPods 5",
+      "line": "AirPods",
+      "category": "AirPods",
+      "date": "2026-09",
+      "current": true,
+      "apple_name": "AirPods 5"
+    },
+    {
+      "name": "HomePod mini 2",
+      "line": "HomePod mini",
+      "category": "Home & TV",
+      "date": "2026-10",
+      "current": true,
+      "apple_name": "HomePod mini"
+    },
+    {
+      "name": "Apple TV 4K (4th generation)",
+      "line": "Apple TV",
+      "category": "Home & TV",
+      "date": "2026-10",
+      "current": true,
+      "apple_name": "Apple TV 4K"
+    },
+    {
+      "name": "Apple HomeView",
+      "line": "HomeView",
+      "category": "Home & TV",
+      "date": "2026-10",
+      "current": true,
+      "apple_name": "HomeView"
+    }
+  ]
+}
