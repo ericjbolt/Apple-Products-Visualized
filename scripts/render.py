@@ -234,6 +234,18 @@ def draw_group(canvas: Image.Image, product: dict, bubbles: list[Bubble], origin
     color = type_color(product_type(product))
     for b in bubbles:
         draw.ellipse((ox + b.x - b.r, oy + b.y - b.r, ox + b.x + b.r, oy + b.y + b.r), fill=color)
+    # Smaller bubbles in the cluster show the product's configurations, such as sizes,
+    # storage, chips, and finishes, largest bubble first.
+    text_color = text_color_for(color)
+    for b, variant in zip(bubbles[1:], product.get("variants", [])):
+        side = b.r * 1.41
+        if side < 24:
+            continue  # too small to read even when zoomed in
+        vf, vsize, vlines = fit_label(variant, side)
+        vh = vsize * 1.18
+        vtop = oy + b.y - vh * len(vlines) / 2 + vh / 2
+        for i, line in enumerate(vlines):
+            draw.text((ox + b.x, vtop + i * vh), line, font=vf, fill=text_color, anchor="mm")
     main = bubbles[0]
     cx, cy = ox + main.x, oy + main.y
     photo = load_photo(product)

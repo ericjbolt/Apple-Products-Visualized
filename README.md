@@ -17,7 +17,7 @@ Full-size images: [hello.jpg](output/hello.jpg) and [thank_you.jpg](output/thank
 1. **The data** lives in [`data/products.json`](data/products.json). Each product has a name, a category, a release month, and a `current` flag that says whether apple.com still sells it new.
 2. **The words** are set in [Pacifico](https://fonts.google.com/specimen/Pacifico), an open-source script font included in `assets/fonts`.
 3. **The bubbles** fill each word completely. The script packs circles of many sizes into the letters, largest first, so thick strokes hold big bubbles and thin strokes hold small ones.
-4. **The order** follows the word from left to right. **hello** lists today's products by introduction date, and **thank you** lists past products by retirement date. Each product gets one cluster of neighboring bubbles in its color. Its largest bubble shows its photo or name, so every product appears exactly once. Retirement dates come from Wikipedia's list of Apple products.
+4. **The order** follows the word from left to right. **hello** lists today's products by introduction date, and **thank you** lists past products by retirement date. Each product gets one cluster of neighboring bubbles in its color. Its largest bubble shows its photo or name, so every product appears exactly once, and the smaller bubbles show its configurations, such as sizes, storage, chips, and finishes, taken from Apple's tech specs pages. Retirement dates come from Wikipedia's list of Apple products.
 5. **The photos** come from Wikimedia Commons, the free media library behind Wikipedia. Each product's largest bubble shows its photo in a white circle. Products without a freely licensed photo show their name instead. Every photo is credited in [CREDITS.md](CREDITS.md).
 6. **The weekly update** runs on GitHub Actions every Tuesday at 3:00 p.m. Pacific time. It checks Wikipedia for new releases, checks apple.com for the current lineup, downloads any missing photos, redraws the images, and opens a pull request for review. When Apple retires a product, it moves from **hello** to **thank you** automatically.
 
@@ -71,6 +71,7 @@ Open `data/products.json` and add, remove, or correct a product. Then run `pytho
 | `current` | `true` places the product in **hello**, `false` in **thank you** |
 | `retired` | Month Apple discontinued the product, as `YYYY-MM`. Sets its place in **thank you**. Added automatically when a product leaves apple.com |
 | `apple_name` | Optional. The exact name apple.com uses, such as "iPhone 17e" |
+| `variants` | Optional. Configurations shown in the product's smaller bubbles, such as "256GB" or "Sky Blue", largest bubble first |
 | `image_file` | Optional. A specific Wikimedia Commons file to use as the photo, such as "iPhone 4 Black.jpg" |
 | `needs_review` | Added by the update scripts. Check the entry, then delete this field |
 

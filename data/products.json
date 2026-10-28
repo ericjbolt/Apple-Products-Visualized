@@ -1728,7 +1728,11 @@
       "category": "TV & Home",
       "date": "2023-02",
       "current": true,
-      "apple_name": "HomePod"
+      "apple_name": "HomePod",
+      "variants": [
+        "White",
+        "Midnight"
+      ]
     },
     {
       "name": "MacBook Air (15-inch, M2)",
@@ -1889,7 +1893,15 @@
       "category": "iPhone",
       "date": "2024-09",
       "current": true,
-      "apple_name": "iPhone 16"
+      "apple_name": "iPhone 16",
+      "variants": [
+        "128GB",
+        "Black",
+        "White",
+        "Pink",
+        "Teal",
+        "Ultramarine"
+      ]
     },
     {
       "name": "iPhone 16 Plus",
@@ -1937,16 +1949,16 @@
       "line": "iPad mini",
       "category": "iPad",
       "date": "2024-10",
-      "current": true,
-      "apple_name": "iPad mini"
+      "current": false,
+      "retired": "2026-10"
     },
     {
       "name": "iMac (24-inch, M4)",
       "line": "iMac",
       "category": "Mac",
       "date": "2024-11",
-      "current": true,
-      "apple_name": "iMac"
+      "current": false,
+      "retired": "2026-10"
     },
     {
       "name": "Mac mini (M4)",
@@ -2010,7 +2022,18 @@
       "category": "iPad",
       "date": "2025-03",
       "current": true,
-      "apple_name": "iPad"
+      "apple_name": "iPad",
+      "variants": [
+        "128GB",
+        "256GB",
+        "512GB",
+        "Wi-Fi",
+        "Wi-Fi + Cellular",
+        "Silver",
+        "Blue",
+        "Pink",
+        "Yellow"
+      ]
     },
     {
       "name": "iPad Air 11-inch (M3)",
@@ -2034,7 +2057,16 @@
       "category": "iPhone",
       "date": "2025-09",
       "current": true,
-      "apple_name": "iPhone 17"
+      "apple_name": "iPhone 17",
+      "variants": [
+        "256GB",
+        "512GB",
+        "Black",
+        "White",
+        "Mist Blue",
+        "Sage",
+        "Lavender"
+      ]
     },
     {
       "name": "iPhone Air",
@@ -2042,7 +2074,16 @@
       "category": "iPhone",
       "date": "2025-09",
       "current": true,
-      "apple_name": "iPhone Air"
+      "apple_name": "iPhone Air",
+      "variants": [
+        "256GB",
+        "512GB",
+        "1TB",
+        "Space Black",
+        "Cloud White",
+        "Light Gold",
+        "Sky Blue"
+      ]
     },
     {
       "name": "iPhone 17 Pro",
@@ -2082,7 +2123,13 @@
       "category": "Apple Watch",
       "date": "2025-09",
       "current": true,
-      "apple_name": "Apple Watch SE 3"
+      "apple_name": "Apple Watch SE 3",
+      "variants": [
+        "40mm",
+        "44mm",
+        "Midnight",
+        "Starlight"
+      ]
     },
     {
       "name": "AirPods Pro 3",
@@ -2090,14 +2137,18 @@
       "category": "AirPods",
       "date": "2025-09",
       "current": true,
-      "apple_name": "AirPods Pro 3"
+      "apple_name": "AirPods Pro 3",
+      "variants": [
+        "MagSafe Charging Case (USB-C)"
+      ]
     },
     {
       "name": "MacBook Pro (14-inch, M5)",
       "line": "MacBook Pro",
       "category": "Mac",
       "date": "2025-10",
-      "current": true
+      "current": false,
+      "retired": "2026-10"
     },
     {
       "name": "iPad Pro 11-inch (M5)",
@@ -2105,7 +2156,15 @@
       "category": "iPad",
       "date": "2025-10",
       "current": true,
-      "apple_name": "iPad Pro"
+      "apple_name": "iPad Pro",
+      "variants": [
+        "256GB",
+        "512GB",
+        "1TB",
+        "2TB",
+        "Space Black",
+        "Silver"
+      ]
     },
     {
       "name": "iPad Pro 13-inch (M5)",
@@ -2113,7 +2172,15 @@
       "category": "iPad",
       "date": "2025-10",
       "current": true,
-      "apple_name": "iPad Pro"
+      "apple_name": "iPad Pro",
+      "variants": [
+        "256GB",
+        "512GB",
+        "1TB",
+        "2TB",
+        "Space Black",
+        "Silver"
+      ]
     },
     {
       "name": "Apple Vision Pro (M5)",
@@ -2121,7 +2188,12 @@
       "category": "Apple Vision Pro",
       "date": "2025-10",
       "current": true,
-      "apple_name": "Apple Vision Pro"
+      "apple_name": "Apple Vision Pro",
+      "variants": [
+        "256GB",
+        "512GB",
+        "1TB"
+      ]
     },
     {
       "name": "AirTag (2nd generation)",
@@ -2129,7 +2201,11 @@
       "category": "Other",
       "date": "2026-01",
       "current": true,
-      "apple_name": "AirTag"
+      "apple_name": "AirTag",
+      "variants": [
+        "1 pack",
+        "4 pack"
+      ]
     },
     {
       "name": "iPhone 17e",
@@ -2137,7 +2213,14 @@
       "category": "iPhone",
       "date": "2026-03",
       "current": true,
-      "apple_name": "iPhone 17e"
+      "apple_name": "iPhone 17e",
+      "variants": [
+        "256GB",
+        "512GB",
+        "Black",
+        "White",
+        "Soft Pink"
+      ]
     },
     {
       "name": "iPad Air 11-inch (M4)",
@@ -2145,7 +2228,17 @@
       "category": "iPad",
       "date": "2026-03",
       "current": true,
-      "apple_name": "iPad Air"
+      "apple_name": "iPad Air",
+      "variants": [
+        "128GB",
+        "256GB",
+        "512GB",
+        "1TB",
+        "Blue",
+        "Purple",
+        "Starlight",
+        "Space Gray"
+      ]
     },
     {
       "name": "iPad Air 13-inch (M4)",
@@ -2153,7 +2246,17 @@
       "category": "iPad",
       "date": "2026-03",
       "current": true,
-      "apple_name": "iPad Air"
+      "apple_name": "iPad Air",
+      "variants": [
+        "128GB",
+        "256GB",
+        "512GB",
+        "1TB",
+        "Blue",
+        "Purple",
+        "Starlight",
+        "Space Gray"
+      ]
     },
     {
       "name": "MacBook Air (13-inch, M5)",
@@ -2161,7 +2264,13 @@
       "category": "Mac",
       "date": "2026-03",
       "current": true,
-      "apple_name": "MacBook Air"
+      "apple_name": "MacBook Air",
+      "variants": [
+        "Sky Blue",
+        "Silver",
+        "Starlight",
+        "Midnight"
+      ]
     },
     {
       "name": "MacBook Air (15-inch, M5)",
@@ -2169,7 +2278,13 @@
       "category": "Mac",
       "date": "2026-03",
       "current": true,
-      "apple_name": "MacBook Air"
+      "apple_name": "MacBook Air",
+      "variants": [
+        "Sky Blue",
+        "Silver",
+        "Starlight",
+        "Midnight"
+      ]
     },
     {
       "name": "MacBook Pro (14-inch, 2026)",
@@ -2177,7 +2292,13 @@
       "category": "Mac",
       "date": "2026-03",
       "current": true,
-      "apple_name": "MacBook Pro"
+      "apple_name": "MacBook Pro",
+      "variants": [
+        "M5 Pro",
+        "M5 Max",
+        "Space Black",
+        "Silver"
+      ]
     },
     {
       "name": "MacBook Pro (16-inch, 2026)",
@@ -2185,7 +2306,13 @@
       "category": "Mac",
       "date": "2026-03",
       "current": true,
-      "apple_name": "MacBook Pro"
+      "apple_name": "MacBook Pro",
+      "variants": [
+        "M5 Pro",
+        "M5 Max",
+        "Space Black",
+        "Silver"
+      ]
     },
     {
       "name": "MacBook Neo",
@@ -2193,7 +2320,13 @@
       "category": "Mac",
       "date": "2026-03",
       "current": true,
-      "apple_name": "MacBook Neo"
+      "apple_name": "MacBook Neo",
+      "variants": [
+        "Silver",
+        "Blush",
+        "Citrus",
+        "Indigo"
+      ]
     },
     {
       "name": "Studio Display (2026)",
@@ -2201,7 +2334,14 @@
       "category": "Displays",
       "date": "2026-03",
       "current": true,
-      "apple_name": "Studio Display"
+      "apple_name": "Studio Display",
+      "variants": [
+        "Standard glass",
+        "Nano-texture glass",
+        "Tilt-adjustable stand",
+        "Tilt- and height-adjustable stand",
+        "VESA mount adapter"
+      ]
     },
     {
       "name": "Studio Display XDR",
@@ -2209,7 +2349,12 @@
       "category": "Displays",
       "date": "2026-03",
       "current": true,
-      "apple_name": "Studio Display XDR"
+      "apple_name": "Studio Display XDR",
+      "variants": [
+        "Standard glass",
+        "Nano-texture glass",
+        "VESA mount adapter"
+      ]
     },
     {
       "name": "AirPods Max 2",
@@ -2217,7 +2362,14 @@
       "category": "AirPods",
       "date": "2026-03",
       "current": true,
-      "apple_name": "AirPods Max 2"
+      "apple_name": "AirPods Max 2",
+      "variants": [
+        "Midnight",
+        "Starlight",
+        "Blue",
+        "Purple",
+        "Orange"
+      ]
     },
     {
       "name": "Mac mini (M6, M5 Pro)",
@@ -2225,7 +2377,12 @@
       "category": "Mac",
       "date": "2026-08",
       "current": true,
-      "apple_name": "Mac mini"
+      "apple_name": "Mac mini",
+      "variants": [
+        "M6",
+        "M5 Pro",
+        "Silver"
+      ]
     },
     {
       "name": "Mac Studio (M5 Max, M5 Ultra)",
@@ -2233,7 +2390,12 @@
       "category": "Mac",
       "date": "2026-08",
       "current": true,
-      "apple_name": "Mac Studio"
+      "apple_name": "Mac Studio",
+      "variants": [
+        "M5 Max",
+        "M5 Ultra",
+        "Silver"
+      ]
     },
     {
       "name": "iPhone 18 Pro",
@@ -2241,7 +2403,17 @@
       "category": "iPhone",
       "date": "2026-09",
       "current": true,
-      "apple_name": "iPhone 18 Pro"
+      "apple_name": "iPhone 18 Pro",
+      "variants": [
+        "256GB",
+        "512GB",
+        "1TB",
+        "2TB",
+        "Black",
+        "Silver",
+        "Glacier",
+        "Burgundy"
+      ]
     },
     {
       "name": "iPhone 18 Pro Max",
@@ -2249,7 +2421,17 @@
       "category": "iPhone",
       "date": "2026-09",
       "current": true,
-      "apple_name": "iPhone 18 Pro"
+      "apple_name": "iPhone 18 Pro",
+      "variants": [
+        "256GB",
+        "512GB",
+        "1TB",
+        "2TB",
+        "Black",
+        "Silver",
+        "Glacier",
+        "Burgundy"
+      ]
     },
     {
       "name": "iPhone Duo",
@@ -2257,7 +2439,15 @@
       "category": "iPhone",
       "date": "2026-09",
       "current": true,
-      "apple_name": "iPhone Duo"
+      "apple_name": "iPhone Duo",
+      "variants": [
+        "256GB",
+        "512GB",
+        "1TB",
+        "2TB",
+        "Night Sky",
+        "Star White"
+      ]
     },
     {
       "name": "Apple Watch Series 12",
@@ -2265,7 +2455,20 @@
       "category": "Apple Watch",
       "date": "2026-09",
       "current": true,
-      "apple_name": "Apple Watch Series 12"
+      "apple_name": "Apple Watch Series 12",
+      "variants": [
+        "Aluminum",
+        "Titanium",
+        "Ceramic",
+        "Dark Bronze",
+        "Light Gold",
+        "Black",
+        "Space Gray",
+        "Radiant Gold",
+        "Natural",
+        "Pearl White",
+        "Night Blue"
+      ]
     },
     {
       "name": "Apple Watch Ultra 4",
@@ -2273,7 +2476,12 @@
       "category": "Apple Watch",
       "date": "2026-09",
       "current": true,
-      "apple_name": "Apple Watch Ultra 4"
+      "apple_name": "Apple Watch Ultra 4",
+      "variants": [
+        "Titanium, Grade 5",
+        "Natural",
+        "Black"
+      ]
     },
     {
       "name": "AirPods 5",
@@ -2281,7 +2489,11 @@
       "category": "AirPods",
       "date": "2026-09",
       "current": true,
-      "apple_name": "AirPods 5"
+      "apple_name": "AirPods 5",
+      "variants": [
+        "USB-C Charging Case",
+        "Wireless Charging Case"
+      ]
     },
     {
       "name": "HomePod mini 2",
@@ -2289,7 +2501,14 @@
       "category": "TV & Home",
       "date": "2026-10",
       "current": true,
-      "apple_name": "HomePod mini"
+      "apple_name": "HomePod mini",
+      "variants": [
+        "Midnight",
+        "White",
+        "Blue",
+        "Pink",
+        "Green"
+      ]
     },
     {
       "name": "Apple TV 4K (4th generation)",
@@ -2297,15 +2516,71 @@
       "category": "TV & Home",
       "date": "2026-10",
       "current": true,
-      "apple_name": "Apple TV 4K"
+      "apple_name": "Apple TV 4K",
+      "variants": [
+        "128GB"
+      ]
     },
     {
-      "name": "HomeView",
+      "name": "Apple HomeView",
       "line": "HomeView",
       "category": "TV & Home",
       "date": "2026-10",
       "current": true,
-      "apple_name": "HomeView"
+      "apple_name": "HomeView",
+      "variants": [
+        "Silver",
+        "Starlight",
+        "Rose Pink",
+        "Space Gray",
+        "Wall mounted"
+      ]
+    },
+    {
+      "name": "iPad mini (A20 Pro)",
+      "line": "iPad mini",
+      "category": "iPad",
+      "date": "2026-10",
+      "current": true,
+      "apple_name": "iPad mini",
+      "variants": [
+        "128GB",
+        "256GB",
+        "512GB",
+        "Midnight",
+        "Starlight"
+      ]
+    },
+    {
+      "name": "MacBook Pro (14-inch, M6)",
+      "line": "MacBook Pro",
+      "category": "Mac",
+      "date": "2026-10",
+      "current": true,
+      "variants": [
+        "M6",
+        "Space Black",
+        "Silver"
+      ]
+    },
+    {
+      "name": "iMac (24-inch, M6)",
+      "line": "iMac",
+      "category": "Mac",
+      "date": "2026-10",
+      "current": true,
+      "apple_name": "iMac",
+      "variants": [
+        "10-core CPU",
+        "12-core CPU",
+        "Blue",
+        "Purple",
+        "Pink",
+        "Orange",
+        "Yellow",
+        "Green",
+        "Silver"
+      ]
     }
   ]
 }
