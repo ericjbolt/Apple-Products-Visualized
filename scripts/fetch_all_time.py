@@ -34,10 +34,10 @@ ACCESSORIES = re.compile(
 )
 
 CATEGORY_KEYWORDS = [
-    ("iPhone", "iPhone"), ("iPad", "iPad"), ("Watch", "Watch"), ("AirPods", "AirPods"),
-    ("Display", "Display"), ("Vision", "Vision"), ("iPod", "iPod & Music"),
-    ("HomePod", "Home & TV"), ("Apple TV", "Home & TV"), ("Home", "Home & TV"),
-    ("AirPort", "Home & TV"), ("Mac", "Mac"), ("AirTag", "Other"),
+    ("iPhone", "iPhone"), ("iPad", "iPad"), ("Watch", "Apple Watch"), ("AirPods", "AirPods"),
+    ("Display", "Displays"), ("Vision", "Apple Vision Pro"), ("iPod", "iPod"),
+    ("HomePod", "TV & Home"), ("Apple TV", "TV & Home"), ("Home", "TV & Home"),
+    ("AirPort", "TV & Home"), ("Mac", "Mac"), ("AirTag", "Other"),
 ]
 
 

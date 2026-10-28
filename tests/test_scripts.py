@@ -120,7 +120,7 @@ def test_only_free_licenses_are_accepted():
 
 
 def test_title_candidates_drop_alternates_and_details():
-    product = {"name": "iPhone 16 / 16 Plus", "line": "iPhone"}
+    product = {"name": "iPhone 16 and iPhone 16 Plus", "line": "iPhone"}
     assert fetch_images.title_candidates(product) == ["iPhone 16", "iPhone"]
     product = {"name": "MacBook Air (M5)", "line": "MacBook Air"}
     assert fetch_images.title_candidates(product) == ["MacBook Air (M5)", "MacBook Air"]

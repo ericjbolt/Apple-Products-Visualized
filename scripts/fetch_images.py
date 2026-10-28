@@ -49,7 +49,7 @@ def strip_html(value: str) -> str:
 
 def title_candidates(product: dict) -> list[str]:
     """Article titles worth trying, most specific first."""
-    name = product["name"].split(" / ")[0].strip()
+    name = re.split(r" / | and (?![^()]*\))", product["name"])[0].strip()
     plain = re.sub(r"\s*\(.*?\)", "", name).strip()
     titles = [name, plain, product["line"]]
     seen, result = set(), []
@@ -82,7 +82,7 @@ class Wiki:
         return None
 
     def search_title(self, product: dict) -> str | None:
-        query = f'{product["name"].split(" / ")[0]} Apple'
+        query = f'{re.split(r" / | and (?![^()]*\))", product["name"])[0]} Apple'
         data = self.get(action="query", list="search", srsearch=query, srlimit=1, srnamespace=0)
         hits = data.get("query", {}).get("search", [])
         return hits[0]["title"] if hits else None

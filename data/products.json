@@ -5,42 +5,42 @@
     {
       "name": "Apple I",
       "line": "Apple I",
-      "category": "Apple I & II",
+      "category": "Apple I, II, III & Lisa",
       "date": "1976-07",
       "current": false
     },
     {
       "name": "Apple II",
       "line": "Apple II",
-      "category": "Apple I & II",
+      "category": "Apple I, II, III & Lisa",
       "date": "1977-06",
       "current": false
     },
     {
       "name": "Apple II Plus",
       "line": "Apple II",
-      "category": "Apple I & II",
+      "category": "Apple I, II, III & Lisa",
       "date": "1979-06",
       "current": false
     },
     {
       "name": "Apple III",
       "line": "Apple III",
-      "category": "Apple I & II",
+      "category": "Apple I, II, III & Lisa",
       "date": "1980-05",
       "current": false
     },
     {
       "name": "Apple IIe",
       "line": "Apple II",
-      "category": "Apple I & II",
+      "category": "Apple I, II, III & Lisa",
       "date": "1983-01",
       "current": false
     },
     {
       "name": "Lisa",
       "line": "Lisa",
-      "category": "Apple I & II",
+      "category": "Apple I, II, III & Lisa",
       "date": "1983-01",
       "current": false
     },
@@ -54,7 +54,7 @@
     {
       "name": "Apple IIc",
       "line": "Apple II",
-      "category": "Apple I & II",
+      "category": "Apple I, II, III & Lisa",
       "date": "1984-04",
       "current": false
     },
@@ -82,7 +82,7 @@
     {
       "name": "Apple IIGS",
       "line": "Apple II",
-      "category": "Apple I & II",
+      "category": "Apple I, II, III & Lisa",
       "date": "1986-09",
       "current": false
     },
@@ -110,7 +110,7 @@
     {
       "name": "Apple IIc Plus",
       "line": "Apple II",
-      "category": "Apple I & II",
+      "category": "Apple I, II, III & Lisa",
       "date": "1988-09",
       "current": false
     },
@@ -327,14 +327,14 @@
     {
       "name": "AirPort Base Station",
       "line": "AirPort",
-      "category": "Home & TV",
+      "category": "TV & Home",
       "date": "1999-07",
       "current": false
     },
     {
       "name": "Apple Cinema Display",
       "line": "Cinema Display",
-      "category": "Display",
+      "category": "Displays",
       "date": "1999-07",
       "current": false
     },
@@ -376,7 +376,7 @@
     {
       "name": "iPod",
       "line": "iPod",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2001-10",
       "current": false
     },
@@ -404,21 +404,21 @@
     {
       "name": "iPod (2nd generation)",
       "line": "iPod",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2002-07",
       "current": false
     },
     {
       "name": "AirPort Extreme",
       "line": "AirPort",
-      "category": "Home & TV",
+      "category": "TV & Home",
       "date": "2003-01",
       "current": false
     },
     {
       "name": "iPod (3rd generation)",
       "line": "iPod",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2003-04",
       "current": false
     },
@@ -446,28 +446,28 @@
     {
       "name": "iPod mini",
       "line": "iPod mini",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2004-01",
       "current": false
     },
     {
       "name": "AirPort Express",
       "line": "AirPort",
-      "category": "Home & TV",
+      "category": "TV & Home",
       "date": "2004-06",
       "current": false
     },
     {
       "name": "Apple Cinema HD Display (30-inch)",
       "line": "Cinema Display",
-      "category": "Display",
+      "category": "Displays",
       "date": "2004-06",
       "current": false
     },
     {
       "name": "iPod (4th generation)",
       "line": "iPod",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2004-07",
       "current": false
     },
@@ -481,7 +481,7 @@
     {
       "name": "iPod photo",
       "line": "iPod",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2004-10",
       "current": false
     },
@@ -495,21 +495,21 @@
     {
       "name": "iPod shuffle",
       "line": "iPod shuffle",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2005-01",
       "current": false
     },
     {
       "name": "iPod nano",
       "line": "iPod nano",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2005-09",
       "current": false
     },
     {
-      "name": "iPod (5th generation, video)",
+      "name": "iPod with video",
       "line": "iPod",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2005-10",
       "current": false
     },
@@ -530,7 +530,7 @@
     {
       "name": "iPod Hi-Fi",
       "line": "iPod Hi-Fi",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2006-02",
       "current": false
     },
@@ -551,14 +551,14 @@
     {
       "name": "iPod shuffle (2nd generation)",
       "line": "iPod shuffle",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2006-09",
       "current": false
     },
     {
       "name": "Apple TV",
       "line": "Apple TV",
-      "category": "Home & TV",
+      "category": "TV & Home",
       "date": "2007-03",
       "current": false
     },
@@ -572,21 +572,21 @@
     {
       "name": "iPod classic",
       "line": "iPod classic",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2007-09",
       "current": false
     },
     {
       "name": "iPod touch",
       "line": "iPod touch",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2007-09",
       "current": false
     },
     {
       "name": "iPod nano (3rd generation)",
       "line": "iPod nano",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2007-09",
       "current": false
     },
@@ -600,7 +600,7 @@
     {
       "name": "Time Capsule",
       "line": "AirPort",
-      "category": "Home & TV",
+      "category": "TV & Home",
       "date": "2008-02",
       "current": false
     },
@@ -614,14 +614,14 @@
     {
       "name": "iPod nano (4th generation)",
       "line": "iPod nano",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2008-09",
       "current": false
     },
     {
       "name": "iPod touch (2nd generation)",
       "line": "iPod touch",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2008-09",
       "current": false
     },
@@ -635,14 +635,14 @@
     {
       "name": "LED Cinema Display",
       "line": "Cinema Display",
-      "category": "Display",
+      "category": "Displays",
       "date": "2008-10",
       "current": false
     },
     {
       "name": "iPod shuffle (3rd generation)",
       "line": "iPod shuffle",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2009-03",
       "current": false
     },
@@ -656,7 +656,7 @@
     {
       "name": "iPod nano (5th generation)",
       "line": "iPod nano",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2009-09",
       "current": false
     },
@@ -677,21 +677,21 @@
     {
       "name": "Apple TV (2nd generation)",
       "line": "Apple TV",
-      "category": "Home & TV",
+      "category": "TV & Home",
       "date": "2010-09",
       "current": false
     },
     {
       "name": "iPod nano (6th generation)",
       "line": "iPod nano",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2010-09",
       "current": false
     },
     {
       "name": "iPod touch (4th generation)",
       "line": "iPod touch",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2010-09",
       "current": false
     },
@@ -705,7 +705,7 @@
     {
       "name": "Thunderbolt Display",
       "line": "Thunderbolt Display",
-      "category": "Display",
+      "category": "Displays",
       "date": "2011-07",
       "current": false
     },
@@ -726,7 +726,7 @@
     {
       "name": "Apple TV (3rd generation)",
       "line": "Apple TV",
-      "category": "Home & TV",
+      "category": "TV & Home",
       "date": "2012-03",
       "current": false
     },
@@ -740,14 +740,14 @@
     {
       "name": "iPod touch (5th generation)",
       "line": "iPod touch",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2012-10",
       "current": false
     },
     {
       "name": "iPod nano (7th generation)",
       "line": "iPod nano",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2012-10",
       "current": false
     },
@@ -801,7 +801,7 @@
       "current": false
     },
     {
-      "name": "iPhone 6 / 6 Plus",
+      "name": "iPhone 6 and iPhone 6 Plus",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2014-09",
@@ -831,7 +831,7 @@
     {
       "name": "Apple Watch",
       "line": "Apple Watch",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2015-04",
       "current": false
     },
@@ -845,12 +845,12 @@
     {
       "name": "iPod touch (6th generation)",
       "line": "iPod touch",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2015-07",
       "current": false
     },
     {
-      "name": "iPhone 6s / 6s Plus",
+      "name": "iPhone 6s and iPhone 6s Plus",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2015-09",
@@ -866,7 +866,7 @@
     {
       "name": "Apple TV HD",
       "line": "Apple TV",
-      "category": "Home & TV",
+      "category": "TV & Home",
       "date": "2015-10",
       "current": false
     },
@@ -892,7 +892,7 @@
       "current": false
     },
     {
-      "name": "iPhone 7 / 7 Plus",
+      "name": "iPhone 7 and iPhone 7 Plus",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2016-09",
@@ -901,7 +901,7 @@
     {
       "name": "Apple Watch Series 1 and Series 2",
       "line": "Apple Watch",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2016-09",
       "current": false
     },
@@ -934,7 +934,7 @@
       "current": false
     },
     {
-      "name": "iPhone 8 / 8 Plus",
+      "name": "iPhone 8 and iPhone 8 Plus",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2017-09",
@@ -943,14 +943,14 @@
     {
       "name": "Apple Watch Series 3",
       "line": "Apple Watch",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2017-09",
       "current": false
     },
     {
       "name": "Apple TV 4K",
       "line": "Apple TV",
-      "category": "Home & TV",
+      "category": "TV & Home",
       "date": "2017-09",
       "current": false
     },
@@ -971,7 +971,7 @@
     {
       "name": "HomePod",
       "line": "HomePod",
-      "category": "Home & TV",
+      "category": "TV & Home",
       "date": "2018-02",
       "current": false
     },
@@ -983,7 +983,7 @@
       "current": false
     },
     {
-      "name": "iPhone XS / XS Max",
+      "name": "iPhone XS and iPhone XS Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2018-09",
@@ -992,7 +992,7 @@
     {
       "name": "Apple Watch Series 4",
       "line": "Apple Watch",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2018-09",
       "current": false
     },
@@ -1034,7 +1034,7 @@
     {
       "name": "iPod touch (7th generation)",
       "line": "iPod touch",
-      "category": "iPod & Music",
+      "category": "iPod",
       "date": "2019-05",
       "current": false
     },
@@ -1046,7 +1046,7 @@
       "current": false
     },
     {
-      "name": "iPhone 11 Pro / Pro Max",
+      "name": "iPhone 11 Pro and iPhone 11 Pro Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2019-09",
@@ -1055,7 +1055,7 @@
     {
       "name": "Apple Watch Series 5",
       "line": "Apple Watch",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2019-09",
       "current": false
     },
@@ -1083,7 +1083,7 @@
     {
       "name": "Pro Display XDR",
       "line": "Pro Display XDR",
-      "category": "Display",
+      "category": "Displays",
       "date": "2019-12",
       "current": false
     },
@@ -1104,14 +1104,14 @@
     {
       "name": "Apple Watch Series 6",
       "line": "Apple Watch",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2020-09",
       "current": false
     },
     {
       "name": "Apple Watch SE",
       "line": "Apple Watch SE",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2020-09",
       "current": false
     },
@@ -1130,14 +1130,14 @@
       "current": false
     },
     {
-      "name": "iPhone 12 / 12 mini",
+      "name": "iPhone 12 and iPhone 12 mini",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2020-10",
       "current": false
     },
     {
-      "name": "iPhone 12 Pro / Pro Max",
+      "name": "iPhone 12 Pro and iPhone 12 Pro Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2020-10",
@@ -1146,7 +1146,7 @@
     {
       "name": "HomePod mini",
       "line": "HomePod mini",
-      "category": "Home & TV",
+      "category": "TV & Home",
       "date": "2020-11",
       "current": false
     },
@@ -1158,7 +1158,7 @@
       "current": false
     },
     {
-      "name": "MacBook Pro 13-inch (M1)",
+      "name": "MacBook Pro (13-inch, M1)",
       "line": "MacBook Pro",
       "category": "Mac",
       "date": "2020-11",
@@ -1186,7 +1186,7 @@
       "current": false
     },
     {
-      "name": "iMac 24-inch (M1)",
+      "name": "iMac (24-inch, M1)",
       "line": "iMac",
       "category": "Mac",
       "date": "2021-05",
@@ -1202,19 +1202,19 @@
     {
       "name": "Apple TV 4K (2nd generation)",
       "line": "Apple TV",
-      "category": "Home & TV",
+      "category": "TV & Home",
       "date": "2021-05",
       "current": false
     },
     {
-      "name": "iPhone 13 / 13 mini",
+      "name": "iPhone 13 and iPhone 13 mini",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2021-09",
       "current": false
     },
     {
-      "name": "iPhone 13 Pro / Pro Max",
+      "name": "iPhone 13 Pro and iPhone 13 Pro Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2021-09",
@@ -1237,7 +1237,7 @@
     {
       "name": "Apple Watch Series 7",
       "line": "Apple Watch",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2021-10",
       "current": false
     },
@@ -1249,7 +1249,7 @@
       "current": false
     },
     {
-      "name": "MacBook Pro 14 / 16-inch (M1 Pro, M1 Max)",
+      "name": "MacBook Pro (14-inch and 16-inch, M1 Pro, M1 Max)",
       "line": "MacBook Pro",
       "category": "Mac",
       "date": "2021-10",
@@ -1265,7 +1265,7 @@
     {
       "name": "Studio Display",
       "line": "Studio Display",
-      "category": "Display",
+      "category": "Displays",
       "date": "2022-03",
       "current": false
     },
@@ -1291,14 +1291,14 @@
       "current": false
     },
     {
-      "name": "iPhone 14 / 14 Plus",
+      "name": "iPhone 14 and iPhone 14 Plus",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2022-09",
       "current": false
     },
     {
-      "name": "iPhone 14 Pro / Pro Max",
+      "name": "iPhone 14 Pro and iPhone 14 Pro Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2022-09",
@@ -1307,21 +1307,21 @@
     {
       "name": "Apple Watch Series 8",
       "line": "Apple Watch",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2022-09",
       "current": false
     },
     {
       "name": "Apple Watch Ultra",
       "line": "Apple Watch Ultra",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2022-09",
       "current": false
     },
     {
       "name": "Apple Watch SE (2nd generation)",
       "line": "Apple Watch SE",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2022-09",
       "current": false
     },
@@ -1349,12 +1349,12 @@
     {
       "name": "Apple TV 4K (3rd generation)",
       "line": "Apple TV",
-      "category": "Home & TV",
+      "category": "TV & Home",
       "date": "2022-11",
       "current": false
     },
     {
-      "name": "MacBook Pro 14 / 16-inch (M2 Pro, M2 Max)",
+      "name": "MacBook Pro (14-inch and 16-inch, M2 Pro, M2 Max)",
       "line": "MacBook Pro",
       "category": "Mac",
       "date": "2023-01",
@@ -1370,13 +1370,13 @@
     {
       "name": "HomePod (2nd generation)",
       "line": "HomePod",
-      "category": "Home & TV",
+      "category": "TV & Home",
       "date": "2023-02",
       "current": true,
       "apple_name": "HomePod"
     },
     {
-      "name": "MacBook Air 15-inch (M2)",
+      "name": "MacBook Air (15-inch, M2)",
       "line": "MacBook Air",
       "category": "Mac",
       "date": "2023-06",
@@ -1398,14 +1398,14 @@
       "apple_name": "Mac Pro"
     },
     {
-      "name": "iPhone 15 / 15 Plus",
+      "name": "iPhone 15 and iPhone 15 Plus",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2023-09",
       "current": false
     },
     {
-      "name": "iPhone 15 Pro / Pro Max",
+      "name": "iPhone 15 Pro and iPhone 15 Pro Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2023-09",
@@ -1414,14 +1414,14 @@
     {
       "name": "Apple Watch Series 9",
       "line": "Apple Watch",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2023-09",
       "current": false
     },
     {
       "name": "Apple Watch Ultra 2",
       "line": "Apple Watch Ultra",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2023-09",
       "current": false
     },
@@ -1442,7 +1442,7 @@
     {
       "name": "Apple Vision Pro",
       "line": "Apple Vision Pro",
-      "category": "Vision",
+      "category": "Apple Vision Pro",
       "date": "2024-02",
       "current": false
     },
@@ -1468,7 +1468,7 @@
       "current": false
     },
     {
-      "name": "iPhone 16 / 16 Plus",
+      "name": "iPhone 16 and iPhone 16 Plus",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2024-09",
@@ -1476,7 +1476,7 @@
       "apple_name": "iPhone 16"
     },
     {
-      "name": "iPhone 16 Pro / Pro Max",
+      "name": "iPhone 16 Pro and iPhone 16 Pro Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2024-09",
@@ -1485,7 +1485,7 @@
     {
       "name": "Apple Watch Series 10",
       "line": "Apple Watch",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2024-09",
       "current": false
     },
@@ -1579,7 +1579,7 @@
       "apple_name": "iPhone Air"
     },
     {
-      "name": "iPhone 17 Pro / Pro Max",
+      "name": "iPhone 17 Pro and iPhone 17 Pro Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2025-09",
@@ -1588,21 +1588,21 @@
     {
       "name": "Apple Watch Series 11",
       "line": "Apple Watch",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2025-09",
       "current": false
     },
     {
       "name": "Apple Watch Ultra 3",
       "line": "Apple Watch Ultra",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2025-09",
       "current": false
     },
     {
       "name": "Apple Watch SE 3",
       "line": "Apple Watch SE",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2025-09",
       "current": true,
       "apple_name": "Apple Watch SE 3"
@@ -1616,7 +1616,7 @@
       "apple_name": "AirPods Pro 3"
     },
     {
-      "name": "MacBook Pro 14-inch (M5)",
+      "name": "MacBook Pro (14-inch, M5)",
       "line": "MacBook Pro",
       "category": "Mac",
       "date": "2025-10",
@@ -1633,7 +1633,7 @@
     {
       "name": "Apple Vision Pro (M5)",
       "line": "Apple Vision Pro",
-      "category": "Vision",
+      "category": "Apple Vision Pro",
       "date": "2025-10",
       "current": true,
       "apple_name": "Apple Vision Pro"
@@ -1687,9 +1687,9 @@
       "apple_name": "MacBook Neo"
     },
     {
-      "name": "Studio Display (2nd generation)",
+      "name": "Studio Display (2026)",
       "line": "Studio Display",
-      "category": "Display",
+      "category": "Displays",
       "date": "2026-03",
       "current": true,
       "apple_name": "Studio Display"
@@ -1697,7 +1697,7 @@
     {
       "name": "Studio Display XDR",
       "line": "Studio Display XDR",
-      "category": "Display",
+      "category": "Displays",
       "date": "2026-03",
       "current": true,
       "apple_name": "Studio Display XDR"
@@ -1711,7 +1711,7 @@
       "apple_name": "AirPods Max 2"
     },
     {
-      "name": "Mac mini (2026)",
+      "name": "Mac mini (M6, M5 Pro)",
       "line": "Mac mini",
       "category": "Mac",
       "date": "2026-08",
@@ -1719,7 +1719,7 @@
       "apple_name": "Mac mini"
     },
     {
-      "name": "Mac Studio (2026)",
+      "name": "Mac Studio (M5 Max, M5 Ultra)",
       "line": "Mac Studio",
       "category": "Mac",
       "date": "2026-08",
@@ -1727,7 +1727,7 @@
       "apple_name": "Mac Studio"
     },
     {
-      "name": "iPhone 18 Pro / Pro Max",
+      "name": "iPhone 18 Pro and iPhone 18 Pro Max",
       "line": "iPhone",
       "category": "iPhone",
       "date": "2026-09",
@@ -1745,7 +1745,7 @@
     {
       "name": "Apple Watch Series 12",
       "line": "Apple Watch",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2026-09",
       "current": true,
       "apple_name": "Apple Watch Series 12"
@@ -1753,7 +1753,7 @@
     {
       "name": "Apple Watch Ultra 4",
       "line": "Apple Watch Ultra",
-      "category": "Watch",
+      "category": "Apple Watch",
       "date": "2026-09",
       "current": true,
       "apple_name": "Apple Watch Ultra 4"
@@ -1769,7 +1769,7 @@
     {
       "name": "HomePod mini 2",
       "line": "HomePod mini",
-      "category": "Home & TV",
+      "category": "TV & Home",
       "date": "2026-10",
       "current": true,
       "apple_name": "HomePod mini"
@@ -1777,15 +1777,15 @@
     {
       "name": "Apple TV 4K (4th generation)",
       "line": "Apple TV",
-      "category": "Home & TV",
+      "category": "TV & Home",
       "date": "2026-10",
       "current": true,
       "apple_name": "Apple TV 4K"
     },
     {
-      "name": "Apple HomeView",
+      "name": "HomeView",
       "line": "HomeView",
-      "category": "Home & TV",
+      "category": "TV & Home",
       "date": "2026-10",
       "current": true,
       "apple_name": "HomeView"

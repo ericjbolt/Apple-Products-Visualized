@@ -30,14 +30,14 @@ CATEGORY_PAGES = {
     "Mac": "https://www.apple.com/mac/",
     "iPad": "https://www.apple.com/ipad/",
     "iPhone": "https://www.apple.com/iphone/",
-    "Watch": "https://www.apple.com/watch/",
+    "Apple Watch": "https://www.apple.com/watch/",
     "AirPods": "https://www.apple.com/airpods/",
-    "Home & TV": "https://www.apple.com/tv-home/",
+    "TV & Home": "https://www.apple.com/tv-home/",
 }
 
 # Single-product pages: the product is current if its page loads.
 SINGLE_PAGES = {
-    "Apple Vision Pro": ("Vision", "https://www.apple.com/apple-vision-pro/"),
+    "Apple Vision Pro": ("Apple Vision Pro", "https://www.apple.com/apple-vision-pro/"),
     "AirTag": ("Other", "https://www.apple.com/airtag/"),
 }
 
@@ -70,7 +70,7 @@ def parse_strip(html: str) -> list[str]:
 
 def guess_category(label: str, page_category: str) -> str:
     if "display" in label.lower():
-        return "Display"
+        return "Displays"
     return page_category
 
 

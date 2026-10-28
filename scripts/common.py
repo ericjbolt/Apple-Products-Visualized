@@ -13,16 +13,16 @@ OUTPUT_DIR = ROOT / "output"
 
 # Display order and colors for each product category.
 CATEGORIES: dict[str, str] = {
-    "Apple I & II": "#c9a227",
+    "Apple I, II, III & Lisa": "#c9a227",
     "Mac": "#4f8ef7",
-    "Display": "#7fa7c4",
-    "iPod & Music": "#d94f8c",
+    "Displays": "#7fa7c4",
+    "iPod": "#d94f8c",
     "iPhone": "#4cc38a",
     "iPad": "#8f6ff0",
-    "Watch": "#e5484d",
+    "Apple Watch": "#e5484d",
     "AirPods": "#e6e6ea",
-    "Home & TV": "#e0763c",
-    "Vision": "#38bdc9",
+    "TV & Home": "#e0763c",
+    "Apple Vision Pro": "#38bdc9",
     "Other": "#9a8f86",
 }
 
