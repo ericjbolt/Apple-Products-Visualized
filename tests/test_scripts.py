@@ -80,5 +80,11 @@ def test_fingerprint_matches_generation_names():
 def test_render_produces_images():
     products = sorted(load()["products"], key=lambda p: p["date"])
     image, cells = render.render(products, **render.build_all_time(products))
-    assert len(cells) >= len(products)
+    assert len(cells) == len(products), "the apple must be exactly full"
     assert image.width == render.WIDTH
+
+
+def test_every_count_fills_exactly():
+    mask = render.np.array(render.body_mask(render.SHAPE_SIZE))
+    for count in (1, 7, 32, 100, 251, 400):
+        assert len(render.exact_grid(mask, count)) == count

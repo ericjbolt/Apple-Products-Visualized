@@ -21,13 +21,14 @@ from common import CATEGORIES, OUTPUT_DIR, load_products
 BACKGROUND = (13, 13, 18)
 TEXT = (236, 236, 240)
 MUTED = (140, 140, 152)
-EMPTY_TILE = (30, 30, 40)
 STEM = (120, 92, 66)
 LEAF = (70, 140, 90)
 
 WIDTH = 1400
 SHAPE_SIZE = 1000  # width and height of the square box the apple is drawn in
 SUPERSAMPLE = 4
+STEM_BASE = 0.255  # where the stem meets the apple, as a share of SHAPE_SIZE
+LEAF_TOP = 0.08   # highest point of the stem and leaf
 
 
 # --------------------------------------------------------------------------- fonts
@@ -113,51 +114,57 @@ class Cell:
     size: float
 
 
-def grid_cells(mask: np.ndarray, cell: float) -> list[Cell]:
-    """Every square cell of the given size that sits fully inside the mask."""
+def _coverage(mask: np.ndarray, cell: float, ox: float, oy: float):
+    """Grid of candidate cells and the share of each cell that lies inside the mask."""
     h, w = mask.shape
-    inset = cell * 0.08
-    cells = []
-    rows = int(h // cell)
-    cols = int(w // cell)
-    x_offset = (w - cols * cell) / 2
-    y_offset = (h - rows * cell)  # align the grid to the bottom so it fills upward
-    for r in range(rows):
-        for c in range(cols):
-            x0 = x_offset + c * cell
-            y0 = y_offset + r * cell
-            probes = [
-                (x0 + cell / 2, y0 + cell / 2),
-                (x0 + inset, y0 + inset),
-                (x0 + cell - inset, y0 + inset),
-                (x0 + inset, y0 + cell - inset),
-                (x0 + cell - inset, y0 + cell - inset),
-            ]
-            if all(mask[int(py), int(px)] > 127 for px, py in probes):
-                cells.append(Cell(x0, y0, cell))
+    cols = np.arange(-1, int(w / cell) + 1)
+    rows = np.arange(-1, int(h / cell) + 1)
+    x0 = ox + cols * cell
+    y0 = h - oy - (rows + 1) * cell  # rows counted upward from the bottom edge
+    samples = (np.arange(4) + 0.5) / 4 * cell
+    xs = (x0[None, :, None] + samples[None, None, :])  # (1, cols, 4)
+    ys = (y0[:, None, None] + samples[None, None, :])  # (rows, 1, 4)
+    xi = np.clip(xs.astype(int), 0, w - 1)
+    yi = np.clip(ys.astype(int), 0, h - 1)
+    inside = mask[yi[:, :, :, None], xi[:, :, None, :]] > 127  # (rows, cols, 4, 4)
+    valid = ((xs >= 0) & (xs < w))[:, :, None, :] & ((ys >= 0) & (ys < h))[:, :, :, None]
+    coverage = (inside & valid).mean(axis=(2, 3))
+    return x0, y0, coverage
+
+
+def exact_grid(mask: np.ndarray, count: int, threshold: float = 0.5) -> list[Cell]:
+    """Exactly `count` square tiles that together fill the whole apple.
+
+    The search tries many tile sizes and grid offsets and keeps the largest tile size
+    whose grid has at least `count` cells that are mostly inside the shape. If that grid
+    has a few extra cells, the ones least inside the shape are dropped, so the apple is
+    always completely full with no empty slots.
+    """
+    if count <= 0:
+        return []
+    offsets = [0.0, 0.25, 0.5, 0.75]
+    best = None  # (cell size, surplus, x0, y0, coverage)
+    lo, hi = 2.0, mask.shape[0] / 2
+    for _ in range(36):
+        mid = (lo + hi) / 2
+        candidate = None
+        for fx in offsets:
+            for fy in offsets:
+                x0, y0, cov = _coverage(mask, mid, fx * mid, fy * mid)
+                n = int((cov >= threshold).sum())
+                if n >= count and (candidate is None or n - count < candidate[1]):
+                    candidate = (mid, n - count, x0, y0, cov)
+        if candidate:
+            best, lo = candidate, mid
+        else:
+            hi = mid
+    size, _, x0, y0, cov = best
+    r_idx, c_idx = np.nonzero(cov >= threshold)
+    order = np.argsort(-cov[r_idx, c_idx], kind="stable")[:count]
+    cells = [Cell(float(x0[c_idx[i]]), float(y0[r_idx[i]]), size) for i in order]
     # Fill order: bottom row first, left to right, like water filling a glass.
     cells.sort(key=lambda k: (-round(k.y, 3), k.x))
     return cells
-
-
-def fit_grid(mask: np.ndarray, capacity: int) -> list[Cell]:
-    """Largest cell size that still yields at least `capacity` cells."""
-    lo, hi = 4.0, mask.shape[0] / 2
-    best = grid_cells(mask, lo)
-    for _ in range(40):
-        mid = (lo + hi) / 2
-        cells = grid_cells(mask, mid)
-        if len(cells) >= capacity:
-            best, lo = cells, mid
-        else:
-            hi = mid
-    return best
-
-
-def capacity_for(count: int, step: int) -> int:
-    """Round up to the next step so the apple visibly fills before it resizes."""
-    target = math.ceil(count * 1.05)
-    return max(step, math.ceil(target / step) * step)
 
 
 # --------------------------------------------------------------------------- drawing helpers
@@ -210,17 +217,21 @@ def fit_label(text: str, max_width: float, start_size: int):
 
 # --------------------------------------------------------------------------- main render
 
-def render(products: list[dict], title: str, subtitle: str, step: int,
+def render(products: list[dict], title: str, subtitle: str,
            show_labels: bool, row_years: bool, cells: list[Cell] | None = None,
            highlight_newest: bool = True,
            legend: list[str] | None = None) -> tuple[Image.Image, list[Cell]]:
     mask_img = body_mask(SHAPE_SIZE)
     mask = np.array(mask_img)
     if cells is None:
-        cells = fit_grid(mask, capacity_for(len(products), step))
+        cells = exact_grid(mask, len(products))
 
     shape_x = (WIDTH - SHAPE_SIZE) // 2
-    shape_y = 150
+    # The stem's base tucks just inside the top row of tiles, wherever that row lands.
+    cell_size = cells[0].size if cells else 0
+    top_tile = min((c.y for c in cells), default=STEM_BASE * SHAPE_SIZE)
+    stem_shift = int(top_tile + 0.4 * cell_size - STEM_BASE * SHAPE_SIZE)
+    shape_y = max(150, 175 - int(LEAF_TOP * SHAPE_SIZE) - stem_shift)
     categories = legend or [c for c in CATEGORIES if any(p["category"] == c for p in products)]
     legend_rows = math.ceil(len(categories) / 4) if categories else 0
     height = shape_y + SHAPE_SIZE + 90 + legend_rows * 46 + 120
@@ -232,23 +243,14 @@ def render(products: list[dict], title: str, subtitle: str, step: int,
     draw.text((WIDTH / 2, 70), title, font=font(54, "Bold"), fill=TEXT, anchor="mm")
     draw.text((WIDTH / 2, 128), subtitle, font=font(26), fill=MUTED, anchor="mm")
 
-    # Faint silhouette so empty space still reads as an apple.
-    ghost = Image.new("RGBA", (SHAPE_SIZE, SHAPE_SIZE), (24, 24, 32, 255))
-    canvas.paste(ghost, (shape_x, shape_y), mask_img)
-    draw_stem_and_leaf(canvas, (shape_x, shape_y), SHAPE_SIZE)
+    # No outline: the tiles themselves form the apple. Only the stem and leaf are drawn.
+    draw_stem_and_leaf(canvas, (shape_x, shape_y + stem_shift), SHAPE_SIZE)
     draw = ImageDraw.Draw(canvas)
 
-    cell_size = cells[0].size if cells else 0
     gap = max(1.0, cell_size * 0.12)
     radius = max(1, int(cell_size * 0.18))
     label_font_size = max(10, int(cell_size * 0.16))
     label_font = font(label_font_size, "SemiBold")
-
-    # Empty slots first, then the filled tiles on top.
-    for cell in cells[len(products):]:
-        box = (shape_x + cell.x + gap / 2, shape_y + cell.y + gap / 2,
-               shape_x + cell.x + cell.size - gap / 2, shape_y + cell.y + cell.size - gap / 2)
-        draw.rounded_rectangle(box, radius=radius, fill=EMPTY_TILE)
 
     last_labeled_year = None
     last_row_y = None
@@ -303,8 +305,7 @@ def render(products: list[dict], title: str, subtitle: str, step: int,
         draw.text((x + 38, y + 13), f"{cat}  {count}", font=legend_font,
                   fill=TEXT if count else MUTED, anchor="lm")
 
-    footer = (f"{len(products)} products in {len(cells)} slots  ·  "
-              "Unofficial fan project, not affiliated with Apple Inc.")
+    footer = "Unofficial fan project, not affiliated with Apple Inc."
     draw.text((WIDTH / 2, height - 50), footer, font=font(20), fill=MUTED, anchor="mm")
     return canvas.convert("RGB"), cells
 
@@ -314,7 +315,7 @@ def build_all_time(products):
     return dict(
         title="Every Apple Product",
         subtitle=f"{len(products)} products, {first}–{last}, oldest at the bottom",
-        step=50, show_labels=False, row_years=True,
+        show_labels=False, row_years=True,
     )
 
 
@@ -322,14 +323,12 @@ def build_current(products):
     return dict(
         title="Apple's Current Lineup",
         subtitle=f"{len(products)} products sold new on apple.com, oldest at the bottom",
-        step=8, show_labels=True, row_years=False,
+        show_labels=True, row_years=False,
     )
 
 
 def animate(products: list[dict], path) -> None:
-    """One frame per year on the final grid, so the apple fills over time."""
-    settings = build_all_time(products)
-    _, cells = render(products, **settings)
+    """One frame per year. Every frame is a full apple, with tiles shrinking as products are added."""
     legend = [c for c in CATEGORIES if any(p["category"] == c for p in products)]
     first, last = int(products[0]["date"][:4]), int(products[-1]["date"][:4])
     frames = []
@@ -337,8 +336,8 @@ def animate(products: list[dict], path) -> None:
         subset = [p for p in products if int(p["date"][:4]) <= year]
         frame, _ = render(subset, title=f"Every Apple Product: {year}",
                           subtitle=f"{len(subset)} products so far",
-                          step=settings["step"], show_labels=False, row_years=True,
-                          cells=cells, highlight_newest=False, legend=legend)
+                          show_labels=False, row_years=True,
+                          highlight_newest=False, legend=legend)
         frames.append(frame.resize((frame.width // 2, frame.height // 2), Image.LANCZOS))
     durations = [180] * (len(frames) - 1) + [2500]
     frames[0].save(path, save_all=True, append_images=frames[1:], duration=durations,

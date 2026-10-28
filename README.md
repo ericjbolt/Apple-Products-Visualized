@@ -1,6 +1,6 @@
 # Apple Fill
 
-Every Apple product, in release order, filling an apple from the bottom up. When Apple releases something new, the next tile lights up. When the apple runs out of room, the tiles shrink and the apple keeps filling.
+Every Apple product, in release order, stacked from the bottom up into the shape of an apple. There is no outline and no empty space: the tiles themselves form the apple. When Apple releases something new, every tile shrinks slightly to make room, and the apple is full again.
 
 There are two versions:
 
@@ -8,16 +8,16 @@ There are two versions:
 | --- | --- |
 | ![Every Apple product](output/all_time.png) | ![Current Apple lineup](output/current.png) |
 
-And the whole history as an animation, one frame per year:
+And the whole history as an animation, one frame per year, with the tiles shrinking as the catalog grows:
 
 ![Apple products filling the apple, year by year](output/all_time.gif)
 
 ## How it works
 
 1. **The data** lives in [`data/products.json`](data/products.json). Each product has a name, a category, a release month, and a `current` flag that says whether apple.com still sells it new.
-2. **The shape** is an original apple-fruit silhouette built from overlapping ellipses. It is not Apple's logo.
-3. **The grid** is the largest set of square tiles that fits inside the shape. Tiles fill bottom row first, left to right, oldest product first, like water filling a glass.
-4. **The capacity** rounds up to the next 50 tiles (all-time) or 8 tiles (current lineup), so the apple fills visibly before it resizes.
+2. **The shape** is an original apple-fruit silhouette built from overlapping ellipses. It is used only to place the tiles and is never drawn. The stem and leaf sit on top. It is not Apple's logo.
+3. **The grid** has exactly one tile per product. The script tries many tile sizes and grid positions, keeps the largest tiles that cover the shape, and trims any extra edge tiles, so the apple is always completely full.
+4. **The order** is bottom row first, left to right, oldest product first. The newest product sits at the top, outlined in white.
 5. **The weekly update** runs on GitHub Actions every Monday. It checks Wikipedia for new releases, checks apple.com for the current lineup, redraws the images, and opens a pull request for review.
 
 ### What counts as a product
