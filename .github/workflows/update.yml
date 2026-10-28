@@ -1,16 +1,46 @@
 name: Weekly product update
 
+# Runs every Tuesday at 3:00 p.m. Pacific time.
+# GitHub schedules use UTC, and 3:00 p.m. Pacific is 22:00 UTC in daylight time
+# (March to November) and 23:00 UTC in standard time. Both times are scheduled,
+# and the "pacific-time" job lets only the one that matches today's clock through.
 on:
   schedule:
-    - cron: "17 14 * * 1"   # Mondays at 14:17 UTC (7:17 a.m. Pacific daylight time)
-  workflow_dispatch:         # adds a "Run workflow" button on the Actions tab
+    - cron: "0 22 * * 2"   # 3:00 p.m. Pacific daylight time
+    - cron: "0 23 * * 2"   # 3:00 p.m. Pacific standard time
+  workflow_dispatch:        # adds a "Run workflow" button on the Actions tab
 
 permissions:
   contents: write
   pull-requests: write
 
 jobs:
+  pacific-time:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.check.outputs.run }}
+    steps:
+      - id: check
+        env:
+          TRIGGER: ${{ github.event_name }}
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          offset=$(TZ=America/Los_Angeles date +%z)   # -0700 in daylight time, -0800 in standard time
+          if [ "$TRIGGER" != "schedule" ]; then
+            run=true
+          elif [ "$offset" = "-0700" ] && [ "$SCHEDULE" = "0 22 * * 2" ]; then
+            run=true
+          elif [ "$offset" = "-0800" ] && [ "$SCHEDULE" = "0 23 * * 2" ]; then
+            run=true
+          else
+            run=false
+          fi
+          echo "Pacific offset $offset, schedule '$SCHEDULE', run=$run"
+          echo "run=$run" >> "$GITHUB_OUTPUT"
+
   update:
+    needs: pacific-time
+    if: needs.pacific-time.outputs.run == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

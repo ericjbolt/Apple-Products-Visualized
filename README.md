@@ -17,7 +17,7 @@ Full-size, zoomable versions: [current.jpg](output/current.jpg) and [thank_you.j
 3. **The tiles** fill each word completely. The script picks a tile size small enough for the letters to stay readable, then fits exactly that many square tiles inside the word with no empty slots.
 4. **The order** follows the word from left to right. In **thank you**, each past product gets a short run of neighboring tiles, oldest first, so the word reads as a timeline. **current** has fewer products than tiles, so the lineup repeats along the word.
 5. **The photos** come from Wikimedia Commons, the free media library behind Wikipedia. Each tile shows its product's photo in a frame of its category color. Products without a freely licensed photo show their name on a colored tile instead. Every photo is credited in [CREDITS.md](CREDITS.md).
-6. **The weekly update** runs on GitHub Actions every Monday. It checks Wikipedia for new releases, checks apple.com for the current lineup, downloads any missing photos, redraws the images, and opens a pull request for review. When Apple retires a product, it moves from **current** to **thank you** automatically.
+6. **The weekly update** runs on GitHub Actions every Tuesday at 3:00 p.m. Pacific time. It checks Wikipedia for new releases, checks apple.com for the current lineup, downloads any missing photos, redraws the images, and opens a pull request for review. When Apple retires a product, it moves from **current** to **thank you** automatically.
 
 ### What counts as a product
 
