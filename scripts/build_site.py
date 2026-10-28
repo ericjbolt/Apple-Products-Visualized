@@ -15,6 +15,7 @@ Usage:
 
 from __future__ import annotations
 
+import hashlib
 import math
 import shutil
 from pathlib import Path
@@ -139,8 +140,12 @@ def main() -> None:
     for stem, label in WORDS:
         source = OUTPUT_DIR / f"{stem}.jpg"
         if source.exists():
-            w, h = write_dzi(source, tiles, stem)
-            built.append((stem, label))
+            # A fingerprint of the image goes into the tile names, so browsers never mix
+            # cached tiles from an older version with tiles from the new one.
+            version = hashlib.sha1(source.read_bytes()).hexdigest()[:10]
+            name = f"{stem}-{version}"
+            w, h = write_dzi(source, tiles, name)
+            built.append((name, label))
             print(f"Tiled {stem}: {w} x {h}")
     tabs = "\n    ".join(
         f'<button type="button" data-word="{stem}" aria-pressed="{str(i == 0).lower()}">{label}</button>'
