@@ -29,7 +29,6 @@ MUTED = (140, 140, 152)
 
 SCRIPT_FONT = ROOT / "assets" / "fonts" / "Pacifico-Regular.ttf"
 WORD_SIZE = 2400          # script font size in pixels for the full-size image
-TILE_PER_STROKE = 0.028   # tile size as a share of WORD_SIZE (about 4 to 5 tiles per stroke)
 MARGIN = 220
 PREVIEW_WIDTH = 1800
 
@@ -69,94 +68,89 @@ def word_mask(word: str, size: int | None = None) -> Image.Image:
     return mask
 
 
-# --------------------------------------------------------------------------- grid
+# --------------------------------------------------------------------------- bubbles
 
 @dataclass
-class Cell:
-    x: float
+class Bubble:
+    x: float  # center, in word-mask pixels
     y: float
-    size: float
+    r: float
 
 
-def _coverage(mask: np.ndarray, cell: float, ox: float, oy: float):
-    """Grid of candidate cells and the share of each cell that lies inside the mask."""
-    h, w = mask.shape
-    cols = np.arange(-1, int(w / cell) + 1)
-    rows = np.arange(-1, int(h / cell) + 1)
-    x0 = ox + cols * cell
-    y0 = oy + rows * cell
-    samples = (np.arange(4) + 0.5) / 4 * cell
-    xs = x0[None, :, None] + samples[None, None, :]
-    ys = y0[:, None, None] + samples[None, None, :]
-    xi = np.clip(xs.astype(int), 0, w - 1)
-    yi = np.clip(ys.astype(int), 0, h - 1)
-    inside = mask[yi[:, :, :, None], xi[:, :, None, :]] > 127
-    valid = ((xs >= 0) & (xs < w))[:, :, None, :] & ((ys >= 0) & (ys < h))[:, :, :, None]
-    return x0, y0, (inside & valid).mean(axis=(2, 3))
+PACK_SCALE = 4             # pack on a mask this many times smaller, for speed
+MIN_RADIUS = 0.006         # smallest bubble, as a share of WORD_SIZE
+BUBBLE_GAP = 0.004         # space between bubbles, as a share of WORD_SIZE
 
 
-OFFSETS = [0.0, 0.25, 0.5, 0.75]
+def pack_bubbles(mask: np.ndarray) -> list[Bubble]:
+    """Fill the word with circles of many sizes, largest first.
 
-
-def cells_at(mask: np.ndarray, size: float, threshold: float = 0.5) -> int:
-    """Most cells of this size that fit, over a few grid offsets."""
-    return max(int((_coverage(mask, size, fx * size, fy * size)[2] >= threshold).sum())
-               for fx in OFFSETS for fy in OFFSETS)
-
-
-def exact_grid(mask: np.ndarray, count: int, threshold: float = 0.5) -> list[Cell]:
-    """Exactly `count` square tiles that together fill the whole shape.
-
-    Tries many tile sizes and grid offsets, keeps the largest tile size whose grid has at
-    least `count` cells mostly inside the shape, then drops the cells least inside the
-    shape, so the shape is always completely full with no empty slots.
+    Each step places the biggest circle that still fits, using a distance map of the
+    space left inside the letters. Thick strokes get large bubbles, thin strokes and
+    corners get small ones, and packing stops when only tiny gaps remain.
     """
-    if count <= 0:
-        return []
-    best = None
-    lo, hi = 2.0, min(mask.shape) / 2
-    for _ in range(36):
-        mid = (lo + hi) / 2
-        candidate = None
-        for fx in OFFSETS:
-            for fy in OFFSETS:
-                x0, y0, cov = _coverage(mask, mid, fx * mid, fy * mid)
-                n = int((cov >= threshold).sum())
-                if n >= count and (candidate is None or n - count < candidate[1]):
-                    candidate = (mid, n - count, x0, y0, cov)
-        if candidate:
-            best, lo = candidate, mid
-        else:
-            hi = mid
-    size, _, x0, y0, cov = best
-    r_idx, c_idx = np.nonzero(cov >= threshold)
-    order = np.argsort(-cov[r_idx, c_idx], kind="stable")[:count]
-    cells = [Cell(float(x0[c_idx[i]]), float(y0[r_idx[i]]), size) for i in order]
-    # Reading order: column by column from left to right, top to bottom within a column,
-    # so the products flow along the word the way it is written.
-    cells.sort(key=lambda k: (round(k.x, 3), k.y))
-    return cells
+    from scipy.ndimage import distance_transform_edt
+
+    small = Image.fromarray(mask).resize((mask.shape[1] // PACK_SCALE, mask.shape[0] // PACK_SCALE),
+                                         Image.BILINEAR)
+    inside = np.array(small) > 127
+    sx, sy = mask.shape[1] / small.width, mask.shape[0] / small.height  # exact scale back up
+    dist = distance_transform_edt(inside)
+    gap = WORD_SIZE * BUBBLE_GAP / PACK_SCALE
+    min_r = WORD_SIZE * MIN_RADIUS / PACK_SCALE
+    h, w = dist.shape
+    bubbles = []
+    while True:
+        index = int(np.argmax(dist))
+        room = float(dist.flat[index])
+        if room < min_r + gap:
+            break
+        cy, cx = divmod(index, w)
+        r = room - gap
+        bubbles.append(Bubble((cx + 0.5) * sx, (cy + 0.5) * sy, r * min(sx, sy)))
+        # Every point near the new bubble is now only as far from an obstacle as it is
+        # from this bubble's edge, plus the gap.
+        reach = int(r + gap + room) + 2
+        y0, y1, x0, x1 = max(0, cy - reach), min(h, cy + reach), max(0, cx - reach), min(w, cx + reach)
+        yy, xx = np.ogrid[y0:y1, x0:x1]
+        edge = np.hypot(yy - cy, xx - cx) - (r + gap)
+        np.minimum(dist[y0:y1, x0:x1], np.maximum(edge, 0), out=dist[y0:y1, x0:x1])
+    return bubbles
 
 
-def plan_tiles(mask: np.ndarray, products: list[dict], mode: str) -> list[tuple[Cell, dict]]:
-    """Pair every tile with a product.
+def group_bubbles(bubbles: list[Bubble], products: list[dict]) -> list[tuple[dict, list[Bubble]]]:
+    """Give each product a cluster of neighboring bubbles, in order from left to right.
 
-    The tile count is the larger of the product count and the number of tiles needed
-    for the letters to stay readable. When there are more tiles than products:
-      "timeline" gives each product a run of neighboring tiles, so history reads left to right
-      "cycle" repeats the whole lineup in order along the word
+    Bubbles are sorted by position along the word and split into one group per product,
+    with each group covering about the same area. A product appears exactly once: its
+    largest bubble shows the photo or name, and the rest of its cluster shares its color.
     """
-    if not products:
+    if not products or not bubbles:
         return []
-    readable = cells_at(mask, WORD_SIZE * TILE_PER_STROKE)
-    total = max(len(products), readable)
-    cells = exact_grid(mask, total)
-    n = len(products)
-    if mode == "cycle":
-        picks = [products[i % n] for i in range(total)]
-    else:
-        picks = [products[min(n - 1, i * n // total)] for i in range(total)]
-    return list(zip(cells, picks))
+    ordered = sorted(bubbles, key=lambda b: (b.x, b.y))
+    n = min(len(products), len(ordered))
+    areas = [b.r ** 2 for b in ordered]
+    remaining = sum(areas)
+    groups: list[list[Bubble]] = []
+    i = 0
+    for g in range(n):
+        groups_left = n - g
+        target = remaining / groups_left
+        group, taken = [], 0.0
+        # Take at least one bubble, aim for an equal share of the remaining area, and
+        # always leave at least one bubble for each product still to come.
+        while i < len(ordered) and (not group or taken < target) and len(ordered) - i > groups_left - 1:
+            group.append(ordered[i])
+            taken += areas[i]
+            i += 1
+            if groups_left == 1:
+                continue
+        if groups_left == 1:
+            group.extend(ordered[i:])
+            i = len(ordered)
+        remaining -= sum(b.r ** 2 for b in group)
+        groups.append(group)
+    return [(p, sorted(g, key=lambda b: -b.r)) for p, g in zip(products, groups)]
 
 
 # --------------------------------------------------------------------------- tile drawing
@@ -220,105 +214,46 @@ def load_photo(product: dict) -> Image.Image | None:
     return _photo_cache[key]
 
 
-def paste_photo(canvas: Image.Image, photo: Image.Image, card, radius: int) -> None:
-    """Fit the photo inside a white rounded card without cropping it."""
-    x0, y0, x1, y1 = (int(round(v)) for v in card)
-    w, h = max(1, x1 - x0), max(1, y1 - y0)
-    tile = Image.new("RGB", (w, h), (255, 255, 255))
-    pad = max(1, int(min(w, h) * 0.06))
+def paste_round_photo(canvas: Image.Image, photo: Image.Image, cx: float, cy: float, r: float) -> None:
+    """Fit the photo inside a white circle without cropping it."""
+    d = max(2, int(2 * r))
+    disc = Image.new("RGB", (d, d), (255, 255, 255))
     fitted = photo.copy()
-    fitted.thumbnail((w - 2 * pad, h - 2 * pad), Image.LANCZOS)
-    tile.paste(fitted, ((w - fitted.width) // 2, (h - fitted.height) // 2))
-    mask = Image.new("L", (w, h), 0)
-    ImageDraw.Draw(mask).rounded_rectangle((0, 0, w - 1, h - 1), radius=radius, fill=255)
-    canvas.paste(tile, (x0, y0), mask)
+    side = int(d * 0.62)  # the largest square that sits comfortably inside the circle
+    fitted.thumbnail((side, side), Image.LANCZOS)
+    disc.paste(fitted, ((d - fitted.width) // 2, (d - fitted.height) // 2))
+    mask = Image.new("L", (d, d), 0)
+    ImageDraw.Draw(mask).ellipse((0, 0, d - 1, d - 1), fill=255)
+    canvas.paste(disc, (int(cx - d / 2), int(cy - d / 2)), mask)
 
 
-def draw_tile(canvas: Image.Image, box, product: dict, radius: int) -> bool:
-    """Draw one tile. Returns True when a photo was used."""
+def draw_group(canvas: Image.Image, product: dict, bubbles: list[Bubble], origin) -> bool:
+    """Draw a product's cluster of bubbles. Returns True when a photo was used."""
+    ox, oy = origin
     draw = ImageDraw.Draw(canvas)
     color = type_color(product_type(product))
-    draw.rounded_rectangle(box, radius=radius, fill=color)
+    for b in bubbles:
+        draw.ellipse((ox + b.x - b.r, oy + b.y - b.r, ox + b.x + b.r, oy + b.y + b.r), fill=color)
+    main = bubbles[0]
+    cx, cy = ox + main.x, oy + main.y
     photo = load_photo(product)
     if photo is not None:
-        frame = max(2, int((box[2] - box[0]) * 0.06))
-        card = (box[0] + frame, box[1] + frame, box[2] - frame, box[3] - frame)
-        paste_photo(canvas, photo, card, max(1, radius - frame))
+        paste_round_photo(canvas, photo, cx, cy, main.r * 0.9)
         return True
-    fnt, size, lines = fit_label(product["name"], box[2] - box[0])
+    side = main.r * 1.41  # square inscribed in the circle
+    fnt, size, lines = fit_label(product["name"], side)
     line_h = size * 1.18
-    cx, cy = (box[0] + box[2]) / 2, (box[1] + box[3]) / 2
     top = cy - line_h * len(lines) / 2 + line_h / 2
     for i, line in enumerate(lines):
         draw.text((cx, top + i * line_h), line, font=fnt, fill=text_color_for(color), anchor="mm")
     return False
 
 
-def product_runs(tiles: list[tuple[Cell, dict]]) -> list[tuple[dict, list[Cell]]]:
-    """Group neighboring tiles that show the same product into one run."""
-    runs: list[tuple[dict, list[Cell]]] = []
-    for cell, product in tiles:
-        if runs and runs[-1][0] is product:
-            runs[-1][1].append(cell)
-        else:
-            runs.append((product, [cell]))
-    return runs
-
-
-def largest_square(cells: list[Cell]) -> tuple[float, float, int]:
-    """Top-left corner and side (in tiles) of the biggest square block inside a run."""
-    size = cells[0].size
-    x0, y0 = min(c.x for c in cells), min(c.y for c in cells)
-    occupied = {(round((c.x - x0) / size), round((c.y - y0) / size)) for c in cells}
-    cols = max(c for c, _ in occupied) + 1
-    rows = max(r for _, r in occupied) + 1
-    best = (0, 0, 1)
-    side = [[0] * (cols + 1) for _ in range(rows + 1)]
-    for r in range(rows):
-        for c in range(cols):
-            if (c, r) in occupied:
-                side[r + 1][c + 1] = 1 + min(side[r][c], side[r][c + 1], side[r + 1][c])
-                if side[r + 1][c + 1] > best[2]:
-                    k = side[r + 1][c + 1]
-                    best = (c - k + 1, r - k + 1, k)
-    c, r, k = best
-    return x0 + c * size, y0 + r * size, k
-
-
-def draw_region(canvas: Image.Image, cells: list[Cell], product: dict, origin, gap: float,
-                radius: int) -> bool:
-    """Draw one product as a single colored shape, with its photo or name shown once.
-
-    The run's tiles merge into one region, so a product that needs many tiles to keep the
-    letters readable still appears only once. Returns True when a photo was used.
-    """
-    size = cells[0].size
-    ox, oy = origin
-    left = int(ox + min(c.x for c in cells))
-    top = int(oy + min(c.y for c in cells))
-    right = int(ox + max(c.x for c in cells) + size) + 1
-    bottom = int(oy + max(c.y for c in cells) + size) + 1
-    mask = Image.new("L", (right - left, bottom - top), 0)
-    md = ImageDraw.Draw(mask)
-    for c in cells:
-        md.rectangle((ox + c.x - left, oy + c.y - top,
-                      ox + c.x + size - left, oy + c.y + size - top), fill=255)
-    shrink = max(3, int(gap) | 1)  # odd filter size: leaves a thin gap between products
-    mask = mask.filter(ImageFilter.MinFilter(shrink)).filter(ImageFilter.GaussianBlur(0.8))
-    color = type_color(product_type(product))
-    canvas.paste(Image.new("RGB", mask.size, color), (left, top), mask)
-
-    sx, sy, k = largest_square(cells)
-    box = (ox + sx + gap / 2, oy + sy + gap / 2, ox + sx + k * size - gap / 2, oy + sy + k * size - gap / 2)
-    return draw_tile(canvas, box, product, radius)
-
-
 # --------------------------------------------------------------------------- composition
 
-def render_word(word: str, products: list[dict], caption: str, mode: str) -> Image.Image:
+def render_word(word: str, products: list[dict], caption: str) -> Image.Image:
     mask_img = word_mask(word)
-    mask = np.array(mask_img)
-    tiles = plan_tiles(mask, products, mode)
+    groups = group_bubbles(pack_bubbles(np.array(mask_img)), products)
 
     # Legend: one column per color family, in rainbow order, listing each product type.
     counts: dict[str, int] = {}
@@ -342,12 +277,7 @@ def render_word(word: str, products: list[dict], caption: str, mode: str) -> Ima
     height = legend_top + header_h + longest * row_h + int(320 * k)
 
     canvas = Image.new("RGB", (width, height), BACKGROUND)
-    size = tiles[0][0].size if tiles else 0
-    gap = max(1.0, size * 0.1)
-    radius = max(1, int(size * 0.16))
-    photos = 0
-    for product, cells in product_runs(tiles):
-        photos += draw_region(canvas, cells, product, (MARGIN, word_top), gap, radius)
+    photos = sum(draw_group(canvas, product, bubbles, (MARGIN, word_top)) for product, bubbles in groups)
 
     draw = ImageDraw.Draw(canvas)
     draw.text((width / 2, caption_y), caption, font=font(int(110 * k), "Medium"), fill=TEXT, anchor="mm")
@@ -405,11 +335,11 @@ def main() -> None:
 
     save(render_word("hello", current,
                      f"{len(current)} products on apple.com today, in order of introduction",
-                     mode="timeline"), "hello")
+                     ), "hello")
     retired_years = sorted(p.get("retired", p["date"])[:4] for p in past)
     span = f"{retired_years[0]}–{retired_years[-1]}" if retired_years else ""
     save(render_word("thank you", past,
-                     f"{len(past)} past products, in order of retirement, {span}", mode="timeline"),
+                     f"{len(past)} past products, in order of retirement, {span}"),
          "thank_you")
     print(f"Rendered {len(current)} current and {len(past)} past products.")
 

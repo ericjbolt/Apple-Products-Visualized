@@ -87,33 +87,33 @@ def small_words(monkeypatch):
     monkeypatch.setattr(render, "WORD_SIZE", 300)
 
 
-def test_words_fill_exactly(monkeypatch):
+def test_bubbles_stay_inside_the_word(monkeypatch):
     small_words(monkeypatch)
     mask = render.np.array(render.word_mask("thank you"))
-    for count in (1, 32, 219, 500):
-        assert len(render.exact_grid(mask, count)) == count, "every tile must be inside the word"
+    bubbles = render.pack_bubbles(mask)
+    assert len(bubbles) > 252, "enough bubbles to give every past product its own cluster"
+    for b in bubbles:
+        assert mask[int(b.y), int(b.x)] > 0, "every bubble center is inside a letter"
+    radii = sorted(b.r for b in bubbles)
+    assert radii[-1] > 3 * radii[0], "bubbles come in many sizes"
 
 
-def test_timeline_shows_every_product_in_order(monkeypatch):
+def test_each_past_product_appears_once_in_retirement_order(monkeypatch):
     small_words(monkeypatch)
     _, past = render.ordered_products(load()["products"])
-    tiles = render.plan_tiles(render.np.array(render.word_mask("thank you")), past, "timeline")
-    shown = []
-    for _, product in tiles:
-        if not shown or shown[-1] is not product:
-            shown.append(product)
-    assert shown == past, "each past product appears once, as one run, in retirement order"
-    retired = [p["retired"] for p in shown]
+    groups = render.group_bubbles(render.pack_bubbles(render.np.array(render.word_mask("thank you"))), past)
+    assert [p for p, _ in groups] == past, "one cluster per product, in retirement order"
+    retired = [p["retired"] for p, _ in groups]
     assert retired == sorted(retired)
 
 
 def test_hello_is_in_introduction_order(monkeypatch):
     small_words(monkeypatch)
     current, _ = render.ordered_products(load()["products"])
-    tiles = render.plan_tiles(render.np.array(render.word_mask("hello")), current, "timeline")
-    dates = [p["date"] for _, p in tiles]
+    groups = render.group_bubbles(render.pack_bubbles(render.np.array(render.word_mask("hello"))), current)
+    assert [p for p, _ in groups] == current
+    dates = [p["date"] for p, _ in groups]
     assert dates == sorted(dates)
-    assert {id(p) for _, p in tiles} == {id(p) for p in current}
 
 
 def test_only_free_licenses_are_accepted():
@@ -141,6 +141,6 @@ def test_photo_tiles_render(tmp_path, monkeypatch):
     monkeypatch.setattr(render, "photo_path", lambda product: photo)
     render._photo_cache.clear()
     current = [p for p in load()["products"] if p["current"]]
-    image = render.render_word("hello", current, "test", mode="cycle")
+    image = render.render_word("hello", current, "test")
     assert image.width > 0
     render._photo_cache.clear()

@@ -16,14 +16,14 @@ Full-size images: [hello.jpg](output/hello.jpg) and [thank_you.jpg](output/thank
 
 1. **The data** lives in [`data/products.json`](data/products.json). Each product has a name, a category, a release month, and a `current` flag that says whether apple.com still sells it new.
 2. **The words** are set in [Pacifico](https://fonts.google.com/specimen/Pacifico), an open-source script font included in `assets/fonts`.
-3. **The tiles** fill each word completely. The script picks a tile size small enough for the letters to stay readable, then fits exactly that many square tiles inside the word with no empty slots.
-4. **The order** follows the word from left to right. **hello** lists today's products by introduction date, and **thank you** lists past products by retirement date. Each product fills one connected section of the letters, shown as a single colored shape with its photo or name appearing once, so no product repeats. Retirement dates come from Wikipedia's list of Apple products.
-5. **The photos** come from Wikimedia Commons, the free media library behind Wikipedia. Each tile shows its product's photo in a frame of its category color. Products without a freely licensed photo show their name on a colored tile instead. Every photo is credited in [CREDITS.md](CREDITS.md).
+3. **The bubbles** fill each word completely. The script packs circles of many sizes into the letters, largest first, so thick strokes hold big bubbles and thin strokes hold small ones.
+4. **The order** follows the word from left to right. **hello** lists today's products by introduction date, and **thank you** lists past products by retirement date. Each product gets one cluster of neighboring bubbles in its color. Its largest bubble shows its photo or name, so every product appears exactly once. Retirement dates come from Wikipedia's list of Apple products.
+5. **The photos** come from Wikimedia Commons, the free media library behind Wikipedia. Each product's largest bubble shows its photo in a white circle. Products without a freely licensed photo show their name instead. Every photo is credited in [CREDITS.md](CREDITS.md).
 6. **The weekly update** runs on GitHub Actions every Tuesday at 3:00 p.m. Pacific time. It checks Wikipedia for new releases, checks apple.com for the current lineup, downloads any missing photos, redraws the images, and opens a pull request for review. When Apple retires a product, it moves from **hello** to **thank you** automatically.
 
 ### Colors and legend
 
-Tiles use the six colors of Apple's 1977 rainbow logo, in stripe order: green, yellow, orange, red, purple, and blue. Each color covers one product family, and each product type within that family gets its own shade, from darker to lighter.
+Bubbles use the six colors of Apple's 1977 rainbow logo, in stripe order: green, yellow, orange, red, purple, and blue. Each color covers one product family, and each product type within that family gets its own shade, from darker to lighter.
 
 | Color | Family | Product types |
 | --- | --- | --- |
@@ -64,7 +64,7 @@ Open `data/products.json` and add, remove, or correct a product. Then run `pytho
 
 | Field | Meaning |
 | --- | --- |
-| `name` | Name shown on the tile when there is no photo |
+| `name` | Name shown on the product's largest bubble when there is no photo |
 | `line` | Product family, such as "MacBook Air", used to match apple.com |
 | `category` | Broad product category, kept for reference. The legend type and color come from `line` |
 | `date` | Announcement or release month, as `YYYY-MM` |
