@@ -18,7 +18,8 @@ And the whole history as an animation, one frame per year, with the tiles shrink
 2. **The shape** is an original apple-fruit silhouette built from overlapping ellipses. It is used only to place the tiles and is never drawn. The stem and leaf sit on top. It is not Apple's logo.
 3. **The grid** has exactly one tile per product. The script tries many tile sizes and grid positions, keeps the largest tiles that cover the shape, and trims any extra edge tiles, so the apple is always completely full.
 4. **The order** is bottom row first, left to right, oldest product first. The newest product sits at the top, outlined in white.
-5. **The weekly update** runs on GitHub Actions every Monday. It checks Wikipedia for new releases, checks apple.com for the current lineup, redraws the images, and opens a pull request for review.
+5. **The photos** come from Wikimedia Commons, the free media library behind Wikipedia. Each tile shows its product's photo inside a frame in the category color. Products without a freely licensed photo appear as a plain colored tile. Every photo is credited in [CREDITS.md](CREDITS.md).
+6. **The weekly update** runs on GitHub Actions every Monday. It checks Wikipedia for new releases, checks apple.com for the current lineup, downloads any missing photos, redraws the images, and opens a pull request for review.
 
 ### What counts as a product
 
@@ -34,6 +35,7 @@ cd apple-fill
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
+python scripts/fetch_images.py           # download product photos and credits
 python scripts/render.py --animate        # redraw all three images
 python scripts/fetch_current.py --dry-run # preview apple.com lineup changes
 python scripts/fetch_all_time.py --dry-run # preview new releases from Wikipedia
@@ -53,6 +55,7 @@ Open `data/products.json` and add, remove, or correct a product. Then run `pytho
 | `date` | Announcement or release month, as `YYYY-MM` |
 | `current` | `true` if apple.com sells it new today |
 | `apple_name` | Optional. The exact name apple.com uses, such as "iPhone 17e" |
+| `image_file` | Optional. A specific Wikimedia Commons file to use as the photo, such as "iPhone 4 Black.jpg" |
 | `needs_review` | Added by the update scripts. Check the entry, then delete this field |
 
 ## Repository structure
@@ -63,6 +66,9 @@ apple-fill/
 ├── scripts/render.py           draws the images
 ├── scripts/fetch_current.py    syncs the current lineup with apple.com
 ├── scripts/fetch_all_time.py   adds new releases from Wikipedia
+├── scripts/fetch_images.py     downloads product photos and writes CREDITS.md
+├── assets/photos/              downloaded product photos
+├── data/photo_credits.json     author, license, and source for each photo
 ├── scripts/common.py           shared helpers and the color palette
 ├── tests/test_scripts.py       offline tests
 ├── output/                     generated images
@@ -74,7 +80,8 @@ apple-fill/
 - The weekly job needs permission to open pull requests. In the repository on GitHub, go to **Settings > Actions > General**, choose **Read and write permissions**, and check **Allow GitHub Actions to create and approve pull requests**.
 - To run the update immediately, open the **Actions** tab, choose **Weekly product update**, and click **Run workflow**.
 - The apple.com and Wikipedia readers depend on how those pages are built. If either page changes, the script stops without writing anything, and the weekly pull request simply will not appear. The images stay correct either way.
-- Product colors are grouped by category only. No Apple product photography or logos are used.
+- The photo script reads each product's Wikipedia article and uses its lead photo. When an article covers several models, the photo may show a sibling model. To choose a specific photo, add an `image_file` field to that product, delete its file from `assets/photos`, and rerun `python scripts/fetch_images.py`.
+- Only photos licensed CC BY, CC BY-SA, CC0, or public domain are accepted. The script checks each license on Wikimedia Commons before downloading, and it skips logos and screenshots.
 
 ## Disclaimer
 
@@ -82,4 +89,6 @@ This is an unofficial fan project. It is not affiliated with, endorsed by, or sp
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+The code is released under the MIT License. See [LICENSE](LICENSE).
+
+The images in the `output` folder include product photos from Wikimedia Commons, some under Share-Alike licenses, so those images are released under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Each photo keeps its original license, listed in [CREDITS.md](CREDITS.md).

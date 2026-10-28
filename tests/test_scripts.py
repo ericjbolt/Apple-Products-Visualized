@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import fetch_all_time  # noqa: E402
+import fetch_images  # noqa: E402
 import fetch_current  # noqa: E402
 import render  # noqa: E402
 from common import CATEGORIES, fingerprint  # noqa: E402
@@ -88,3 +89,32 @@ def test_every_count_fills_exactly():
     mask = render.np.array(render.body_mask(render.SHAPE_SIZE))
     for count in (1, 7, 32, 100, 251, 400):
         assert len(render.exact_grid(mask, count)) == count
+
+
+def test_only_free_licenses_are_accepted():
+    assert fetch_images.license_ok({"license": "CC BY-SA 4.0"})
+    assert fetch_images.license_ok({"license": "CC BY 2.0"})
+    assert fetch_images.license_ok({"license": "CC0"})
+    assert fetch_images.license_ok({"license": "Public domain"})
+    assert not fetch_images.license_ok({"license": "Fair use"})
+    assert not fetch_images.license_ok({"license": "CC BY-NC 4.0"})
+    assert not fetch_images.license_ok({"license": ""})
+
+
+def test_title_candidates_drop_alternates_and_details():
+    product = {"name": "iPhone 16 / 16 Plus", "line": "iPhone"}
+    assert fetch_images.title_candidates(product) == ["iPhone 16", "iPhone"]
+    product = {"name": "MacBook Air (M5)", "line": "MacBook Air"}
+    assert fetch_images.title_candidates(product) == ["MacBook Air (M5)", "MacBook Air"]
+
+
+def test_photo_tiles_render(tmp_path, monkeypatch):
+    from PIL import Image
+    photo = tmp_path / "photo.jpg"
+    Image.new("RGB", (64, 40), (90, 90, 90)).save(photo)
+    monkeypatch.setattr(render, "photo_path", lambda product: photo)
+    render._photo_cache.clear()
+    current = [p for p in load()["products"] if p["current"]]
+    image, cells = render.render(current, **render.build_current(current))
+    assert len(cells) == len(current)
+    render._photo_cache.clear()

@@ -36,6 +36,10 @@ jobs:
         continue-on-error: true
         run: python scripts/fetch_current.py
 
+      - name: Download product photos from Wikimedia Commons
+        continue-on-error: true
+        run: python scripts/fetch_images.py
+
       - name: Render images
         run: python scripts/render.py --animate
 
@@ -51,4 +55,5 @@ jobs:
 
             Before merging, open `data/products.json` and check any product marked
             `"needs_review": true` (name, category, and date). Remove that flag once checked.
-            The job summary on the Actions tab lists every change.
+            The job summary on the Actions tab lists every change. New photos and their
+            credits are in `assets/photos/` and `CREDITS.md`.

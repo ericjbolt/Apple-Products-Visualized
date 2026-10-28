@@ -16,7 +16,7 @@ from datetime import datetime
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-from common import CATEGORIES, OUTPUT_DIR, load_products
+from common import CATEGORIES, OUTPUT_DIR, load_products, photo_path
 
 BACKGROUND = (13, 13, 18)
 TEXT = (236, 236, 240)
@@ -202,17 +202,49 @@ def tile_label(product: dict) -> str:
     return product["name"]
 
 
-def fit_label(text: str, max_width: float, start_size: int):
-    """Shrink the font until the label wraps into at most four lines that all fit."""
+def fit_label(text: str, max_width: float, start_size: int, max_lines: int = 4,
+              min_size: int = 9, max_height: float | None = None):
+    """Shrink the font until the label wraps into few enough lines that all fit."""
     size = start_size
-    while size > 9:
+    while size > min_size:
         fnt = font(size, "SemiBold")
         lines = wrap(text, fnt, max_width)
-        if len(lines) <= 4 and all(fnt.getlength(line) <= max_width for line in lines):
+        fits_height = max_height is None or len(lines) * size * 1.18 <= max_height
+        if (len(lines) <= max_lines and fits_height
+                and all(fnt.getlength(line) <= max_width for line in lines)):
             return fnt, size, lines
         size -= 1
     fnt = font(size, "SemiBold")
-    return fnt, size, wrap(text, fnt, max_width)[:4]
+    return fnt, size, wrap(text, fnt, max_width)[:max_lines]
+
+
+_photo_cache: dict[str, Image.Image | None] = {}
+
+
+def load_photo(product: dict) -> Image.Image | None:
+    """The product's downloaded photo, or None to fall back to a plain colored tile."""
+    path = photo_path(product)
+    key = str(path)
+    if key not in _photo_cache:
+        try:
+            _photo_cache[key] = Image.open(path).convert("RGB") if path.exists() else None
+        except OSError:
+            _photo_cache[key] = None
+    return _photo_cache[key]
+
+
+def paste_photo(canvas: Image.Image, photo: Image.Image, card, radius: int) -> None:
+    """Fit the photo inside a white rounded card without cropping it."""
+    x0, y0, x1, y1 = (int(round(v)) for v in card)
+    w, h = max(1, x1 - x0), max(1, y1 - y0)
+    tile = Image.new("RGB", (w, h), (255, 255, 255))
+    pad = max(1, int(min(w, h) * 0.06))
+    fitted = photo.copy()
+    fitted.thumbnail((w - 2 * pad, h - 2 * pad), Image.LANCZOS)
+    tile.paste(fitted, ((w - fitted.width) // 2, (h - fitted.height) // 2))
+    mask = Image.new("L", (w, h), 0)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, w - 1, h - 1), radius=radius, fill=255)
+    canvas.paste(tile, (x0, y0), mask)
 
 
 # --------------------------------------------------------------------------- main render
@@ -254,6 +286,7 @@ def render(products: list[dict], title: str, subtitle: str,
 
     last_labeled_year = None
     last_row_y = None
+    photos_used = 0
     year_font = font(max(14, min(22, int(cell_size * 0.5))), "Medium")
     shape_left = shape_x + min((c.x for c in cells), default=0)
 
@@ -263,14 +296,34 @@ def render(products: list[dict], title: str, subtitle: str,
                shape_x + cell.x + cell.size - gap / 2, shape_y + cell.y + cell.size - gap / 2)
         draw.rounded_rectangle(box, radius=radius, fill=color)
 
+        photo = load_photo(product)
+        label_box = box
+        if photo is not None:
+            photos_used += 1
+            # The category color becomes a frame around a white card holding the photo.
+            frame = max(2, int(cell.size * 0.07))
+            card_bottom = box[3] - frame
+            if show_labels:
+                card_bottom = box[1] + (box[3] - box[1]) * 0.64
+                label_box = (box[0], card_bottom, box[2], box[3])
+            card = (box[0] + frame, box[1] + frame, box[2] - frame, card_bottom)
+            paste_photo(canvas, photo, card, max(1, radius - frame))
+            draw = ImageDraw.Draw(canvas)
+
         if show_labels:
             inner = cell.size - gap - cell.size * 0.14
-            label_font, label_font_size, lines = fit_label(tile_label(product), inner, label_font_size)
+            max_lines = 2 if photo is not None else 4
+            label_font, label_font_size, lines = fit_label(
+                tile_label(product), inner, label_font_size, max_lines=max_lines,
+                min_size=8 if photo is not None else 9,
+                max_height=(label_box[3] - label_box[1]) * 0.86)
             line_h = label_font_size * 1.18
-            top = (box[1] + box[3]) / 2 - line_h * len(lines) / 2 + line_h / 2
+            middle = (label_box[1] + label_box[3]) / 2
+            top = middle - line_h * len(lines) / 2 + line_h / 2
             for i, line in enumerate(lines):
                 draw.text(((box[0] + box[2]) / 2, top + i * line_h), line,
                           font=label_font, fill=text_color_for(color), anchor="mm")
+            label_font_size = max(10, int(cell_size * 0.16))  # reset for the next tile
 
         # Year markers down the left edge, one per row when at least five years have passed.
         if row_years and (last_row_y is None or abs(cell.y - last_row_y) > 0.5):
@@ -306,6 +359,8 @@ def render(products: list[dict], title: str, subtitle: str,
                   fill=TEXT if count else MUTED, anchor="lm")
 
     footer = "Unofficial fan project, not affiliated with Apple Inc."
+    if photos_used:
+        footer = ("Product photos: Wikimedia Commons contributors, see CREDITS.md  ·  " + footer)
     draw.text((WIDTH / 2, height - 50), footer, font=font(20), fill=MUTED, anchor="mm")
     return canvas.convert("RGB"), cells
 

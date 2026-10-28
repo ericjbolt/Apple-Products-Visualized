@@ -52,3 +52,15 @@ def fingerprint(name: str) -> str:
     text = re.sub(r"\b(\d+)(st|nd|rd|th)\b", r"\1", text)
     text = re.sub(r"\b(apple|the|generation|gen|model|inch)\b", " ", text)
     return " ".join(text.split())
+
+
+PHOTO_DIR = ROOT / "assets" / "photos"
+
+
+def slug(name: str) -> str:
+    return normalize(name).replace(" ", "-")
+
+
+def photo_path(product: dict) -> Path:
+    """Where the downloaded photo for a product lives (it may not exist yet)."""
+    return PHOTO_DIR / f"{slug(product['name'])}.jpg"
