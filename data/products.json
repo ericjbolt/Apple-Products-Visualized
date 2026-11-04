@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27",
+  "updated": "2026-11-04",
   "note": "Dates are the announcement or release month. 'current' means sold new on apple.com.",
   "products": [
     {
@@ -1908,9 +1908,8 @@
       "line": "iPhone",
       "category": "iPhone",
       "date": "2024-09",
-      "current": false,
-      "apple_name": "iPhone 16",
-      "retired": "2026-09"
+      "current": true,
+      "apple_name": "iPhone 16"
     },
     {
       "name": "iPhone 16 Pro",
@@ -2136,11 +2135,12 @@
       "line": "AirPods Pro",
       "category": "AirPods",
       "date": "2025-09",
-      "current": true,
+      "current": false,
       "apple_name": "AirPods Pro 3",
       "variants": [
         "MagSafe Charging Case (USB-C)"
-      ]
+      ],
+      "retired": "2026-11"
     },
     {
       "name": "MacBook Pro (14-inch, M5)",
@@ -2333,7 +2333,7 @@
       "line": "Studio Display",
       "category": "Displays",
       "date": "2026-03",
-      "current": true,
+      "current": false,
       "apple_name": "Studio Display",
       "variants": [
         "Standard glass",
@@ -2341,27 +2341,29 @@
         "Tilt-adjustable stand",
         "Tilt- and height-adjustable stand",
         "VESA mount adapter"
-      ]
+      ],
+      "retired": "2026-11"
     },
     {
       "name": "Studio Display XDR",
       "line": "Studio Display XDR",
       "category": "Displays",
       "date": "2026-03",
-      "current": true,
+      "current": false,
       "apple_name": "Studio Display XDR",
       "variants": [
         "Standard glass",
         "Nano-texture glass",
         "VESA mount adapter"
-      ]
+      ],
+      "retired": "2026-11"
     },
     {
       "name": "AirPods Max 2",
       "line": "AirPods Max",
       "category": "AirPods",
       "date": "2026-03",
-      "current": true,
+      "current": false,
       "apple_name": "AirPods Max 2",
       "variants": [
         "Midnight",
@@ -2369,7 +2371,8 @@
         "Blue",
         "Purple",
         "Orange"
-      ]
+      ],
+      "retired": "2026-11"
     },
     {
       "name": "Mac mini (M6, M5 Pro)",
@@ -2488,12 +2491,13 @@
       "line": "AirPods",
       "category": "AirPods",
       "date": "2026-09",
-      "current": true,
+      "current": false,
       "apple_name": "AirPods 5",
       "variants": [
         "USB-C Charging Case",
         "Wireless Charging Case"
-      ]
+      ],
+      "retired": "2026-11"
     },
     {
       "name": "HomePod mini 2",
@@ -2501,14 +2505,15 @@
       "category": "TV & Home",
       "date": "2026-10",
       "current": true,
-      "apple_name": "HomePod mini",
+      "apple_name": "HomePod mini 2",
       "variants": [
         "Midnight",
         "White",
         "Blue",
         "Pink",
         "Green"
-      ]
+      ],
+      "retired": "2026-11"
     },
     {
       "name": "Apple TV 4K (4th generation)",
@@ -2527,14 +2532,15 @@
       "category": "TV & Home",
       "date": "2026-10",
       "current": true,
-      "apple_name": "HomeView",
+      "apple_name": "Apple HomeView",
       "variants": [
         "Silver",
         "Starlight",
         "Rose Pink",
         "Space Gray",
         "Wall mounted"
-      ]
+      ],
+      "retired": "2026-11"
     },
     {
       "name": "iPad mini (A20 Pro)",
@@ -2556,12 +2562,13 @@
       "line": "MacBook Pro",
       "category": "Mac",
       "date": "2026-10",
-      "current": true,
+      "current": false,
       "variants": [
         "M6",
         "Space Black",
         "Silver"
-      ]
+      ],
+      "retired": "2026-11"
     },
     {
       "name": "iMac (24-inch, M6)",
@@ -2581,6 +2588,24 @@
         "Green",
         "Silver"
       ]
+    },
+    {
+      "name": "Displays",
+      "line": "Displays",
+      "category": "Displays",
+      "date": "2026-11",
+      "current": true,
+      "apple_name": "Displays",
+      "needs_review": true
+    },
+    {
+      "name": "Golden Gate",
+      "line": "Golden Gate",
+      "category": "Mac",
+      "date": "2026-11",
+      "current": true,
+      "apple_name": "Golden Gate",
+      "needs_review": true
     }
   ]
 }

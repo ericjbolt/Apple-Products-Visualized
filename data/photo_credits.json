@@ -1,1 +1,1465 @@
-{}
+{
+  "apple-i": {
+    "file": "CopsonApple1_2k_cropped.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:CopsonApple1_2k_cropped.jpg",
+    "artist": "Achim Baqué",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "apple-ii": {
+    "file": "Apple_II-IMG_7064.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_II-IMG_7064.jpg",
+    "artist": "Rama & Musée Bolo",
+    "license": "CC BY-SA 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en"
+  },
+  "apple-ii-plus": {
+    "file": "Apple_II_Plus.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_II_Plus.jpg",
+    "artist": "Bilby",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "apple-iii": {
+    "file": "Apple3.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple3.jpg",
+    "artist": "Unknown author",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  "apple-iie": {
+    "file": "Apple_IIe.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_IIe.jpg",
+    "artist": "Bilby",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "lisa": {
+    "file": "Apple-lisa-1.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple-lisa-1.jpg",
+    "artist": "Timothy Colegrove",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macintosh-128k": {
+    "file": "Computer_macintosh_128k,_1984_(all_about_Apple_onlus).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Computer_macintosh_128k,_1984_(all_about_Apple_onlus).jpg",
+    "artist": "Sailko",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "apple-iic": {
+    "file": "Apple_IIc_with_monitor.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_IIc_with_monitor.jpg",
+    "artist": "Bilby",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "macintosh-512k": {
+    "file": "Mac512k-front.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Mac512k-front.jpg",
+    "artist": "Pratyeka",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "laserwriter": {
+    "file": "Laserwriter.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Laserwriter.jpg",
+    "artist": "Apple",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "macintosh-plus": {
+    "file": "Apple_Macintosh_Plus_white_background_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Macintosh_Plus_white_background_(cropped).jpg",
+    "artist": "Felix Winkelnkemper",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "apple-iigs": {
+    "file": "Apple_IIGS_with_peripherals.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_IIGS_with_peripherals.jpg",
+    "artist": "Ruben de Rijcke",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macintosh-se": {
+    "file": "Macintosh_SE_b.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macintosh_SE_b.jpg",
+    "artist": "Unknown author",
+    "license": "CC BY-SA 2.5",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.5"
+  },
+  "macintosh-ii": {
+    "file": "MacII.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacII.jpg",
+    "artist": "Alexander Schaelss",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  "macintosh-iix": {
+    "file": "Macintosh_IIx.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macintosh_IIx.jpg",
+    "artist": "Unknown author",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  "apple-iic-plus": {
+    "file": "Apple_IIc_Plus_(front).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_IIc_Plus_(front).jpg",
+    "artist": "Users SCEhardt , Apple2gs on en.wikipedia",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  "macintosh-se-30": {
+    "file": "Se30.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Se30.jpg",
+    "artist": "Unknown author",
+    "license": "CC BY-SA 2.5",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.5"
+  },
+  "macintosh-portable": {
+    "file": "Macintosh_Portable-IMG_7541.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macintosh_Portable-IMG_7541.jpg",
+    "artist": "Rama",
+    "license": "CC BY-SA 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en"
+  },
+  "macintosh-iici": {
+    "file": "Macintosh_IIci.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Macintosh_IIci.png",
+    "artist": "Ben Boldt at English Wikipedia",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "macintosh-iifx": {
+    "file": "Macintosh_IIfx.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macintosh_IIfx.jpg",
+    "artist": "Unknown author",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  "macintosh-classic": {
+    "file": "Macintosh_classic.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macintosh_classic.jpg",
+    "artist": "Unknown author",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  "macintosh-lc": {
+    "file": "Apple_Museum_(Prague)_Macintosh_LC_(1990)_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Museum_(Prague)_Macintosh_LC_(1990)_(cropped).jpg",
+    "artist": "Benoît Prieur",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "macintosh-iisi": {
+    "file": "Macintosh_IIsi_2.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macintosh_IIsi_2.jpg",
+    "artist": "Danamania",
+    "license": "CC BY-SA 2.5",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.5"
+  },
+  "powerbook-100": {
+    "file": "Powerbook_100_pose.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Powerbook_100_pose.jpg",
+    "artist": "Danamania",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "powerbook-170": {
+    "file": "PowerBook_170.jpg",
+    "source": "https://en.wikipedia.org/wiki/File:PowerBook_170.jpg",
+    "artist": "Bluedisk ( talk )",
+    "license": "CC-BY-SA-3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  "macintosh-quadra-700": {
+    "file": "Macintosh_Quadra_700.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Macintosh_Quadra_700.png",
+    "artist": "Ben Boldt at English Wikipedia",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "macintosh-classic-ii": {
+    "file": "Macintosh_Classic_2.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macintosh_Classic_2.jpg",
+    "artist": "Unknown author",
+    "license": "CC BY-SA 2.5",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.5"
+  },
+  "powerbook-duo-210": {
+    "file": "Powerbook_duo_2300c.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Powerbook_duo_2300c.jpg",
+    "artist": "Dpaanlka at English Wikipedia",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "macintosh-color-classic": {
+    "file": "Macintosh_Colour_Classic_1994_(retouched).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macintosh_Colour_Classic_1994_(retouched).jpg",
+    "artist": "Mystère Martin",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  "macintosh-lc-iii": {
+    "file": "Macintosh_LC_III_front.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macintosh_LC_III_front.jpg",
+    "artist": "Stephen Edmonds",
+    "license": "CC BY-SA 2.5",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.5"
+  },
+  "macintosh-centris-650": {
+    "file": "Macintosh_Quadra_650.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macintosh_Quadra_650.jpg",
+    "artist": "Unknown author",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  "newton-messagepad": {
+    "file": "Apple_Newton-IMG_0454-cropped.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Newton-IMG_0454-cropped.jpg",
+    "artist": "Rama & Musée Bolo",
+    "license": "CC BY-SA 2.0 fr",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en"
+  },
+  "quicktake-100": {
+    "file": "Apple_Quicktake_100_(329044100).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Quicktake_100_(329044100).jpg",
+    "artist": "jaqian from Dublin, Ireland",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "power-macintosh-6100": {
+    "file": "Power_Macintosh_6100-60AV_-_front.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Power_Macintosh_6100-60AV_-_front.jpg",
+    "artist": "MIKI Yoshihito",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "powerbook-500-series": {
+    "file": "540c_open.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:540c_open.jpg",
+    "artist": "Unknown author",
+    "license": "CC BY-SA 2.5",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.5"
+  },
+  "power-macintosh-9500": {
+    "file": "PowerMac_9500_132_front.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:PowerMac_9500_132_front.jpg",
+    "artist": "Thomas Kaiser",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  "powerbook-5300": {
+    "file": "PowerBook5300cs.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:PowerBook5300cs.jpg",
+    "artist": "Serged",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "powerbook-3400": {
+    "file": "Powerbook3400.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Powerbook3400.jpg",
+    "artist": "Unknown author",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  "twentieth-anniversary-macintosh": {
+    "file": "Apple_Museum_(Prague)_20th_Anniversary_Mac_(1997).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Museum_(Prague)_20th_Anniversary_Mac_(1997).jpg",
+    "artist": "Benoît Prieur",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "emate-300": {
+    "file": "Apple_Newton_eMate_300_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Newton_eMate_300_(cropped).jpg",
+    "artist": "Felix Winkelnkemper",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "power-macintosh-g3": {
+    "file": "Power_Macintosh_G3_models.jpg",
+    "source": "https://en.wikipedia.org/wiki/File:Power_Macintosh_G3_models.jpg",
+    "artist": "fr:User:Klodo6975",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "powerbook-g3": {
+    "file": "PowerBook_redjar.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:PowerBook_redjar.jpg",
+    "artist": "redjar ( Jared C. Benedict ), also active as en:User:redjar and User:redjar",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0"
+  },
+  "imac-g3": {
+    "file": "IMac_G3_Bondi_Blue,_three-quarters_view.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IMac_G3_Bondi_Blue,_three-quarters_view.png",
+    "artist": "Alterations by David Fuchs ; original by Rama , licensed CC-by-SA",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ibook": {
+    "file": "IBookG3_Palourde2.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IBookG3_Palourde2.png",
+    "artist": "No machine-readable author provided. Ocmey assumed (based on copyright claims).",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "airport-base-station": {
+    "file": "Early_AirPort_(2364225930).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Early_AirPort_(2364225930).jpg",
+    "artist": "raneko",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "apple-cinema-display": {
+    "file": "Apple_Cinema_display_aluminum-2004-07-23.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Cinema_display_aluminum-2004-07-23.jpg",
+    "artist": "https://www.flickr.com/people/pingping/",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0"
+  },
+  "power-mac-g4": {
+    "file": "GraphiteG4.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:GraphiteG4.jpg",
+    "artist": "Bluedawe at English Wikipedia",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "imac-dv": {
+    "file": "IMac_G3_Bondi_Blue,_three-quarters_view.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IMac_G3_Bondi_Blue,_three-quarters_view.png",
+    "artist": "Alterations by David Fuchs ; original by Rama , licensed CC-by-SA",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "power-mac-g4-cube": {
+    "file": "Power_mac_g4_cube.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Power_mac_g4_cube.png",
+    "artist": "Steve Shaner",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "powerbook-g4": {
+    "file": "PowerBook_redjar.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:PowerBook_redjar.jpg",
+    "artist": "redjar ( Jared C. Benedict ), also active as en:User:redjar and User:redjar",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0"
+  },
+  "ibook-dual-usb": {
+    "file": "IBookG3_Palourde2.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IBookG3_Palourde2.png",
+    "artist": "No machine-readable author provided. Ocmey assumed (based on copyright claims).",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "ipod": {
+    "file": "IPod_family.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPod_family.png",
+    "artist": "Kyro",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "imac-g4": {
+    "file": "Apple_iMac_G4_(32871160027).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_iMac_G4_(32871160027).jpg",
+    "artist": "Felix Winkelnkemper",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "emac": {
+    "file": "Apple-eMac-FL_(transparent).png",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple-eMac-FL_(transparent).png",
+    "artist": "Evan-Amos",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "xserve": {
+    "file": "Xserve_cluster_NASA.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Xserve_cluster_NASA.jpg",
+    "artist": "Unknown author",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "ipod-2nd-generation": {
+    "file": "IPod_family.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPod_family.png",
+    "artist": "Kyro",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "airport-extreme": {
+    "file": "Apple_AirPort_Extreme_Base_Station_(A1408)-93731.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_AirPort_Extreme_Base_Station_(A1408)-93731.jpg",
+    "artist": "Raimond Spekking",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipod-3rd-generation": {
+    "file": "IPod_family.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPod_family.png",
+    "artist": "Kyro",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "power-mac-g5": {
+    "file": "Apple_Power_Macintosh_G5_Late_2005_02.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Power_Macintosh_G5_Late_2005_02.jpg",
+    "artist": "Bernie Kohl",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "isight": {
+    "file": "Apple_iSight_webcam_2.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_iSight_webcam_2.jpg",
+    "artist": "Kplans",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "ibook-g4": {
+    "file": "IBookG3_Palourde2.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IBookG3_Palourde2.png",
+    "artist": "No machine-readable author provided. Ocmey assumed (based on copyright claims).",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "airport-express": {
+    "file": "Airport_Express_(2012).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Airport_Express_(2012).jpg",
+    "artist": "Fletcher6",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  "apple-cinema-hd-display-30-inch": {
+    "file": "Apple_Cinema_display_aluminum-2004-07-23.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Cinema_display_aluminum-2004-07-23.jpg",
+    "artist": "https://www.flickr.com/people/pingping/",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0"
+  },
+  "ipod-4th-generation": {
+    "file": "IPod_family.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPod_family.png",
+    "artist": "Kyro",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "imac-g5": {
+    "file": "IMac_G5_Rev._A_front.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:IMac_G5_Rev._A_front.jpg",
+    "artist": "Matthew Welty (fiveaside) from Sacramento, USA",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0"
+  },
+  "ipod-with-video": {
+    "file": "IPod_family.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPod_family.png",
+    "artist": "Kyro",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "imac-intel": {
+    "file": "IMac_M4_2024_2_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:IMac_M4_2024_2_(cropped).jpg",
+    "artist": "Seasider53",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "macbook-pro": {
+    "file": "MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "artist": "Premeditated",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook": {
+    "file": "MacBook-Pro-13inch.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook-Pro-13inch.jpg",
+    "artist": "KeySpace",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "apple-tv": {
+    "file": "Apple_TV_4K_(3rd_Generation,_2022)_with_Siri_Remote_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_TV_4K_(3rd_Generation,_2022)_with_Siri_Remote_(cropped).jpg",
+    "artist": "Dillan Payne",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook-air": {
+    "file": "Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "artist": "User:KKPCW",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "time-capsule": {
+    "file": "Early_AirPort_(2364225930).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Early_AirPort_(2364225930).jpg",
+    "artist": "raneko",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "iphone-3g": {
+    "file": "IPhone_3G_or_3GS_digital_render.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPhone_3G_or_3GS_digital_render.png",
+    "artist": "JoBot164",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "ipod-touch-2nd-generation": {
+    "file": "IPod_touch_2G.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPod_touch_2G.png",
+    "artist": "Kyro",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "macbook-pro-unibody": {
+    "file": "MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "artist": "Premeditated",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "led-cinema-display": {
+    "file": "Apple_Cinema_display_aluminum-2004-07-23.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Cinema_display_aluminum-2004-07-23.jpg",
+    "artist": "https://www.flickr.com/people/pingping/",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0"
+  },
+  "iphone-3gs": {
+    "file": "IPhone_3G_or_3GS_digital_render.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPhone_3G_or_3GS_digital_render.png",
+    "artist": "JoBot164",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "ipad": {
+    "file": "IPad_mini_Air_Pro.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_mini_Air_Pro.png",
+    "artist": "KA KIT",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "iphone-4": {
+    "file": "IPhone_4_Mock_No_Shadow_PSD.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPhone_4_Mock_No_Shadow_PSD.png",
+    "artist": "Justin14",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  "apple-tv-2nd-generation": {
+    "file": "Apple_TV_4K_(3rd_Generation,_2022)_with_Siri_Remote_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_TV_4K_(3rd_Generation,_2022)_with_Siri_Remote_(cropped).jpg",
+    "artist": "Dillan Payne",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-2": {
+    "file": "IPad2.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad2.png",
+    "artist": "KAP03",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "thunderbolt-display": {
+    "file": "Apple_Thunderbolt_Display.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Thunderbolt_Display.png",
+    "artist": "andrew-gw",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  "iphone-4s": {
+    "file": "IPhone_4S_No_shadow.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPhone_4S_No_shadow.png",
+    "artist": "Zach Vega",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  "ipad-3rd-generation": {
+    "file": "IPad_3.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_3.png",
+    "artist": "Zach Vega",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "apple-tv-3rd-generation": {
+    "file": "Apple_TV_4K_(3rd_Generation,_2022)_with_Siri_Remote_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_TV_4K_(3rd_Generation,_2022)_with_Siri_Remote_(cropped).jpg",
+    "artist": "Dillan Payne",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-4th-generation": {
+    "file": "IPad_3.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_3.png",
+    "artist": "Zach Vega",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "ipad-mini": {
+    "file": "IPad_Mini.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Mini.png",
+    "artist": "KK IN HK",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-air": {
+    "file": "IPad_Air_2020_(51012790753).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Air_2020_(51012790753).jpg",
+    "artist": "ajay_suresh",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "ipad-mini-2": {
+    "file": "IPadminiWhite.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPadminiWhite.png",
+    "artist": "Pixeden.com",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "ipad-air-2": {
+    "file": "IPad_Air_2_Wikipedia.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Air_2_Wikipedia.png",
+    "artist": "Netspy",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "ipad-mini-3": {
+    "file": "IPad_mini_3_mockup.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_mini_3_mockup.png",
+    "artist": "Jem Riggs",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "imac-with-retina-5k-display": {
+    "file": "IMac_M4_2024_2_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:IMac_M4_2024_2_(cropped).jpg",
+    "artist": "Seasider53",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "apple-watch": {
+    "file": "Apple_Watch_Series_10.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Series_10.jpg",
+    "artist": "KK IN HK",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "macbook-12-inch": {
+    "file": "MacBook_with_Retina_Display.png",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_with_Retina_Display.png",
+    "artist": "Maurizio Pesce",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "ipad-mini-4": {
+    "file": "IPad_Mini_4_Space_Gray.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Mini_4_Space_Gray.png",
+    "artist": "Piscopro",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "apple-tv-hd": {
+    "file": "Apple_TV_4K_(3rd_Generation,_2022)_with_Siri_Remote_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_TV_4K_(3rd_Generation,_2022)_with_Siri_Remote_(cropped).jpg",
+    "artist": "Dillan Payne",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-pro-12-9-inch": {
+    "file": "IPad_Pro_Mockup.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Pro_Mockup.png",
+    "artist": "Moonsprite",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-pro-9-7-inch": {
+    "file": "IPad_Pro_Mockup.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Pro_Mockup.png",
+    "artist": "Moonsprite",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "apple-watch-series-1": {
+    "file": "Apple_Watch_Series_10.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Series_10.jpg",
+    "artist": "KK IN HK",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "apple-watch-series-2": {
+    "file": "Apple_Watch_Series_10.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Series_10.jpg",
+    "artist": "KK IN HK",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "macbook-pro-13-inch-2016": {
+    "file": "MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "artist": "Premeditated",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook-pro-15-inch-2016": {
+    "file": "MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "artist": "Premeditated",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "airpods": {
+    "file": "AirPods_4_ANC_and_case.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:AirPods_4_ANC_and_case.jpg",
+    "artist": "SimplyPops",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "ipad-5th-generation": {
+    "file": "IPad_2017_tablet.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_2017_tablet.jpg",
+    "artist": "Frmorrison",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-pro-10-5-inch": {
+    "file": "IPad_Pro_Mockup.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Pro_Mockup.png",
+    "artist": "Moonsprite",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "apple-watch-series-3": {
+    "file": "Apple_Watch_Series_10.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Series_10.jpg",
+    "artist": "KK IN HK",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "apple-tv-4k": {
+    "file": "Apple_TV_4K_(3rd_Generation,_2022)_with_Siri_Remote_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_TV_4K_(3rd_Generation,_2022)_with_Siri_Remote_(cropped).jpg",
+    "artist": "Dillan Payne",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "homepod": {
+    "file": "HomePod_2024.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:HomePod_2024.jpg",
+    "artist": "Seasider53",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "ipad-6th-generation": {
+    "file": "IPad_2017_tablet.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_2017_tablet.jpg",
+    "artist": "Frmorrison",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "apple-watch-series-4": {
+    "file": "Apple_Watch_Series_10.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Series_10.jpg",
+    "artist": "KK IN HK",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "ipad-pro-11-inch-1st-generation": {
+    "file": "IPad_Pro_11_mockup.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Pro_11_mockup.png",
+    "artist": "Jem Riggs",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-pro-12-9-inch-3rd-generation": {
+    "file": "Wikipedia_on_iPad_Pro.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Wikipedia_on_iPad_Pro.jpg",
+    "artist": "彭家杰",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-air-3rd-generation": {
+    "file": "IPad_Air_3_Mockup.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Air_3_Mockup.png",
+    "artist": "Piscopro",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-mini-5th-generation": {
+    "file": "IPad_Mini_4_Space_Gray.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Mini_4_Space_Gray.png",
+    "artist": "Piscopro",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "airpods-2nd-generation": {
+    "file": "AirPods_4_ANC_and_case.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:AirPods_4_ANC_and_case.jpg",
+    "artist": "SimplyPops",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "ipod-touch-7th-generation": {
+    "file": "IPod_Touch_7.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPod_Touch_7.png",
+    "artist": "Apple Inc.",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "apple-watch-series-5": {
+    "file": "Apple_Watch_Series_10.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Series_10.jpg",
+    "artist": "KK IN HK",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "ipad-7th-generation": {
+    "file": "IPad_10.2‑inch.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_10.2%E2%80%91inch.png",
+    "artist": "Piscopro",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "airpods-pro": {
+    "file": "AirPods_Pro_3_with_case.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:AirPods_Pro_3_with_case.jpg",
+    "artist": "Auggie G",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "pro-display-xdr": {
+    "file": "Apple_Pro_Display_XDR_and_Mac_Pro_(2019_model).png",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Pro_Display_XDR_and_Mac_Pro_(2019_model).png",
+    "artist": "Dienthoaiquangcao13",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-pro-11-inch-2nd-generation": {
+    "file": "IPad_Pro_11_mockup.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Pro_11_mockup.png",
+    "artist": "Jem Riggs",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-pro-12-9-inch-4th-generation": {
+    "file": "Wikipedia_on_iPad_Pro.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Wikipedia_on_iPad_Pro.jpg",
+    "artist": "彭家杰",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "apple-watch-series-6": {
+    "file": "Apple_Watch_Series_10.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Series_10.jpg",
+    "artist": "KK IN HK",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "apple-watch-se": {
+    "file": "Apple_Watch_Series_10.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Series_10.jpg",
+    "artist": "KK IN HK",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "ipad-8th-generation": {
+    "file": "IPad_10.2‑inch.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_10.2%E2%80%91inch.png",
+    "artist": "Piscopro",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "homepod-mini": {
+    "file": "Apple_HomePod_mini.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_HomePod_mini.jpg",
+    "artist": "Arne Müseler",
+    "license": "CC BY-SA 3.0 de",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+  },
+  "macbook-air-m1": {
+    "file": "Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "artist": "User:KKPCW",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook-pro-13-inch-m1": {
+    "file": "MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "artist": "Premeditated",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "airpods-max": {
+    "file": "Apple_airpods_max_1.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_airpods_max_1.jpg",
+    "artist": "Arne Müseler",
+    "license": "CC BY-SA 3.0 de",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+  },
+  "imac-24-inch-m1": {
+    "file": "IMac_M4_2024_2_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:IMac_M4_2024_2_(cropped).jpg",
+    "artist": "Seasider53",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "ipad-pro-11-inch-3rd-generation": {
+    "file": "IPad_Pro_11_mockup.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Pro_11_mockup.png",
+    "artist": "Jem Riggs",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-pro-12-9-inch-5th-generation": {
+    "file": "Wikipedia_on_iPad_Pro.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Wikipedia_on_iPad_Pro.jpg",
+    "artist": "彭家杰",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "apple-tv-4k-2nd-generation": {
+    "file": "Apple_TV_4K_(3rd_Generation,_2022)_with_Siri_Remote_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_TV_4K_(3rd_Generation,_2022)_with_Siri_Remote_(cropped).jpg",
+    "artist": "Dillan Payne",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-9th-generation": {
+    "file": "IPad_10.2‑inch.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_10.2%E2%80%91inch.png",
+    "artist": "Piscopro",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-mini-6th-generation": {
+    "file": "IPad_Mini_6_in_hand.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Mini_6_in_hand.jpg",
+    "artist": "Theknine2",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "apple-watch-series-7": {
+    "file": "Apple_Watch_Series_10.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Series_10.jpg",
+    "artist": "KK IN HK",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "airpods-3rd-generation": {
+    "file": "AirPods_4_ANC_and_case.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:AirPods_4_ANC_and_case.jpg",
+    "artist": "SimplyPops",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "macbook-pro-14-inch-2021": {
+    "file": "MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "artist": "Premeditated",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook-pro-16-inch-2021": {
+    "file": "MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "artist": "Premeditated",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "mac-studio": {
+    "file": "Mac_Studio_(2022)_front.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Mac_Studio_(2022)_front.jpg",
+    "artist": "Yasu ( talk )",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  "studio-display": {
+    "file": "Apple_Studio_Display_2024.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Studio_Display_2024.jpg",
+    "artist": "Seasider53",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "ipad-air-5th-generation": {
+    "file": "IPad_Air_4.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Air_4.png",
+    "artist": "ajay_suresh",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0"
+  },
+  "macbook-air-13-inch-m2": {
+    "file": "Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "artist": "User:KKPCW",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "apple-watch-series-8": {
+    "file": "Apple_Watch_Series_10.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Series_10.jpg",
+    "artist": "KK IN HK",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "apple-watch-ultra": {
+    "file": "Apple_Watch_Ultra_Series_4_Natural_Titanium_Case.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Ultra_Series_4_Natural_Titanium_Case.jpg",
+    "artist": "Genetichazzard",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "apple-watch-se-2nd-generation": {
+    "file": "Apple_Watch_Series_10.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Series_10.jpg",
+    "artist": "KK IN HK",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "airpods-pro-2nd-generation": {
+    "file": "AirPods_Pro_3_with_case.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:AirPods_Pro_3_with_case.jpg",
+    "artist": "Auggie G",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "ipad-10th-generation": {
+    "file": "IPad_10.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_10.png",
+    "artist": "Riski394",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-pro-11-inch-4th-generation": {
+    "file": "IPad_Pro_11_mockup.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Pro_11_mockup.png",
+    "artist": "Jem Riggs",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-pro-12-9-inch-6th-generation": {
+    "file": "Wikipedia_on_iPad_Pro.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Wikipedia_on_iPad_Pro.jpg",
+    "artist": "彭家杰",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "apple-tv-4k-3rd-generation": {
+    "file": "Apple_TV_4K_(3rd_Generation,_2022)_with_Siri_Remote_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_TV_4K_(3rd_Generation,_2022)_with_Siri_Remote_(cropped).jpg",
+    "artist": "Dillan Payne",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook-pro-14-inch-2023": {
+    "file": "MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "artist": "Premeditated",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook-pro-16-inch-2023": {
+    "file": "MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "artist": "Premeditated",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "homepod-2nd-generation": {
+    "file": "HomePod_2024.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:HomePod_2024.jpg",
+    "artist": "Seasider53",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "macbook-air-15-inch-m2": {
+    "file": "Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "artist": "User:KKPCW",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "mac-studio-m2": {
+    "file": "Mac_Studio_(2022)_front.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Mac_Studio_(2022)_front.jpg",
+    "artist": "Yasu ( talk )",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  "apple-watch-series-9": {
+    "file": "Apple_Watch_Series_10.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Series_10.jpg",
+    "artist": "KK IN HK",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "apple-watch-ultra-2": {
+    "file": "Apple_Watch_Ultra_Series_4_Natural_Titanium_Case.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Ultra_Series_4_Natural_Titanium_Case.jpg",
+    "artist": "Genetichazzard",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook-pro-14-inch-m3-nov-2023": {
+    "file": "MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "artist": "Premeditated",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook-pro-16-inch-nov-2023": {
+    "file": "MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "artist": "Premeditated",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "imac-24-inch-m3": {
+    "file": "IMac_M4_2024_2_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:IMac_M4_2024_2_(cropped).jpg",
+    "artist": "Seasider53",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "apple-vision-pro": {
+    "file": "Apple_Vision_Pro_with_Solo_Knit_Band.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Vision_Pro_with_Solo_Knit_Band.jpg",
+    "artist": "BobSmith810",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "macbook-air-13-inch-m3": {
+    "file": "Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "artist": "User:KKPCW",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook-air-15-inch-m3": {
+    "file": "Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "artist": "User:KKPCW",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-air-11-inch-m2": {
+    "file": "IPad_Air_2020_(51012790753).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Air_2020_(51012790753).jpg",
+    "artist": "ajay_suresh",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "ipad-air-13-inch-m2": {
+    "file": "IPad_Air_2020_(51012790753).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Air_2020_(51012790753).jpg",
+    "artist": "ajay_suresh",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "ipad-pro-11-inch-m4": {
+    "file": "Wikipedia_on_iPad_Pro.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Wikipedia_on_iPad_Pro.jpg",
+    "artist": "彭家杰",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-pro-13-inch-m4": {
+    "file": "Wikipedia_on_iPad_Pro.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Wikipedia_on_iPad_Pro.jpg",
+    "artist": "彭家杰",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "apple-watch-series-10": {
+    "file": "Apple_Watch_Series_10.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Series_10.jpg",
+    "artist": "KK IN HK",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "airpods-4": {
+    "file": "AirPods_4_ANC_and_case.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:AirPods_4_ANC_and_case.jpg",
+    "artist": "SimplyPops",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "ipad-mini-a17-pro": {
+    "file": "IPad_Mini.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Mini.png",
+    "artist": "KK IN HK",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "imac-24-inch-m4": {
+    "file": "IMac_M4_2024_2_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:IMac_M4_2024_2_(cropped).jpg",
+    "artist": "Seasider53",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "macbook-pro-14-inch-m4-2024": {
+    "file": "MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "artist": "Premeditated",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook-pro-16-inch-2024": {
+    "file": "MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "artist": "Premeditated",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook-air-13-inch-m4": {
+    "file": "Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "artist": "User:KKPCW",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook-air-15-inch-m4": {
+    "file": "Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "artist": "User:KKPCW",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "mac-studio-m4-max-m3-ultra": {
+    "file": "Mac_Studio_(2022)_front.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Mac_Studio_(2022)_front.jpg",
+    "artist": "Yasu ( talk )",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  "ipad-11-inch-a16": {
+    "file": "IPad_mini_Air_Pro.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_mini_Air_Pro.png",
+    "artist": "KA KIT",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "ipad-air-11-inch-m3": {
+    "file": "IPad_Air_2020_(51012790753).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Air_2020_(51012790753).jpg",
+    "artist": "ajay_suresh",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "ipad-air-13-inch-m3": {
+    "file": "IPad_Air_2020_(51012790753).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Air_2020_(51012790753).jpg",
+    "artist": "ajay_suresh",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "apple-watch-series-11": {
+    "file": "Apple_Watch_Series_10.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Series_10.jpg",
+    "artist": "KK IN HK",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "apple-watch-ultra-3": {
+    "file": "Apple_Watch_Ultra_Series_4_Natural_Titanium_Case.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Ultra_Series_4_Natural_Titanium_Case.jpg",
+    "artist": "Genetichazzard",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "apple-watch-se-3": {
+    "file": "Apple_Watch_Series_10.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Series_10.jpg",
+    "artist": "KK IN HK",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "airpods-pro-3": {
+    "file": "AirPods_Pro_3_with_case.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:AirPods_Pro_3_with_case.jpg",
+    "artist": "Auggie G",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "macbook-pro-14-inch-m5": {
+    "file": "MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "artist": "Premeditated",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-pro-11-inch-m5": {
+    "file": "Wikipedia_on_iPad_Pro.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Wikipedia_on_iPad_Pro.jpg",
+    "artist": "彭家杰",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-pro-13-inch-m5": {
+    "file": "Wikipedia_on_iPad_Pro.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Wikipedia_on_iPad_Pro.jpg",
+    "artist": "彭家杰",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "apple-vision-pro-m5": {
+    "file": "Apple_Vision_Pro_with_Solo_Knit_Band.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Vision_Pro_with_Solo_Knit_Band.jpg",
+    "artist": "BobSmith810",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "ipad-air-11-inch-m4": {
+    "file": "IPad_Air_2020_(51012790753).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Air_2020_(51012790753).jpg",
+    "artist": "ajay_suresh",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "ipad-air-13-inch-m4": {
+    "file": "IPad_Air_2020_(51012790753).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Air_2020_(51012790753).jpg",
+    "artist": "ajay_suresh",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "macbook-air-13-inch-m5": {
+    "file": "Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "artist": "User:KKPCW",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook-air-15-inch-m5": {
+    "file": "Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Macbook_Air_15_inch_-_2_(blurred).jpg",
+    "artist": "User:KKPCW",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook-pro-14-inch-2026": {
+    "file": "MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "artist": "Premeditated",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook-pro-16-inch-2026": {
+    "file": "MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "artist": "Premeditated",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook-neo": {
+    "file": "MacBook_Neo_in_Citrus.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Neo_in_Citrus.jpg",
+    "artist": "Padgriffin",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "studio-display-2026": {
+    "file": "Apple_Studio_Display_2024.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Studio_Display_2024.jpg",
+    "artist": "Seasider53",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "studio-display-xdr": {
+    "file": "Apple_Pro_Display_XDR_and_Mac_Pro_(2019_model).png",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Pro_Display_XDR_and_Mac_Pro_(2019_model).png",
+    "artist": "Dienthoaiquangcao13",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "airpods-max-2": {
+    "file": "Apple_airpods_max_1.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_airpods_max_1.jpg",
+    "artist": "Arne Müseler",
+    "license": "CC BY-SA 3.0 de",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+  },
+  "mac-studio-m5-max-m5-ultra": {
+    "file": "Mac_Studio_(2022)_front.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Mac_Studio_(2022)_front.jpg",
+    "artist": "Yasu ( talk )",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  "apple-watch-series-12": {
+    "file": "Apple_Watch_Series_10.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Series_10.jpg",
+    "artist": "KK IN HK",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "apple-watch-ultra-4": {
+    "file": "Apple_Watch_Ultra_Series_4_Natural_Titanium_Case.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Watch_Ultra_Series_4_Natural_Titanium_Case.jpg",
+    "artist": "Genetichazzard",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "airpods-5": {
+    "file": "AirPods_4_ANC_and_case.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:AirPods_4_ANC_and_case.jpg",
+    "artist": "SimplyPops",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "homepod-mini-2": {
+    "file": "Apple_HomePod_mini.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_HomePod_mini.jpg",
+    "artist": "Arne Müseler",
+    "license": "CC BY-SA 3.0 de",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+  },
+  "apple-tv-4k-4th-generation": {
+    "file": "Apple_TV_4K_(3rd_Generation,_2022)_with_Siri_Remote_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_TV_4K_(3rd_Generation,_2022)_with_Siri_Remote_(cropped).jpg",
+    "artist": "Dillan Payne",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ipad-mini-a20-pro": {
+    "file": "IPad_Mini.png",
+    "source": "https://commons.wikimedia.org/wiki/File:IPad_Mini.png",
+    "artist": "KK IN HK",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "macbook-pro-14-inch-m6": {
+    "file": "MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:MacBook_Pro_16_(M1_Pro,_2021)_-_Wikipedia.jpg",
+    "artist": "Premeditated",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "imac-24-inch-m6": {
+    "file": "IMac_M4_2024_2_(cropped).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:IMac_M4_2024_2_(cropped).jpg",
+    "artist": "Seasider53",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "displays": {
+    "file": "Anzeigen(Displays).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Anzeigen(Displays).jpg",
+    "artist": "Unknown author",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  "golden-gate": {
+    "file": "Wpdms_usgs_photo_golden_gate.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Wpdms_usgs_photo_golden_gate.jpg",
+    "artist": "The original uploader was Decumanus at English Wikipedia .",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/"
+  }
+}
