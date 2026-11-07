@@ -70,7 +70,7 @@ Open `data/products.json` and add, remove, or correct a product. Then run `pytho
 | `date` | Announcement or release month, as `YYYY-MM` |
 | `current` | `true` places the product in **hello**, `false` in **thank you** |
 | `retired` | Month Apple discontinued the product, as `YYYY-MM`. Sets its place in **thank you**. Added automatically when a product leaves apple.com |
-| `apple_name` | Optional. The exact name apple.com uses, such as "iPhone 17e" |
+| `page` | For current products, the product's page on apple.com, such as `/airpods-pro/`. The weekly sync keeps a product current while this page is listed in apple.com's product menus, and retires it when the page disappears. Products sharing a page, such as both iPhone 18 Pro sizes, list the same page |
 | `variants` | Optional. Configurations shown in the product's smaller bubbles, such as "256GB" or "Sky Blue", largest bubble first |
 | `image_file` | Optional. A specific Wikimedia Commons file to use as the photo, such as "iPhone 4 Black.jpg" |
 | `needs_review` | Added by the update scripts. Check the entry, then delete this field |

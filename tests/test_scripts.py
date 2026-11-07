@@ -14,17 +14,61 @@ import fetch_current  # noqa: E402
 import render  # noqa: E402
 from common import TYPE_TO_GROUP, fingerprint, product_type  # noqa: E402
 
-STRIP_HTML = """
-<nav class="chapternav"><ul class="chapternav-items">
-  <li class="chapternav-item"><a><span class="chapternav-label">iPhone 18 Pro</span></a></li>
-  <li class="chapternav-item"><a><span class="chapternav-label">iPhone Duo</span>
-      <span class="chapternav-new">New</span></a></li>
-  <li class="chapternav-item"><a><span class="chapternav-label">iPhone 19e</span></a></li>
-  <li class="chapternav-item"><a><span class="chapternav-label">Compare</span></a></li>
-  <li class="chapternav-item"><a><span class="chapternav-label">Accessories</span></a></li>
-  <li class="chapternav-item"><a><span class="chapternav-label">iOS 27</span></a></li>
-</ul></nav>
-"""
+def menu_html(*links):
+    """An apple.com chapter-navigation menu with the given (href, label) links."""
+    items = "".join(f'<li class="chapternav-item"><a href="{h}"><span class="chapternav-label">{l}</span></a></li>'
+                    for h, l in links)
+    return f'<nav class="chapternav"><ul>{items}</ul></nav>'
+
+
+# The product menus as apple.com listed them in November 2026, including the links
+# that broke the label-based sync: family labels ("AirPods" for AirPods 5), the
+# Displays hub, a macOS release name, and store-only models such as iPhone 16.
+MENUS = {
+    "Mac": [("/macbook-neo/", "MacBook Neo"), ("/macbook-air/", "MacBook Air"),
+            ("/macbook-pro/", "MacBook ProNew"), ("/imac/", "iMacNew"), ("/mac-mini/", "Mac miniNew"),
+            ("/mac-studio/", "Mac StudioNew"), ("/mac/compare/", "Compare"),
+            ("/mac/best-mac/", "Help Me Choose"), ("/displays/", "Displays"),
+            ("/us/shop/goto/mac/accessories", "Accessories"), ("/us/shop/goto/buy_mac", "Shop Mac"),
+            ("/os/macos/", "Golden Gate")],
+    "Displays": [("/studio-display/", "Studio Display"), ("/studio-display-xdr/", "Studio Display XDR")],
+    "iPad": [("/ipad-pro/", "iPad Pro"), ("/ipad-air/", "iPad Air"), ("/ipad-11/", "iPad"),
+             ("/ipad-mini/", "iPad miniNew"), ("/ipad/compare/", "Compare"),
+             ("/apple-pencil/", "Apple Pencil"), ("/ipad-keyboards/", "Keyboards"),
+             ("/os/ipados/", "iPadOS 27"), ("/us/shop/goto/buy_ipad", "Shop iPad")],
+    "iPhone": [("/iphone-duo/", "iPhone Duo New"), ("/iphone-18-pro/", "iPhone 18 Pro New"),
+               ("/iphone-air/", "iPhone Air"), ("/iphone-17/", "iPhone 17"), ("/iphone-17e/", "iPhone 17e"),
+               ("/us/shop/goto/buy_iphone/iphone_16", "iPhone 16"), ("/iphone/compare/", "Compare"),
+               ("/us/shop/goto/buy_iphone", "Shop iPhone"), ("/os/ios/", "iOS 27")],
+    "Apple Watch": [("/apple-watch-series-12/", "Apple WatchSeries 12New"),
+                    ("/apple-watch-ultra-4/", "Apple WatchUltra 4New"), ("/apple-watch-se-3/", "Apple WatchSE 3"),
+                    ("/apple-watch-nike/", "Apple WatchNikeNew Colors"), ("/apple-watch-hermes/", "Apple WatchHermès"),
+                    ("/us/shop/goto/watch/bands", "Bands"), ("/apple-fitness-plus/", "Apple Fitness+")],
+    "AirPods": [("/airpods-5/", "AirPods New"), ("/airpods-pro/", "AirPods Pro"),
+                ("/airpods-max/", "AirPods Max"), ("/airpods/compare/", "Compare"),
+                ("/apple-music/", "Apple Music")],
+    "TV & Home": [("/apple-homeview/", "Apple HomeView New"), ("/apple-tv-4k/", "Apple TV 4K New"),
+                  ("/homepod-mini/", "HomePod mini 2 New"), ("/homepod-2nd-generation/", "HomePod"),
+                  ("/home/accessories/", "Accessories New"), ("/home-app/", "Home app")],
+}
+
+
+def listed_from_menus(menus=MENUS):
+    """What scrape() would return for these menus, without touching the network."""
+    listed = {}
+    for category, links in menus.items():
+        if category == "Displays":
+            continue
+        for page, label in fetch_current.parse_menu(menu_html(*links)):
+            if page in fetch_current.HUB_PAGES:
+                for sub, sub_label in fetch_current.parse_menu(menu_html(*menus["Displays"])):
+                    listed.setdefault(sub, (sub_label, "Displays"))
+            else:
+                listed.setdefault(page, (label, category))
+    for page, category in fetch_current.STANDALONE_PAGES.items():
+        listed.setdefault(page, (page, category))
+    return listed
+
 
 TIMELINE_HTML = """
 <table>
@@ -52,23 +96,44 @@ def test_dataset_is_valid():
             assert p.get("retired", "") >= p["date"], ("past products need a retirement date", p)
 
 
-def test_strip_parser_skips_non_products():
-    assert fetch_current.parse_strip(STRIP_HTML) == ["iPhone 18 Pro", "iPhone Duo", "iPhone 19e"]
+def test_menu_parser_keeps_only_product_pages():
+    pages = [p for p, _ in fetch_current.parse_menu(menu_html(*MENUS["Mac"]))]
+    assert pages == ["/macbook-neo/", "/macbook-air/", "/macbook-pro/", "/imac/", "/mac-mini/",
+                     "/mac-studio/", "/displays/"], "no compare, shop, accessories, or macOS links"
+    iphone = dict(fetch_current.parse_menu(menu_html(*MENUS["iPhone"])))
+    assert iphone["/us/shop/goto/buy_iphone/iphone_16"] == "iPhone 16", "store-only models count"
+    assert "/us/shop/goto/buy_iphone" not in iphone, "the plain Shop iPhone link does not"
+    assert dict(fetch_current.parse_menu(menu_html(*MENUS["AirPods"])))["/airpods-5/"] == "AirPods"
 
 
-def test_current_sync_marks_missing_and_adds_new():
+def test_current_lineup_matches_apple_com_exactly():
+    """The November 2026 menus must produce no changes: nothing retired, nothing added."""
     doc = copy.deepcopy(load())
-    found = {"iPhone 18 Pro": "iPhone", "iPhone Duo": "iPhone", "iPhone 19e": "iPhone",
-             "MacBook Air": "Mac"}
-    changes = fetch_current.apply(doc, found)
-    current = {p["name"] for p in doc["products"] if p["current"]}
-    assert "iPhone Duo" in current
-    assert "MacBook Air (13-inch, M5)" in current and "MacBook Air (15-inch, M5)" in current
-    assert "iPhone 17e" not in current
-    assert "iPhone 19e" in current
-    assert any("New product added: iPhone 19e" in c for c in changes)
-    retired = {p["name"]: p.get("retired") for p in doc["products"]}
-    assert retired["iPhone 17e"] is not None, "a product leaving apple.com gets a retirement date"
+    assert fetch_current.apply(doc, listed_from_menus()) == []
+
+
+def test_every_current_product_has_a_page():
+    for p in load()["products"]:
+        if p["current"]:
+            assert p.get("page"), p["name"]
+        else:
+            assert "page" not in p, ("retired products must not claim a page", p["name"])
+
+
+def test_removed_page_retires_its_products_and_new_page_is_added():
+    doc = copy.deepcopy(load())
+    listed = listed_from_menus()
+    del listed["/iphone-18-pro/"]
+    listed["/iphone-19e/"] = ("iPhone 19e", "iPhone")
+    changes = fetch_current.apply(doc, listed)
+    by_name = {p["name"]: p for p in doc["products"]}
+    for name in ("iPhone 18 Pro", "iPhone 18 Pro Max"):
+        assert not by_name[name]["current"] and by_name[name]["retired"], name
+        assert "page" not in by_name[name]
+    assert by_name["iPhone 19e"]["needs_review"] and by_name["iPhone 19e"]["page"] == "/iphone-19e/"
+    assert sorted(changes) == sorted(["No longer current: iPhone 18 Pro", "No longer current: iPhone 18 Pro Max",
+                                      "New product added: iPhone 19e (/iphone-19e/)"])
+    assert by_name["iPhone 16 Plus"]["current"] is False, "a retired model stays retired"
 
 
 def test_timeline_parser_adds_only_newer_hardware():

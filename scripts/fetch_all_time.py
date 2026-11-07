@@ -81,7 +81,6 @@ def apply(doc: dict, rows: list[dict]) -> list[str]:
     products = doc["products"]
     newest_month = max(p["date"] for p in products)
     known = {fingerprint(p["name"]) for p in products}
-    known |= {fingerprint(p["apple_name"]) for p in products if p.get("apple_name")}
     changes = []
     for row in rows:
         if row["month"] <= newest_month or ACCESSORIES.search(row["name"]):
